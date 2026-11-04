@@ -14,6 +14,9 @@ The guide uses dedicated [engine](config/full-engine.env.example) and
 [web](config/web.env.example) env templates. `npm run check:full-env` checks
 your filled `.engine` configuration without displaying secrets or calling APIs.
 
+Recording the actual application? Use the [demo speaking script](docs/DEMO-SCRIPT.md):
+login → indexing → voice → text → manual tagging → Studio, with optional settings.
+
 **The original Brisky engine predates the event and is not submitted as new work.**
 This repository does not contain its indexing engine, old dashboard or landing
 page. Read [provenance](docs/PROVENANCE.md) and

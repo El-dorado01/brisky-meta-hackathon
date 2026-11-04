@@ -1585,3 +1585,43 @@ Published full-application setup: original Meta-only engine commit 49b7e71293e66
 2026-11-04 independent reasoning-flow audit: inspected scope/intent, query rewrites, evidence lifecycle, duration metadata, uncertainty, citations, voice and Studio. Fixed old selected-source contamination after retrieval, stale source-duration metadata, explicit local-scope precedence, narration bypass of new lookup requests, keyword-only searches for usage/thanks, and original-request constraint forwarding through single/compound verification. Added reusable generated-only live checks with explicit --live opt-in and unchanged budget ledger. 120 deterministic checks across ten suites and five live generated-only Meta cases passed; provider-independent code, Meta-only live validation. Limitations and remaining timeout/recall/semantic risks are explicit in docs/reasoning-audit.md.
 
 2026-11-04 broader conversation follow-up: added bounded indexed source review for selected tutorials, multi-recording comparisons and temporal follow-ups; balanced global evidence budget, per-source coverage and selected range anchors; explicit excerpt-only/new-topic guard; retained current query assessments when broadening retrieved sources. Strengthened distinctions between suggested questions/ideas and source facts, proposals and agreements, chronology and cause, corrections and proof, and editing and searching. Fixed rewrite/translation text that contains search keywords from forcing unrelated retrieval. Five further generated-only live Meta style cases passed, following plan/answer phases correctly; no personal media or UI redesign. See docs/reasoning-audit.md for scope and remaining limits.
+
+## 2026-11-04 submission completeness and beginner setup follow-up
+
+The separate event repository's initial selective export omitted Baseten and
+some new evaluation/setup/development sources. Added a non-runtime development
+review archive, changed-path inventory against the declared baseline, and a
+redacted zero-context patch for edits to pre-existing engine files. The full
+engine remains an explicitly external pinned dependency, not newly authored event
+code. Dormant non-Meta code is preserved for review/restoration, not enabled for
+judging. Rewrote event docs/FULL-SETUP.md with installation links, key provisioning,
+exact server env configuration, model setup, database/auth startup order, Drive
+account allowlisting, operational checks and troubleshooting. No inference or
+media processing is needed for this documentation/export update. Source comparison
+and owner attestation do not independently prove dates or eligibility.
+
+### Judge environment templates and read-only preflight
+
+Added dedicated Meta-only engine and Next.js env examples to the event repository,
+plus a credential-safe local preflight checking required keys, profile flags,
+origins, pricing and Drive allowlists. The full setup guide now copies these
+instead of the broad legacy development example. Generated configuration tests
+verify successful setup and reject missing credentials, non-Meta selections,
+invalid pricing and mismatched account scope. This does not validate credentials
+against external providers or establish a fresh-machine installation. Legacy local
+SMTP server/port entries are unused by the pinned web server, which configures
+Brevo's SMTP endpoint internally. No model calls are needed for these checks.
+
+### Source-size test restriction removed; demo recording guide
+
+Owner requested removal of the fixed 32 MiB source-file admission restriction.
+Controlled indexing now checks known positive size against the configurable
+WORKER_FULL_DOWNLOAD_MAX_MB resource ceiling instead. Judge/local source download
+and range-transfer settings use the existing general 16384 MiB ceiling; model
+request-body/media limits remain separate and unchanged. Account scoping and
+cumulative $30 local budget remain intact. This is not proof of arbitrary large
+or long-media end-to-end support. Added regressions admitting a 128 MiB source
+through the guard and rejecting configured oversize/unknown sources without
+processing media. Added docs/demo-recording-script.md in the owner's requested
+order, with honest manual-tagging, provenance, latency and evidence boundaries.
+No worker, automatic polling or paid inference is started for these changes.

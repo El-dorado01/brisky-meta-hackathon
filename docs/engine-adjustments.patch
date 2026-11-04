@@ -3165,7 +3165,7 @@ index 5f5f8b0..388c0a4 100644
 -    const pattern = (body?.pattern || 'MADE EASY').trim();
 +    const pattern = boundedText(body?.pattern, 'pattern', 200).trim();
 diff --git a/apps/api/src/modules/queue/indexing.processor.ts b/apps/api/src/modules/queue/indexing.processor.ts
-index b468457..f25ca2d 100644
+index b468457..1d4e67d 100644
 --- a/apps/api/src/modules/queue/indexing.processor.ts
 +++ b/apps/api/src/modules/queue/indexing.processor.ts
 @@ -4,0 +5,3 @@ import { ConfigService } from '@nestjs/config';
@@ -3208,13 +3208,18 @@ index b468457..f25ca2d 100644
 +    } catch { this.logger.warn('Temporary scratch cleanup did not complete'); }
 @@ -200,0 +210 @@ export class IndexingProcessor extends WorkerHost {
 +    if (this.configService.get('INDEX_BUDGET_PLAN_ENABLED', 'false') !== 'true') return this.processScoped(job);
-@@ -201,0 +212,33 @@ export class IndexingProcessor extends WorkerHost {
+@@ -201,0 +212,38 @@ export class IndexingProcessor extends WorkerHost {
 +    const key = `${envelope.user_id}/${envelope.asset_id}`;
 +    const allowed = String(this.configService.get('INDEX_ALLOWED_CONNECTOR_ACCOUNT_IDS', '')).split(/[,\s]+/);
++    if (!Number.isFinite(this.fullDownloadMaxBytes) || this.fullDownloadMaxBytes <= 0) {
++      throw new AiBudgetError('Configure a positive WORKER_FULL_DOWNLOAD_MAX_MB');
++    }
 +    const rejection = !envelope.source.connectorAccountId || !allowed.includes(envelope.source.connectorAccountId)
 +      ? 'Source is outside controlled indexing scope'
-+      : !Number.isFinite(envelope.source.fileSize) || Number(envelope.source.fileSize) <= 0 || Number(envelope.source.fileSize) > 32 * 1024 * 1024
-+        ? 'Controlled indexing requires a known source size of at most 32 MiB' : '';
++      : !Number.isFinite(envelope.source.fileSize) || Number(envelope.source.fileSize) <= 0
++        ? 'Controlled indexing requires a known positive source size'
++        : Number(envelope.source.fileSize) > this.fullDownloadMaxBytes
++          ? 'Source exceeds WORKER_FULL_DOWNLOAD_MAX_MB' : '';
 +    if (rejection) {
 +      await this.db.query("UPDATE indexing_jobs SET status='failed',stage='blocked',error=$1,finished_at=NOW() WHERE bull_job_id=$2 AND user_id=$3",[rejection,job.id,envelope.user_id]);
 +      await this.db.query("UPDATE media_assets SET status=CASE WHEN status='indexed' THEN status ELSE 'failed' END,error=$1,updated_at=NOW() WHERE id=$2 AND user_id=$3",[rejection,envelope.asset_id,envelope.user_id]);
@@ -3242,7 +3247,7 @@ index b468457..f25ca2d 100644
 +        return;
 +      }
 +    }
-@@ -204,0 +248,18 @@ export class IndexingProcessor extends WorkerHost {
+@@ -204,0 +253,18 @@ export class IndexingProcessor extends WorkerHost {
 +    // Dependency waits are not useful work and must not claim scarce processing slots.
 +    let blocked=false;
 +    if(envelope.job_type==='finalize_asset') blocked=await this.unitsService.pendingSiblingUnits(assetId,'finalize')>0;
@@ -3261,25 +3266,25 @@ index b468457..f25ca2d 100644
 +      throw new DelayedError();
 +    }
 +
-@@ -212,0 +274 @@ export class IndexingProcessor extends WorkerHost {
+@@ -212,0 +279 @@ export class IndexingProcessor extends WorkerHost {
 +        envelope.job_type,
-@@ -237 +299 @@ export class IndexingProcessor extends WorkerHost {
+@@ -237 +304 @@ export class IndexingProcessor extends WorkerHost {
 -      if (isIndexUnitJob(envelope.job_type) || envelope.job_type === 'plan_asset') {
 +      if (isIndexUnitJob(envelope.job_type) || envelope.job_type === 'plan_asset' || envelope.job_type === 'extract_clip') {
-@@ -273,0 +336,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -273,0 +341,3 @@ export class IndexingProcessor extends WorkerHost {
 +      const checkpointId=envelope.processing_config?.unitId;
 +      const reused=checkpointId && (await this.unitsService.getUnit?.(assetId,checkpointId))?.status==='completed';
 +      await recordFactoryStep(this.db,job,envelope,(reused?'reused_':'')+envelope.job_type,async()=>{
-@@ -290,0 +356 @@ export class IndexingProcessor extends WorkerHost {
+@@ -290,0 +361 @@ export class IndexingProcessor extends WorkerHost {
 +      });
-@@ -291,0 +358,4 @@ export class IndexingProcessor extends WorkerHost {
+@@ -291,0 +363,4 @@ export class IndexingProcessor extends WorkerHost {
 +      if (err instanceof DelayedError) {
 +        await this.scheduler?.releaseSlot?.(bullJobId).catch(()=>undefined);
 +        throw err;
 +      }
-@@ -292,0 +363 @@ export class IndexingProcessor extends WorkerHost {
+@@ -292,0 +368 @@ export class IndexingProcessor extends WorkerHost {
 +      const retrying=(job.attemptsMade||0)+1<(job.opts?.attempts||1);
-@@ -294 +365,10 @@ export class IndexingProcessor extends WorkerHost {
+@@ -294 +370,10 @@ export class IndexingProcessor extends WorkerHost {
 -        await this.scheduler.releaseSlot(bullJobId, true, err?.message || String(err)).catch(() => undefined);
 +        await this.scheduler.releaseSlot(bullJobId, !retrying, err?.message || String(err)).catch(() => undefined);
 +      }
@@ -3291,17 +3296,17 @@ index b468457..f25ca2d 100644
 +          finished_at=CASE WHEN $2='waiting' THEN NULL ELSE NOW() END,updated_at=NOW()
 +          WHERE bull_job_id=$1 AND status NOT IN ('completed','cancelled') AND NOT cancel_requested`,
 +          [bullJobId, retrying ? 'waiting' : 'failed', retrying ? 'retrying' : 'failed', String(err)]);
-@@ -432 +512 @@ export class IndexingProcessor extends WorkerHost {
+@@ -432 +517 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(scratch);
 +      await this.cleanupJobScratch(scratch,job,envelope);
-@@ -454,0 +535 @@ export class IndexingProcessor extends WorkerHost {
+@@ -454,0 +540 @@ export class IndexingProcessor extends WorkerHost {
 +      await this.cleanupJobScratch(scratch,job,envelope);
-@@ -465,0 +547,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -465,0 +552,2 @@ export class IndexingProcessor extends WorkerHost {
 +    let streamedSource: SeekableMediaSource | undefined;
 +    let sourceVersion: string | undefined;
-@@ -469 +551,0 @@ export class IndexingProcessor extends WorkerHost {
+@@ -469 +556,0 @@ export class IndexingProcessor extends WorkerHost {
 -        this.checkScratchCapacity(scratch, fileSize, 'full_download');
-@@ -475,5 +557,20 @@ export class IndexingProcessor extends WorkerHost {
+@@ -475,5 +562,20 @@ export class IndexingProcessor extends WorkerHost {
 -        await connector.downloadAsset(auth, remoteId!, effectiveSourcePath);
 -        bytesRead = fs.existsSync(effectiveSourcePath)
 -          ? fs.statSync(effectiveSourcePath).size
@@ -3327,7 +3332,7 @@ index b468457..f25ca2d 100644
 +          bytesRead = fs.existsSync(effectiveSourcePath) ? fs.statSync(effectiveSourcePath).size : fileSize;
 +          accessMode = 'full_download';
 +        }
-@@ -486,2 +583,12 @@ export class IndexingProcessor extends WorkerHost {
+@@ -486,2 +588,12 @@ export class IndexingProcessor extends WorkerHost {
 -      const audioPath = path.join(scratch, 'audio.wav');
 -      await this.ffmpegPipeline.extractAudio(effectiveSourcePath, audioPath);
 +      if (!this.useAiTranscription() && this.configService.get('WINDOWED_TRANSCRIPTION', 'false') === 'true') {
@@ -3342,28 +3347,28 @@ index b468457..f25ca2d 100644
 +        bytesRead = streamedSource.bytesRead;
 +        await streamedSource.close();
 +      }
-@@ -502 +609,5 @@ export class IndexingProcessor extends WorkerHost {
+@@ -502 +614,5 @@ export class IndexingProcessor extends WorkerHost {
 -      if (this.whisperService.isAvailable()) {
 +      let transcriptionUsage: ModelUsage|undefined;
 +      if (this.useAiTranscription()) {
 +        const result=await this.aiService.transcribeAudio(audioPath);
 +        transcriptCues=result.transcript||[];transcriptionUsage=result.usage;
 +      } else if (this.whisperService.isAvailable()) {
-@@ -507 +618 @@ export class IndexingProcessor extends WorkerHost {
+@@ -507 +623 @@ export class IndexingProcessor extends WorkerHost {
 -          const result = await this.geminiService.transcribeAudio(audioPath);
 +          const result = await this.aiService.transcribeAudio(audioPath);
-@@ -511 +622 @@ export class IndexingProcessor extends WorkerHost {
+@@ -511 +627 @@ export class IndexingProcessor extends WorkerHost {
 -        const result = await this.geminiService.transcribeAudio(audioPath);
 +        const result = await this.aiService.transcribeAudio(audioPath);
-@@ -517,0 +629,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -517,0 +634,2 @@ export class IndexingProcessor extends WorkerHost {
 +        transcriptionProvider: this.useAiTranscription() ? 'ai' : 'whisper',
 +        usage: transcriptionUsage,
-@@ -535,0 +649,4 @@ export class IndexingProcessor extends WorkerHost {
+@@ -535,0 +654,4 @@ export class IndexingProcessor extends WorkerHost {
 +      if (!this.useAiTranscription() && this.configService.get('WINDOWED_TRANSCRIPTION', 'false') === 'true') {
 +        await this.unitsService.failTranscriptWindows(assetId, err instanceof Error ? err.message : String(err));
 +      }
 +      if (err instanceof AudioWindowCancelled) return;
-@@ -543 +660,142 @@ export class IndexingProcessor extends WorkerHost {
+@@ -543 +665,142 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(scratch);
 +      await streamedSource?.close();
 +      await this.cleanupJobScratch(scratch,job,envelope);
@@ -3507,20 +3512,20 @@ index b468457..f25ca2d 100644
 +    } catch (error) {
 +      await this.unitsService.markUnitFailed(assetId, 'scene_windows', String(error));
 +      throw error;
-@@ -559,0 +818,5 @@ export class IndexingProcessor extends WorkerHost {
+@@ -559,0 +823,5 @@ export class IndexingProcessor extends WorkerHost {
 +    const operationId = envelope.processing_config?.clipOperationId;
 +    if (operationId) {
 +      if (!this.indexingService) throw new Error('Clip operation service unavailable');
 +      if (await this.indexingService.isClipPublished(operationId, userId)) return;
 +    }
-@@ -564 +827 @@ export class IndexingProcessor extends WorkerHost {
+@@ -564 +832 @@ export class IndexingProcessor extends WorkerHost {
 -    const clipAssetId = `clip_${randomBytes(8).toString('hex')}`;
 +    const clipAssetId = envelope.processing_config?.clipAssetId || `clip_${createHash('sha256').update(String(jobId)).digest('hex').slice(0, 32)}`;
-@@ -592 +854,0 @@ export class IndexingProcessor extends WorkerHost {
+@@ -592 +859,0 @@ export class IndexingProcessor extends WorkerHost {
 -        const parentDuration = Number(assetRes.rows[0]?.duration || 0);
-@@ -598 +859,0 @@ export class IndexingProcessor extends WorkerHost {
+@@ -598 +864,0 @@ export class IndexingProcessor extends WorkerHost {
 -        const auth = await this.connectorsService.getAuthContext(connectorAccountId!, userId);
-@@ -602,16 +863,16 @@ export class IndexingProcessor extends WorkerHost {
+@@ -602,16 +868,16 @@ export class IndexingProcessor extends WorkerHost {
 -        let usedRanged = false;
 -        if (
 -          connector.capabilities?.can_range_read &&
@@ -3553,7 +3558,7 @@ index b468457..f25ca2d 100644
 +          const session = await connector.openReadSession(auth, remoteId!);
 +          if (session.size !== parentFileSize) throw new Error('Cloud source size changed since indexing');
 +          const source = await openSeekableMediaSource(session, { maxBytes: transferLimit });
-@@ -619,29 +880,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -619,29 +885,2 @@ export class IndexingProcessor extends WorkerHost {
 -            this.logger.log(
 -              `[Phase F4] Attempting ranged clip extraction for asset ${parentAssetId} (bytes ${startByte}-${endByte}, ${(length / 1024).toFixed(1)} KB vs total ${(parentFileSize / (1024 * 1024)).toFixed(1)} MB)`,
 -            );
@@ -3585,7 +3590,7 @@ index b468457..f25ca2d 100644
 -            usedRanged = true;
 +            await this.ffmpegPipeline.extractClip(source.url, clipPath, startS, endS);
 +            await source.validate();
-@@ -649,27 +883,6 @@ export class IndexingProcessor extends WorkerHost {
+@@ -649,27 +888,6 @@ export class IndexingProcessor extends WorkerHost {
 -            bytesRead = actualRangedBytes;
 -            this.logger.log(
 -              `[Phase F4] Ranged clip extraction succeeded for ${parentAssetId}: read ${(actualRangedBytes / (1024 * 1024)).toFixed(2)} MB`,
@@ -3619,7 +3624,7 @@ index b468457..f25ca2d 100644
 +            throw error;
 +          } finally { await source.close(); }
 +        } else {
-@@ -679,3 +892,4 @@ export class IndexingProcessor extends WorkerHost {
+@@ -679,3 +897,4 @@ export class IndexingProcessor extends WorkerHost {
 -          bytesRead = fs.existsSync(effectiveSourcePath)
 -            ? fs.statSync(effectiveSourcePath).size
 -            : parentFileSize;
@@ -3627,11 +3632,11 @@ index b468457..f25ca2d 100644
 +            throw new Error('Cloud source download is incomplete or changed');
 +          }
 +          bytesRead = fs.statSync(effectiveSourcePath).size;
-@@ -701,0 +916,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -701,0 +921,3 @@ export class IndexingProcessor extends WorkerHost {
 +      if (!fs.existsSync(clipPath) || fs.statSync(clipPath).size === 0) {
 +        throw new Error('Clip extraction did not produce a media file');
 +      }
-@@ -723,25 +940,26 @@ export class IndexingProcessor extends WorkerHost {
+@@ -723,25 +945,26 @@ export class IndexingProcessor extends WorkerHost {
 -      // Register derived asset in media_assets
 -      await this.db.query(
 -        `INSERT INTO media_assets (
@@ -3683,7 +3688,7 @@ index b468457..f25ca2d 100644
 +            clipChecksum,
 +          ],
 +        );
-@@ -749,10 +967,10 @@ export class IndexingProcessor extends WorkerHost {
+@@ -749,10 +972,10 @@ export class IndexingProcessor extends WorkerHost {
 -      // Register lineage in asset_relationships table
 -      await this.db.query(
 -        `INSERT INTO asset_relationships (source_asset_id, target_asset_id, relationship_type, metadata)
@@ -3704,7 +3709,7 @@ index b468457..f25ca2d 100644
 +            JSON.stringify({ start_s: startS, end_s: endS, duration }),
 +          ],
 +        );
-@@ -760,4 +978,16 @@ export class IndexingProcessor extends WorkerHost {
+@@ -760,4 +983,16 @@ export class IndexingProcessor extends WorkerHost {
 -      await this.db.query(
 -        `UPDATE indexing_jobs SET status = 'completed', stage = 'completed', progress = 100, access_mode = $1, bytes_read = $2, finished_at = NOW() WHERE bull_job_id = $3`,
 -        [accessMode, bytesRead, job.id],
@@ -3725,27 +3730,27 @@ index b468457..f25ca2d 100644
 +      } else {
 +        await publish(this.db);
 +      }
-@@ -803 +1033 @@ export class IndexingProcessor extends WorkerHost {
+@@ -803 +1038 @@ export class IndexingProcessor extends WorkerHost {
 -        `UPDATE indexing_jobs SET status = 'failed', stage = 'failed', error = $1, finished_at = NOW() WHERE bull_job_id = $2`,
 +        `UPDATE indexing_jobs SET status = 'failed', stage = 'failed', error = $1, finished_at = NOW() WHERE bull_job_id = $2 AND status <> 'completed'`,
-@@ -808 +1038 @@ export class IndexingProcessor extends WorkerHost {
+@@ -808 +1043 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(scratch);
 +      await this.cleanupJobScratch(scratch,job,envelope);
-@@ -829,0 +1060 @@ export class IndexingProcessor extends WorkerHost {
+@@ -829,0 +1065 @@ export class IndexingProcessor extends WorkerHost {
 +      if (this.configService.get('INDEX_BUDGET_PLAN_ENABLED', 'false') === 'true') new AiUsageLedger(this.configService).releasePlan();
-@@ -832 +1063 @@ export class IndexingProcessor extends WorkerHost {
+@@ -832 +1068 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(scratchDir);
 +      await this.cleanupJobScratch(scratchDir);
-@@ -866,0 +1098,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -866,0 +1103,2 @@ export class IndexingProcessor extends WorkerHost {
 +    let streamedSource: SeekableMediaSource | undefined;
 +    let streamedVersion: string | undefined;
-@@ -922 +1155 @@ export class IndexingProcessor extends WorkerHost {
+@@ -922 +1160 @@ export class IndexingProcessor extends WorkerHost {
 -      const result = await fn();
 +      const result = await recordFactoryStep(this.db,job,envelope,stage,fn);
-@@ -977 +1210 @@ export class IndexingProcessor extends WorkerHost {
+@@ -977 +1215 @@ export class IndexingProcessor extends WorkerHost {
 -        await this.cloneExistingAsset(donorId, assetId, userId);
 +        await recordFactoryStep(this.db,job,envelope,'reused_index',()=>this.cloneExistingAsset(donorId!,assetId,userId));
-@@ -998 +1231,19 @@ export class IndexingProcessor extends WorkerHost {
+@@ -998 +1236,19 @@ export class IndexingProcessor extends WorkerHost {
 -      if (isRemoteMaster) {
 +      if (forceReindex && (job.attemptsMade || 0) === 0) await this.unitsService.resetAssetUnits(assetId);
 +
@@ -3766,10 +3771,10 @@ index b468457..f25ca2d 100644
 +      }
 +
 +      if (isRemoteMaster && !streamedSource) {
-@@ -1056 +1307 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1056 +1312 @@ export class IndexingProcessor extends WorkerHost {
 -      } else {
 +      } else if (!isRemoteMaster) {
-@@ -1091,2 +1342,20 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1091,2 +1347,20 @@ export class IndexingProcessor extends WorkerHost {
 -      const scenes = await mark('scene_detection', 14, () =>
 -        this.ffmpegPipeline.detectScenesAndExtractFrames(
 +      const policy = this.preparationPolicy();
@@ -3792,25 +3797,25 @@ index b468457..f25ca2d 100644
 +          () => streamedSource!.validate(), async () => {
 +            if (await this.checkCancelled(job.id || '', assetId, scratch)) throw new Error('Scene preparation cancelled');
 +          }) : this.ffmpegPipeline.detectScenesAndExtractFrames(
-@@ -1096 +1365 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1096 +1370 @@ export class IndexingProcessor extends WorkerHost {
 -          (current, total) => {
 +          async (current, total) => {
-@@ -1098 +1367,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1098 +1372,2 @@ export class IndexingProcessor extends WorkerHost {
 -            setStage('extracting_keyframes', pct).catch(() => undefined);
 +            await setStage('extracting_keyframes', pct).catch(() => undefined);
 +            await updateFactoryProgress(this.db,String(job.id||''),userId,'scenes',current,total).catch(()=>undefined);
-@@ -1101,0 +1372,4 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1101,0 +1377,4 @@ export class IndexingProcessor extends WorkerHost {
 +      if (streamedSource) {
 +        await streamedSource.validate();
 +        if (scenes.some((scene) => !scene.keyframes?.length)) throw new Error('Streamed scene preparation is missing scene evidence');
 +      }
-@@ -1104 +1378 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1104 +1383 @@ export class IndexingProcessor extends WorkerHost {
 -      for (const scene of scenes) {
 +      for (const scene of usableScenes || windowedScenes ? [] : scenes) {
-@@ -1111,0 +1386,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1111,0 +1391,2 @@ export class IndexingProcessor extends WorkerHost {
 +      if (streamedSource && !usableScenes) await this.unitsService.saveSourcePreparation(assetId, { fingerprint,
 +        sourceVersion: streamedVersion, scenes });
-@@ -1114,2 +1390,18 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1114,2 +1395,18 @@ export class IndexingProcessor extends WorkerHost {
 -      if (forceReindex) {
 -        await this.unitsService.resetAssetUnits(assetId);
 +      if (this.configService.get('INDEX_BUDGET_PLAN_ENABLED', 'false') === 'true') {
@@ -3831,52 +3836,52 @@ index b468457..f25ca2d 100644
 +        const models=provider==='meta'?[this.aiService.getPrimaryModel(),String(this.configService.get('META_VIDEO_MODEL','')),
 +          ...(speechCalls?[String(this.configService.get('META_AUDIO_MODEL',''))]:[])]:provider==='google'?(this.aiService.getModelCascade?.()||[this.aiService.getPrimaryModel()]):[this.aiService.getPrimaryModel()];
 +        new AiUsageLedger(this.configService).reservePlan(provider!, this.aiService.getPrimaryModel(), calls * multiplier, `${userId}/${assetId}`,models);
-@@ -1202,0 +1495,6 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1202,0 +1500,6 @@ export class IndexingProcessor extends WorkerHost {
 +      if (streamedSource) {
 +        await streamedSource.validate();
 +        await this.db.query(`UPDATE indexing_jobs SET bytes_read = $1, access_mode = 'range_read' WHERE bull_job_id = $2`,
 +          [streamedSource.bytesRead, job.id]);
 +      }
 +
-@@ -1211 +1509 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1211 +1514 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(scratch);
 +      await this.cleanupJobScratch(scratch,job,envelope);
-@@ -1273 +1571 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1273 +1576 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(path.join(this.scratchDir, String(jobId)));
 +      await this.cleanupJobScratch(path.join(this.scratchDir, String(jobId)),job,envelope);
-@@ -1277,0 +1576,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1277,0 +1581,2 @@ export class IndexingProcessor extends WorkerHost {
 +    } finally {
 +      await streamedSource?.close();
-@@ -1341 +1641 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1341 +1646 @@ export class IndexingProcessor extends WorkerHost {
 -      if (completedUnits.has(unit.unit_id) || unit.status === 'completed') continue;
 +      if (['source_preparation', 'transcript_window', 'scene_window'].includes(unit.unit_type) || completedUnits.has(unit.unit_id) || unit.status === 'completed') continue;
-@@ -1395 +1695 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1395 +1700 @@ export class IndexingProcessor extends WorkerHost {
 -      const res = await this.geminiService.analyzeFrames([analysisScene]);
 +      const res = await this.aiService.analyzeFrames([analysisScene]);
-@@ -1411 +1711 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1411 +1716 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(scratch);
 +      await this.cleanupJobScratch(scratch,job,envelope);
-@@ -1446,0 +1747,6 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1446,0 +1752,6 @@ export class IndexingProcessor extends WorkerHost {
 +        const session = connector.openReadSession ? await connector.openReadSession(auth, remoteId!) : undefined;
 +        const prepared = session ? await this.unitsService.getUnit(assetId, 'source_preparation') : null;
 +        if (prepared?.metadata?.sourceVersion && prepared.metadata.sourceVersion !== session?.version) {
 +          throw new Error('Cloud source changed since scene preparation');
 +        }
 +        if (session) this.checkScratchCapacity(scratch, session.size, 'full_download');
-@@ -1447,0 +1754,6 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1447,0 +1759,6 @@ export class IndexingProcessor extends WorkerHost {
 +        if (session) {
 +          if (!fs.existsSync(effectiveSourcePath) || fs.statSync(effectiveSourcePath).size !== session.size) {
 +            throw new Error('Cloud source download is incomplete or changed');
 +          }
 +          await session.validate(new AbortController().signal);
 +        }
-@@ -1451 +1763 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1451 +1768 @@ export class IndexingProcessor extends WorkerHost {
 -      const res = await this.geminiService.analyzeVideo(effectiveSourcePath);
 +      const res = await this.aiService.analyzeVideo(effectiveSourcePath);
-@@ -1468 +1780 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1468 +1785 @@ export class IndexingProcessor extends WorkerHost {
 -      this.cleanupJobScratch(scratch);
 +      await this.cleanupJobScratch(scratch,job,envelope);
-@@ -1487,0 +1800,9 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1487,0 +1805,9 @@ export class IndexingProcessor extends WorkerHost {
 +    // Queue order is not a dependency guarantee. Wait for speech and native video
 +    // before freezing this scene's text/vector; failed stages remain partial evidence.
 +    const [audioUnit,videoUnit]=await Promise.all([
@@ -3886,42 +3891,42 @@ index b468457..f25ca2d 100644
 +    if([audioUnit,videoUnit].some(unit=>unit && ['waiting','active'].includes(unit.status))) {
 +      await this.delayJob(job);
 +    }
-@@ -1497,0 +1819 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1497,0 +1824 @@ export class IndexingProcessor extends WorkerHost {
 +      sources: string[];
-@@ -1499,3 +1821,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1499,3 +1826,3 @@ export class IndexingProcessor extends WorkerHost {
 -      `SELECT title, description, visual_objects, actions, transcript_text, on_screen_text
 -       FROM media_segments WHERE id = $1`,
 -      [segId],
 +      `SELECT title, description, visual_objects, actions, transcript_text, on_screen_text, sources
 +       FROM media_segments WHERE id = $1 AND user_id=$2`,
 +      [segId,envelope.user_id],
-@@ -1507,2 +1829,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1507,2 +1834,2 @@ export class IndexingProcessor extends WorkerHost {
 -         AND timestamp_start < $3 AND timestamp_end > $2`,
 -      [assetId, start, end],
 +         AND timestamp_start < $3 AND timestamp_end > $2 AND user_id=$4`,
 +      [assetId, start, end,envelope.user_id],
-@@ -1514,0 +1837,6 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1514,0 +1842,6 @@ export class IndexingProcessor extends WorkerHost {
 +    const nativeSegments:VideoAnalysis['segments']=videoUnit?.status==='completed' && Array.isArray(videoUnit.metadata?.analysis?.segments)
 +      ? videoUnit.metadata.analysis.segments.filter((segment:VideoAnalysis['segments'][number])=>segment.start_time<end&&segment.end_time>start) : [];
 +    const description=[...new Set([row?.description,...nativeSegments.map(s=>s.description)].filter(Boolean))].join(' ');
 +    const objects=[...new Set([...(row?.visual_objects||[]),...nativeSegments.flatMap(s=>s.visual_objects||[])])];
 +    const actions=[...new Set([...(row?.actions||[]),...nativeSegments.flatMap(s=>s.actions||[])])];
 +    const sources=[...new Set([...(row?.sources||[]),...(nativeSegments.length?['video']:[]),...(transcript?['transcript']:[])])];
-@@ -1517,3 +1845,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1517,3 +1850,3 @@ export class IndexingProcessor extends WorkerHost {
 -      row?.description,
 -      (row?.visual_objects || []).join(', '),
 -      (row?.actions || []).join(', '),
 +      description,
 +      objects.join(', '),
 +      actions.join(', '),
-@@ -1527 +1855 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1527 +1860 @@ export class IndexingProcessor extends WorkerHost {
 -        embeddingText || `Scene ${sceneId} ${start}s-${end}s`,
 +        embeddingText || `Scene ${sceneId} ${start}s-${end}s`,envelope.user_id,
-@@ -1535,0 +1864,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1535,0 +1869,3 @@ export class IndexingProcessor extends WorkerHost {
 +               embedding_meta_1024=CASE WHEN $2=1024 THEN $1::vector ELSE embedding_meta_1024 END,
 +               meta_embedding_model=CASE WHEN $2=1024 THEN $10 ELSE meta_embedding_model END,
 +               meta_embedding_input_hash=CASE WHEN $2=1024 THEN $11 ELSE meta_embedding_input_hash END,
-@@ -1537,3 +1868,4 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1537,3 +1873,4 @@ export class IndexingProcessor extends WorkerHost {
 -               transcript_text = COALESCE(NULLIF($3, ''), transcript_text)
 -           WHERE id = $4`,
 -          [embeddingStr, dim, transcript, segId],
@@ -3929,61 +3934,61 @@ index b468457..f25ca2d 100644
 +               description=$5,visual_objects=$6,actions=$7,sources=$8
 +           WHERE id = $4 AND user_id=$9`,
 +          [embeddingStr, dim, transcript, segId,description,objects,actions,sources,envelope.user_id,META_EMBEDDING_MODEL,metaEmbeddingHash(embeddingText)],
-@@ -1571,0 +1904,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1571,0 +1909,3 @@ export class IndexingProcessor extends WorkerHost {
 +    if (this.configService.get('INDEX_BUDGET_PLAN_ENABLED', 'false') === 'true') {
 +      new AiUsageLedger(this.configService).releasePlan(`${envelope.user_id}/${assetId}`);
 +    }
-@@ -1590,0 +1926,6 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1590,0 +1931,6 @@ export class IndexingProcessor extends WorkerHost {
 +  private useAiTranscription():boolean {
 +    const provider=this.configService.get('TRANSCRIPTION_PROVIDER','whisper');
 +    if(!['whisper','ai'].includes(provider))throw new Error('TRANSCRIPTION_PROVIDER must be whisper or ai');
 +    return provider==='ai';
 +  }
 +
-@@ -1631 +1972 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1631 +1977 @@ export class IndexingProcessor extends WorkerHost {
 -         keyframe_path, sources, analysis_version, keyframe_paths
 +         keyframe_path, sources, analysis_version, keyframe_paths, provider, model
-@@ -1635 +1976 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1635 +1981 @@ export class IndexingProcessor extends WorkerHost {
 -         $12, $13, $14, $15::jsonb
 +         $12, $13, $14, $15::jsonb, $16, $17
-@@ -1643 +1984,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1643 +1989,2 @@ export class IndexingProcessor extends WorkerHost {
 -         keyframe_paths = EXCLUDED.keyframe_paths`,
 +         keyframe_paths = EXCLUDED.keyframe_paths,
 +         provider = EXCLUDED.provider, model = EXCLUDED.model`,
-@@ -1665,0 +2008,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1665,0 +2013,2 @@ export class IndexingProcessor extends WorkerHost {
 +        primary?.provider || 'unknown',
 +        primary?.model || 'unknown',
-@@ -1725,0 +2070 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1725,0 +2075 @@ export class IndexingProcessor extends WorkerHost {
 +      const isMeta=dim===1024&&metaEmbeddings(this.configService);
-@@ -1732 +2077 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1732 +2082 @@ export class IndexingProcessor extends WorkerHost {
 -           keyframe_paths
 +           keyframe_paths,embedding_meta_1024,meta_embedding_model,meta_embedding_input_hash
-@@ -1738 +2083 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1738 +2088 @@ export class IndexingProcessor extends WorkerHost {
 -           $20::jsonb
 +           $20::jsonb,$21::vector,$22,$23
-@@ -1754,0 +2100,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1754,0 +2105,3 @@ export class IndexingProcessor extends WorkerHost {
 +           embedding_meta_1024=COALESCE(EXCLUDED.embedding_meta_1024,media_segments.embedding_meta_1024),
 +           meta_embedding_model=COALESCE(EXCLUDED.meta_embedding_model,media_segments.meta_embedding_model),
 +           meta_embedding_input_hash=COALESCE(EXCLUDED.meta_embedding_input_hash,media_segments.meta_embedding_input_hash),
-@@ -1784,0 +2133,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1784,0 +2138,3 @@ export class IndexingProcessor extends WorkerHost {
 +          isMeta?embeddingStr:null,
 +          isMeta?META_EMBEDDING_MODEL:null,
 +          isMeta?metaEmbeddingHash(metaEmbeddingText({title:seg.title,description:seg.description,visual_objects:seg.visualObjects,actions:seg.actions,transcript_text:seg.transcriptText,on_screen_text:seg.onScreenText})):null,
-@@ -1889 +2240,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1889 +2245,2 @@ export class IndexingProcessor extends WorkerHost {
 -              embedding::text AS embedding, embedding_384::text AS embedding_384, embedding_dim
 +              embedding::text AS embedding, embedding_384::text AS embedding_384, embedding_dim,
 +              embedding_meta_1024::text AS embedding_meta_1024, meta_embedding_model, meta_embedding_input_hash
-@@ -1902 +2254,2 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1902 +2259,2 @@ export class IndexingProcessor extends WorkerHost {
 -           keyframe_path, keyframe_paths, sources, provider, model, embedding, embedding_384, embedding_dim, analysis_version
 +           keyframe_path, keyframe_paths, sources, provider, model, embedding, embedding_384, embedding_dim, analysis_version,
 +           embedding_meta_1024, meta_embedding_model, meta_embedding_input_hash
-@@ -1907 +2260 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1907 +2265 @@ export class IndexingProcessor extends WorkerHost {
 -           $17::vector, $18::vector, $19, $20
 +           $17::vector, $18::vector, $19, $20, $21::vector, $22, $23
-@@ -1922 +2275 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1922 +2280 @@ export class IndexingProcessor extends WorkerHost {
 -          s.keyframe_paths,
 +          typeof s.keyframe_paths==='string'?s.keyframe_paths:JSON.stringify(s.keyframe_paths||[]),
-@@ -1929,0 +2283,3 @@ export class IndexingProcessor extends WorkerHost {
+@@ -1929,0 +2288,3 @@ export class IndexingProcessor extends WorkerHost {
 +          s.embedding_meta_1024,
 +          s.meta_embedding_model,
 +          s.meta_embedding_input_hash,

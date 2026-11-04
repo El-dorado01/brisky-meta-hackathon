@@ -225,8 +225,8 @@ SAAS_DRIVE_SYNC_ACCOUNT_IDS=
 INDEX_ALLOWED_CONNECTOR_ACCOUNT_IDS=
 INDEX_BUDGET_PLAN_ENABLED=true
 INDEX_PLAN_ATTEMPTS_PER_CALL=2
-WORKER_FULL_DOWNLOAD_MAX_MB=32
-INDEX_RANGE_MAX_MB=32
+WORKER_FULL_DOWNLOAD_MAX_MB=16384
+INDEX_RANGE_MAX_MB=16384
 
 AI_BUDGET_USD=5
 AI_USAGE_LEDGER_PATH=./storage/usage/ai-attempts.jsonl
@@ -356,7 +356,7 @@ Brevo sender, sign in, and finish onboarding.
 
 **Before starting Terminal 3**, connect Google Drive in Factory's Connectors
 manager. Consent using the Google test account configured earlier. Select a
-small folder you control, preferably one short video **under 32 MiB**. Save it.
+small folder you control, preferably one short video for the first run. Save it.
 Sync may report paused until its account allowlist is configured; this is expected.
 
 Find the connected account's ID: open the browser's Developer Tools → Network,
@@ -379,8 +379,12 @@ pnpm dev:worker
 
 The worker builds the API code it shares, then consumes queued work. Watch its
 logs and Factory progress. Let the video reach indexed status before searching.
-A running API/web alone does not process queued files. Larger files in this
-bounded profile need attention instead of silently bypassing its cap.
+A running API/web alone does not process queued files. The former 32 MiB
+source-file test cap is removed. Source transfer/download allowances default to
+16384 MiB (16 GiB) and remain configurable for local resources. Model request
+bodies have separate, smaller limits; this does not mean a 16 GiB video can be
+sent in one inference request. Large/long-file end-to-end processing is not
+established by short-video checks. Budget and account-scope controls still apply.
 
 ## 8. Try the workflow
 
