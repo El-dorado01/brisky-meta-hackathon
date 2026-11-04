@@ -10,6 +10,9 @@ tool installation, obtaining keys, model downloads and each startup terminal.
 For the source audit, read [contribution coverage](docs/CONTRIBUTION-COVERAGE.md):
 it maps exported components, retained development alternatives and patches to
 pre-existing engine files without claiming the old engine as new work.
+The guide uses dedicated [engine](config/full-engine.env.example) and
+[web](config/web.env.example) env templates. `npm run check:full-env` checks
+your filled `.engine` configuration without displaying secrets or calling APIs.
 
 **The original Brisky engine predates the event and is not submitted as new work.**
 This repository does not contain its indexing engine, old dashboard or landing

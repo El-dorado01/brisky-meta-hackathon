@@ -146,16 +146,22 @@ or port, update the OAuth callback and app/voice origins together.
 Inside `.engine`, Windows PowerShell:
 
 ```powershell
-Copy-Item .env.example .env
-Copy-Item apps/web/.env.example apps/web/.env.local
+Copy-Item ../config/full-engine.env.example .env
+Copy-Item ../config/web.env.example apps/web/.env.local
 ```
 
 macOS/Linux equivalent:
 
 ```sh
-cp .env.example .env
-cp apps/web/.env.example apps/web/.env.local
+cp ../config/full-engine.env.example .env
+cp ../config/web.env.example apps/web/.env.local
 ```
+
+These are the dedicated judge templates shipped by the event repository. Use
+them rather than the engine's general development examples: they already select
+Meta-only speech, embeddings and reasoning and include the operational limits.
+They do not contain the developer's credentials or account IDs. Optional Python
+and FFmpeg path overrides are commented out so platform detection can work.
 
 Only copy these files on first setup; repeating the commands can overwrite your
 filled credentials. Edit with your editor. Root `.env` belongs to the API and
@@ -173,8 +179,9 @@ Use one for `JWT_SECRET`, one for `CONNECTOR_ENCRYPTION_KEY`, and one for
 
 ### Root `.engine/.env`
 
-Edit the existing entries below; avoid duplicate definitions. Retain other
-example defaults unless this guide overrides them.
+Edit the existing entries below; avoid duplicate definitions. The copied judge
+template includes these entries plus grouped scene, concurrency, cache, timeout
+and storage settings. Keep those template settings for the first run.
 
 ```dotenv
 PORT=3001
@@ -254,6 +261,26 @@ BREVO_SENDER_NAME=Brisky
 
 The SaaS and engine can share this local database while remaining separate
 server processes and env files. Restart the affected processes after env edits.
+
+### Check configuration before starting services
+
+From `.engine`, run the event repository's read-only checker:
+
+```sh
+node ../scripts/check-full-env.cjs
+```
+
+Alternatively, from the event repository root run `npm run check:full-env`.
+It checks required values, secret format, Meta-only selections, pricing entries,
+local origins and matching Drive allowlists **without printing secret values**.
+Blank Drive account IDs are notes at this stage: fill them after connecting in
+step 7, then rerun the checker. Other errors must be fixed before continuing.
+This does not test whether Meta/Google/Brevo accept your credentials, whether
+models are downloaded, or whether Docker/services are running. Use the model
+checks and application checks in the next steps as well.
+
+The web's Brevo SMTP host and port are configured internally; extra
+`BREVO_SMTP_SERVER` / `BREVO_SMTP_PORT` env entries are not read by this build.
 
 ## 5. Download and verify local Meta models
 
