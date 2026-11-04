@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "af0cf7f4ff056a8f56a44456fd8d3f95434cc152",
+  "sourceCommit": "247eb0736e8e14506c24b9e494c9d9aab2f2cfb7",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -4373,7 +4373,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "e853df560948cf236746813e4444ff3448127b76571d7431b325567fac6a7434"
+      "sha256": "56afbc3e6344ede332b7a7d854228841b9a0ed084687fa923f9e2cc7453c57d7"
     },
     {
       "status": "A",
