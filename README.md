@@ -1,5 +1,20 @@
 # Brisky — Meta hackathon event component
 
+## Hackathon team: solo entry
+
+**Sole hackathon participant: [El-dorado01](https://github.com/El-dorado01), the
+project owner.** The owner confirms that this hackathon entry had no additional
+human participant or collaborator. The contributor credited in the original
+Brisky engine repository worked on that pre-existing project and **did not
+participate in or assist with this hackathon**.
+
+The original repository's GitHub contributors are historical project contributors,
+not this entry's team roster. Their existing attribution is preserved. Only the
+identified event-developed contributions are presented for judging; the original
+engine is an explicitly declared dependency. See [provenance](docs/PROVENANCE.md).
+This is an owner-confirmed team statement, not a claim that all engine or
+third-party code was authored by the entrant.
+
 **TTS exception / recorded demo:** The owner supplied a November 4 organizer
 clarification allowing any text-to-speech service when disclosed here. The actual
 Brisky recording profile uses **Gemini Flash TTS (Kore)** only to speak response

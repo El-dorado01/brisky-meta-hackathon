@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "a67c2d33c5189f422de03f9e0044622ea21ef647",
+  "sourceCommit": "41167d054aa266628e73cabf18047abb7ea65412",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -362,14 +362,14 @@
       "sourcePath": "apps/api/src/modules/conversation/live-voice.service.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/live-voice.service.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "5f93a89f780e6b65cf1a5795b43747cc53f09afa1a562493eac71af8c7624da1"
+      "sha256": "c32454f09fad8b29511ebca4949ba09598ec9e11dfc4ae366e37a37247792b4d"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/live-voice.spec.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/live-voice.spec.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "23701ea55ce256665d6a2d013eb0d446069e9b3f460708e43982a455615fc234"
+      "sha256": "c345bff8390b44dbec9e8c31214dcdf85f3fc3b0b9a8e15057fb30fa1d49f25c"
     },
     {
       "status": "A",
@@ -4359,14 +4359,14 @@
       "sourcePath": "docs/hackathon-agent-brief.md",
       "destination": "development-archive/docs/hackathon-agent-brief.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "53be0b0c976f402019625e5f9d7e60d284d2d258139ba1f0cac120f0252095c4"
+      "sha256": "8da7788a7e873a48eb1c031db2443aecbdc620ccbd485d3534339f4b8724f631"
     },
     {
       "status": "A",
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "7859bb13469d845a9ccfaa7fa174d72e4f21861b5eb3de68e95c09af4138962a"
+      "sha256": "778d63f3d4e5572ae2f331ae77ea1b33851e93e62c8d42f01f279df505c1d9c9"
     },
     {
       "status": "A",

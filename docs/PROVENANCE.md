@@ -1,5 +1,14 @@
 # Event contribution and provenance boundary
 
+## Solo participation
+
+The project owner, [El-dorado01](https://github.com/El-dorado01), confirms they
+were the sole human participant in this hackathon entry. The earlier contributor
+to the original engine did not participate in or help with event work. Historical
+GitHub contributor attribution is retained and is distinct from the hackathon
+team roster. This records the owner's attestation; it does not independently
+verify registration or claim sole authorship of the original engine.
+
 The owner confirmed on November 4 that the new SaaS workspace, mascot and event
 features began **after October 26, 2026, 12:24 PM Eastern** (16:24 UTC / 17:24
 Africa/Lagos). This is an owner attestation, not independent authorship proof.

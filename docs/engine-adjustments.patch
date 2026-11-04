@@ -261,24 +261,36 @@ index 6795a4b..28c939d 100644
 -CMD ["node", "apps/api/dist/worker.js"]
 +CMD ["node", "apps/workers/src/main.cjs"]
 diff --git a/README.md b/README.md
-index 81613f8..2837d12 100644
+index 81613f8..3f37da6 100644
 --- a/README.md
 +++ b/README.md
 @@ -1 +1 @@
 -# Brisky — AI Media Intelligence Platform
 +# Brisky
-@@ -3 +3,3 @@
+@@ -3 +3 @@
 -> **Connect your media once. We continuously understand it, so you can find any moment by simply describing what you remember.**
++## Hackathon team and pre-existing contributions
+@@ -5 +5,4 @@
+-An intelligence layer that continuously analyzes and indexes video archives, enabling sub-second natural language retrieval to the exact timestamp—combining **Whisper speech transcription**, **FFmpeg scene/keyframe analysis**, and **Gemini multimodal video reasoning** into a unified PostgreSQL + pgvector knowledge store.
++**Sole hackathon participant: [El-dorado01](https://github.com/El-dorado01), the
++project owner.** The owner confirms that no other human contributor participated
++in or assisted with this hackathon entry. An earlier contributor worked on the
++original Brisky engine before the event and did **not** help with the hackathon.
+@@ -7 +10,7 @@ An intelligence layer that continuously analyzes and indexes video archives, ena
+----
++This repository contains pre-existing engine work as well as event-developed
++extensions. Its GitHub contributor list reflects the project's full history;
++it is not the hackathon team roster. Existing contributor attribution is retained.
++The separate [hackathon submission](https://github.com/El-dorado01/brisky-meta-hackathon)
++documents the event work and declares this engine as a pre-existing dependency.
++This team statement records the owner's confirmation; it does not claim sole
++authorship of pre-existing code or third-party dependencies.
+@@ -9 +18,3 @@ An intelligence layer that continuously analyzes and indexes video archives, ena
+-## 🏛️ Core Architectural Principle
 +Brisky helps people find, understand and connect moments in their media collections.
 +Search results retain source timestamps; Spaces hold conversations, saved moments and
 +shortlists. Processing uses cloud connectors, FFmpeg, speech and configurable AI adapters.
-@@ -5,18 +7 @@
--An intelligence layer that continuously analyzes and indexes video archives, enabling sub-second natural language retrieval to the exact timestamp—combining **Whisper speech transcription**, **FFmpeg scene/keyframe analysis**, and **Gemini multimodal video reasoning** into a unified PostgreSQL + pgvector knowledge store.
--
-----
--
--## 🏛️ Core Architectural Principle
--
+@@ -11,12 +22 @@ An intelligence layer that continuously analyzes and indexes video archives, ena
 -> **"We keep the intelligence, not the tape."**
 -
 -Unlike traditional media tools that duplicate and hoard massive camera master files:
@@ -292,7 +304,7 @@ index 81613f8..2837d12 100644
 -
 -This is a **pnpm monorepo**. Please use `pnpm`, not `npm` or `yarn`.
 +## Three applications
-@@ -25,17 +10,4 @@ This is a **pnpm monorepo**. Please use `pnpm`, not `npm` or `yarn`.
+@@ -25,17 +25,4 @@ This is a **pnpm monorepo**. Please use `pnpm`, not `npm` or `yarn`.
 -brisky/
 -├── apps/
 -│   ├── api/                 # NestJS 11 + Fastify API & BullMQ worker (/api/v1)
@@ -314,16 +326,22 @@ index 81613f8..2837d12 100644
 +  api/       NestJS/Fastify engine API and shared processing modules
 +  workers/   Standalone BullMQ workers; no HTTP listener
 +  web/       Next.js SaaS UI and server-side SaaS API routes
-@@ -44,5 +16,3 @@ brisky/
+@@ -44 +31,3 @@ brisky/
 ----
--
--## ⚡ Prerequisites
--
--Ensure your system has the following installed before starting:
 +The web app handles email-code sessions and workspace routes. It calls the engine for
 +media/connector operations. The engine submits jobs through Redis; workers process them
 +and persist results in PostgreSQL. Workers reuse engine modules from `apps/api`.
-@@ -50,10 +20,5 @@ Ensure your system has the following installed before starting:
+@@ -46 +35,5 @@ brisky/
+-## ⚡ Prerequisites
++| App | Local address | Instructions |
++| --- | --- | --- |
++| API | `http://localhost:3001/api/v1` | [API README](apps/api/README.md) |
++| Workers | No HTTP port | [Workers README](apps/workers/README.md) |
++| Web | `http://localhost:3000` | [Web README](apps/web/README.md) |
+@@ -48 +41 @@ brisky/
+-Ensure your system has the following installed before starting:
++## Setup
+@@ -50,10 +43,3 @@ Ensure your system has the following installed before starting:
 -1. **Node.js**: `v20.x` or higher (`node -v`)
 -2. **pnpm**: `v9.x` or `v10.x` (`corepack enable && pnpm -v`)
 -3. **Docker & Docker Compose**: Required for PostgreSQL + pgvector & Redis (`docker compose version`)
@@ -334,66 +352,60 @@ index 81613f8..2837d12 100644
 -   - *Verify by running:* `ffmpeg -version` and `ffprobe -version`
 -5. **Google Gemini API Key**: Required for multimodal frame/video analysis and text embeddings.
 -   - Obtain a key from [Google AI Studio](https://aistudio.google.com/).
-+| App | Local address | Instructions |
-+| --- | --- | --- |
-+| API | `http://localhost:3001/api/v1` | [API README](apps/api/README.md) |
-+| Workers | No HTTP port | [Workers README](apps/workers/README.md) |
-+| Web | `http://localhost:3000` | [Web README](apps/web/README.md) |
-@@ -61 +26 @@ Ensure your system has the following installed before starting:
-----
-+## Setup
-@@ -63 +28,3 @@ Ensure your system has the following installed before starting:
--## 🚀 Quickstart Guide
 +For the event, use the [strict Meta-only engine profile](docs/meta-only-runtime.md).
 +It preserves development providers but disables their execution and uses isolated
 +Meta LASER2 embeddings. The standalone event demo is not the full Brisky app.
-@@ -65 +32,3 @@ Ensure your system has the following installed before starting:
--### 1. Clone & Install Dependencies
+@@ -61 +47,3 @@ Ensure your system has the following installed before starting:
+----
 +Use Node.js 20 or newer, Corepack/pnpm, and Docker for PostgreSQL/pgvector and Redis.
 +Media processing additionally needs FFmpeg/FFprobe. Local speech/embeddings need Python
 +and the dependencies under `services/whisper-transcriber`.
-@@ -67,3 +36 @@ Ensure your system has the following installed before starting:
+@@ -63 +51 @@ Ensure your system has the following installed before starting:
+-## 🚀 Quickstart Guide
++Streaming Meta voice uses a separate optional CPU runtime (Python 3.11–3.14):
+@@ -65,8 +53,3 @@ Ensure your system has the following installed before starting:
+-### 1. Clone & Install Dependencies
+-
 -```bash
 -git clone <repo-url>
 -cd brisky
-+Streaming Meta voice uses a separate optional CPU runtime (Python 3.11–3.14):
-@@ -71,2 +38,3 @@ cd brisky
+-
 -# Install all monorepo dependencies
 -pnpm install
 +```sh
 +pnpm setup:mms
 +pnpm setup:mms --check
-@@ -75 +43,5 @@ pnpm install
+@@ -75 +58,5 @@ pnpm install
 -### 2. Configure Environment Variables
 +It downloads about 145 MB of checksum-verified Meta MMS English weights plus CPU
 +dependencies; API startup never downloads models. Set root
 +`VOICE_CONVERSATION_MODE=meta-mms` for Meta streaming transcription/dialogue and
 +local speech. Gemini Live remains available through the explicit `live` mode.
 +See [judge setup, model licence and validation limits](docs/meta-mms-voice.md).
-@@ -77 +49 @@ pnpm install
+@@ -77 +64 @@ pnpm install
 -Copy the example environment template:
 +Optional local face matching has a separate, explicit setup command (Python 3.10+):
-@@ -79,2 +51,3 @@ Copy the example environment template:
+@@ -79,2 +66,3 @@ Copy the example environment template:
 -```bash
 -cp .env.example .env
 +```sh
 +pnpm setup:faces
 +pnpm setup:faces --check
-@@ -83 +56,5 @@ cp .env.example .env
+@@ -83 +71,5 @@ cp .env.example .env
 -Open `.env` in your editor and set your **Gemini API Key**:
 +Setup creates `.venv-face`, installs OpenCV dependencies and downloads about 39 MB
 +of checksum-verified face models with their licence notices. `--check` only verifies
 +readiness. API/worker startup never downloads these files automatically. The current
 +user-triggered face scan runs on the **API host**, so a worker-only machine does not
 +need this optional runtime yet. See [face matching](docs/local-face-matching.md).
-@@ -85,5 +62 @@ Open `.env` in your editor and set your **Gemini API Key**:
+@@ -85,5 +77 @@ Open `.env` in your editor and set your **Gemini API Key**:
 -```env
 -# AI Keys (Required for video indexing and vector search)
 -GEMINI_API_KEY=your_actual_gemini_api_key_here
 -GEMINI_MODEL=gemini-2.5-flash
 -GEMINI_EMBEDDING_MODEL=gemini-embedding-001
 +From the repository root:
-@@ -91,4 +64,4 @@ GEMINI_EMBEDDING_MODEL=gemini-embedding-001
+@@ -91,4 +79,4 @@ GEMINI_EMBEDDING_MODEL=gemini-embedding-001
 -# Database & Redis (defaults match docker-compose.yml)
 -DATABASE_URL=postgresql://postgres:postgrespassword@localhost:5432/brisky
 -REDIS_HOST=localhost
@@ -402,17 +414,17 @@ index 81613f8..2837d12 100644
 +corepack enable
 +pnpm install --frozen-lockfile
 +pnpm --dir apps/web install --frozen-lockfile
-@@ -97 +70,2 @@ REDIS_PORT=6379
+@@ -97 +85,2 @@ REDIS_PORT=6379
 -### 3. Start PostgreSQL + Redis (Docker)
 +API/workers use the root workspace and lockfile. Web retains its own workspace, lockfile
 +and pinned package-manager version, so install it separately.
-@@ -99,3 +73,2 @@ REDIS_PORT=6379
+@@ -99,3 +88,2 @@ REDIS_PORT=6379
 -```bash
 -pnpm infra:up
 -```
 +For a new checkout, copy `.env.example` to `.env` and `apps/web/.env.example` to
 +`apps/web/.env.local`. Keep existing configured files.
-@@ -103,3 +76,4 @@ pnpm infra:up
+@@ -103,3 +91,4 @@ pnpm infra:up
 -*This spins up:*
 -- **PostgreSQL 16 with pgvector** on `localhost:5432` (database: `brisky`).
 -- **Redis 7** on `localhost:6379` (BullMQ async queue).
@@ -420,28 +432,28 @@ index 81613f8..2837d12 100644
 +| --- | --- |
 +| Root `.env` | Engine/workers: database, Redis, AI providers/budget, storage and Drive OAuth |
 +| `apps/web/.env.local` | SaaS server: database, engine bridge, Brevo SMTP and session settings |
-@@ -107 +81,2 @@ pnpm infra:up
+@@ -107 +96,2 @@ pnpm infra:up
 -### 4. Run the Development Servers
 +Never commit secrets or expose them in `NEXT_PUBLIC_*` variables. See
 +[environment configuration](docs/environment-configuration.md) and [budget controls](docs/ai-budget-controls.md).
-@@ -109 +84 @@ pnpm infra:up
+@@ -109 +99 @@ pnpm infra:up
 -Brisky implements an **independent Media Factory architecture**: the API and Web applications run independently from heavy video/AI compute workers.
 +## Run locally
-@@ -111,3 +86 @@ Brisky implements an **independent Media Factory architecture**: the API and Web
+@@ -111,3 +101 @@ Brisky implements an **independent Media Factory architecture**: the API and Web
 -```bash
 -# Terminal 1: Web Dashboard & Backend API
 -pnpm dev
 +Turn Docker on when database/queue work is needed, then start infrastructure:
-@@ -115,2 +88,2 @@ pnpm dev
+@@ -115,2 +103,2 @@ pnpm dev
 -# Terminal 2: Standalone Indexing Worker (consumes the queue)
 -pnpm dev:worker
 +```sh
 +docker compose up -d postgres redis
-@@ -119,2 +92 @@ pnpm dev:worker
+@@ -119,2 +107 @@ pnpm dev:worker
 -- **Web Dashboard:** [http://localhost:5173](http://localhost:5173)
 -- **API Health Check:** [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/health)
 +Run each application in a separate terminal, from the repository root:
-@@ -122,5 +94,2 @@ pnpm dev:worker
+@@ -122,5 +109,2 @@ pnpm dev:worker
 -*(Optional) Running services individually:*
 -```bash
 -pnpm dev:api     # API server only
@@ -449,7 +461,7 @@ index 81613f8..2837d12 100644
 -pnpm dev:worker  # Worker process only
 +```sh
 +pnpm dev:api
-@@ -129,69 +98,3 @@ pnpm dev:worker  # Worker process only
+@@ -129,69 +113,3 @@ pnpm dev:worker  # Worker process only
 ----
 -
 -## 🔑 Authentication & Demo Credentials
@@ -522,29 +534,29 @@ index 81613f8..2837d12 100644
 +```sh
 +pnpm dev:web
 +```
-@@ -199,3 +102 @@ Navigate to the **Search** tab and try different query classes:
+@@ -199,3 +117 @@ Navigate to the **Search** tab and try different query classes:
 -### 1. `ffmpeg` or `ffprobe` not found
 -- Ensure FFmpeg is installed and accessible from your terminal (`ffmpeg -version`).
 -- If using non-standard binary paths, specify `FFMPEG_PATH` and `FFPROBE_PATH` in `.env`.
 +Start workers only when queued jobs should be processed; this can trigger paid AI calls:
-@@ -203,2 +104,3 @@ Navigate to the **Search** tab and try different query classes:
+@@ -203,2 +119,3 @@ Navigate to the **Search** tab and try different query classes:
 -### 2. Docker Port Conflicts (5432 or 6379)
 -- If you already have a local PostgreSQL or Redis server running, stop them or update `DB_PORT` and `REDIS_PORT` in `.env` and `docker-compose.yml`.
 +```sh
 +pnpm dev:worker
 +```
-@@ -206,3 +108,3 @@ Navigate to the **Search** tab and try different query classes:
+@@ -206,3 +123,3 @@ Navigate to the **Search** tab and try different query classes:
 -### 3. Gemini API 503 / 429 Errors
 -- If you encounter rate limits on Gemini, verify that `GEMINI_MODEL=gemini-2.5-flash` is set in `.env` (it has higher rate limits and lower latency than experimental models).
 -- The pipeline includes built-in retry backoff and concurrency throttling (`GEMINI_MAX_CONCURRENCY=2`).
 +`pnpm dev` starts only the API. Web login needs PostgreSQL and configured email delivery;
 +engine operations need the API, and indexing needs Redis plus workers. Engine health:
 +`http://localhost:3001/api/v1/health`.
-@@ -210,2 +112 @@ Navigate to the **Search** tab and try different query classes:
+@@ -210,2 +127 @@ Navigate to the **Search** tab and try different query classes:
 -### 4. Stopping Background Infrastructure
 -To shut down the Docker database and queue containers:
 +## Build and checks
-@@ -213,2 +114,5 @@ To shut down the Docker database and queue containers:
+@@ -213,2 +129,5 @@ To shut down the Docker database and queue containers:
 -```bash
 -pnpm infra:down
 +```sh
@@ -552,12 +564,12 @@ index 81613f8..2837d12 100644
 +pnpm build:workers
 +pnpm build:web
 +pnpm --filter @brisky/api test
-@@ -217 +121,3 @@ pnpm infra:down
+@@ -217 +136,3 @@ pnpm infra:down
 -To also delete database volumes and start fresh:
 +Worker build checks its Node entry point; the API build compiles its shared engine modules.
 +Private media, caches and the durable AI journal live under ignored `storage/`. Generated
 +test fixtures should use automatically cleaned temporary directories.
-@@ -219,3 +125,7 @@ To also delete database volumes and start fresh:
+@@ -219,3 +140,7 @@ To also delete database volumes and start fresh:
 -```bash
 -docker compose down -v
 -```
@@ -568,17 +580,17 @@ index 81613f8..2837d12 100644
 +controlled budget/profile; other accounts remain paused. See [controlled sync](docs/controlled-sync.md).
 +Completed protocol tests do not establish recognition
 +accuracy or unattended library readiness. Priorities: accuracy, then cost, then speed.
-@@ -223 +133,4 @@ docker compose down -v
+@@ -223 +148,4 @@ docker compose down -v
 ----
 +- [TODO](TODO.md) and [ingestion/provider checklist](docs/media-ingestion-roadmap.md)
 +- [Developer API](docs/api-contract-and-pagination.md) and [OpenAPI](docs/openapi.json)
 +- [Drive validation](docs/drive-save-and-sync.md)
 +- [Hackathon brief](docs/hackathon-agent-brief.md) and [contributions](docs/hackathon-contributions.md)
-@@ -225 +138,2 @@ docker compose down -v
+@@ -225 +153,2 @@ docker compose down -v
 -## 📜 Monorepo NPM Scripts Reference
 +The Brisky engine predates the hackathon. The contribution record distinguishes existing
 +functionality, event-developed changes and planned or unverified work.
-@@ -227,9 +141,6 @@ docker compose down -v
+@@ -227,9 +156,6 @@ docker compose down -v
 -| Command | Description |
 -| :--- | :--- |
 -| `pnpm dev` | Starts API and Web dev servers in parallel |

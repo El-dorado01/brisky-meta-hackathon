@@ -1711,3 +1711,26 @@ end-session requests. Regression tests cover plain thanks, mixed requests, genui
 farewells, and erroneous model hang-up attempts. This fixes a concrete request
 bug, not all possible voice/provider failures. Source:
 https://dev.meta.ai/docs/tool-calling .
+
+### Standalone worker voice-hook startup correction
+
+While preparing the owner's local fresh-index rehearsal, the standalone worker
+failed because LiveVoiceService attempted HTTP WebSocket initialization in a
+Nest application context with no HTTP adapter. The voice bootstrap now returns
+for worker processes or contexts without an adapter; API voice initialization
+remains intact. 23 voice/worker regression checks passed; the worker flag test
+restores process.env to avoid contaminating later fixtures. This extends the
+pre-existing engine and is event-period reliability work. The owner's local
+32 MiB demo cap is an ignored env override only; published source-size defaults
+remain unchanged. No personal footage or inference calls are needed for this fix.
+
+### Owner-confirmed solo participation and cumulative budget update
+
+The owner confirmed sole human participation in this event; an earlier original
+engine contributor did not assist with the hackathon. Added prominent team and
+historical-attribution statements to both repository READMEs and event provenance.
+Existing authorship and contributor records are retained. The owner's local
+cumulative testing ceiling is increased from $30 to $50 without resetting the
+journal; local 32 MiB source bounds and public setup defaults are unchanged.
+This is an owner-attested team statement, not independent registration evidence
+or a promise of organizer eligibility.
