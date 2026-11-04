@@ -190,8 +190,8 @@
     {
       "path": "event-components/api/modules/conversation/meta-live-voice.ts",
       "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.ts",
-      "sourceCommit": "365d777ad4acd862f9e449832546f7f2c9be8eed",
-      "sha256": "63a2d2df19c2c0969d8fb9f70304af797a788c485b78dd48e4c8a6cece098a4f",
+      "sourceCommit": "a67c2d33c5189f422de03f9e0044622ea21ef647",
+      "sha256": "689cb8dd815a0ba063fffa5007665f20dbbb47aa08a14b47b3a2517efe65d889",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
@@ -2692,6 +2692,20 @@
       "attribution": "event-developed speech streaming validation; extends external engine",
       "sourceCommit": "365d777ad4acd862f9e449832546f7f2c9be8eed",
       "sha256": "91c2570e4363fc812fa1efe9cf7ee2d5331f294307ef177e5d3fe9fc070d9dff"
+    },
+    {
+      "path": "event-components/api/modules/conversation/meta-live-voice.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.spec.ts",
+      "attribution": "event voice acknowledgement and explicit call-ending regressions",
+      "sourceCommit": "a67c2d33c5189f422de03f9e0044622ea21ef647",
+      "sha256": "27a69d70a15d0be94c366b87f68e620b11fcd9590fa9115e578a05d320215d50"
+    },
+    {
+      "path": "event-components/api/modules/conversation/meta-voice-stream.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/meta-voice-stream.spec.ts",
+      "attribution": "event voice acknowledgement and explicit call-ending regressions",
+      "sourceCommit": "a67c2d33c5189f422de03f9e0044622ea21ef647",
+      "sha256": "dad6c4f7f411ad434e4a24144e9f2e7a0a170e2818b7fbc78174da52fbe64cc5"
     }
   ],
   "identicalPreEventBlobsExcluded": []

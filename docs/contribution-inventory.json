@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "365d777ad4acd862f9e449832546f7f2c9be8eed",
+  "sourceCommit": "a67c2d33c5189f422de03f9e0044622ea21ef647",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -374,23 +374,23 @@
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.spec.ts",
-      "destination": "development-archive/apps/api/src/modules/conversation/meta-live-voice.spec.ts",
-      "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "46bfc628fd7de78770b6bb493b8d4a6e7209bac46df06312c1e902b493bbdf3b"
+      "destination": "event-components/api/modules/conversation/meta-live-voice.spec.ts",
+      "disposition": "exported integration source",
+      "sha256": "27a69d70a15d0be94c366b87f68e620b11fcd9590fa9115e578a05d320215d50"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.ts",
       "destination": "event-components/api/modules/conversation/meta-live-voice.ts",
       "disposition": "exported integration source",
-      "sha256": "63a2d2df19c2c0969d8fb9f70304af797a788c485b78dd48e4c8a6cece098a4f"
+      "sha256": "689cb8dd815a0ba063fffa5007665f20dbbb47aa08a14b47b3a2517efe65d889"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/meta-voice-stream.spec.ts",
-      "destination": "development-archive/apps/api/src/modules/conversation/meta-voice-stream.spec.ts",
-      "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "4a6a4ab1c04edb0ec1eed4566f297fe309243f453b304fd3b715de2ed205847e"
+      "destination": "event-components/api/modules/conversation/meta-voice-stream.spec.ts",
+      "disposition": "exported integration source",
+      "sha256": "dad6c4f7f411ad434e4a24144e9f2e7a0a170e2818b7fbc78174da52fbe64cc5"
     },
     {
       "status": "A",
@@ -4366,7 +4366,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "40ed67580dffd1a357575d2cf7d1a35632adb1b2ee68cf36c134a45364ae4766"
+      "sha256": "7859bb13469d845a9ccfaa7fa174d72e4f21861b5eb3de68e95c09af4138962a"
     },
     {
       "status": "A",
