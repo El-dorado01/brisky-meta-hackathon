@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "c3495c0384775abaf0deabe0966d3ab915a53a66",
+  "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -955,7 +955,7 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/baseten-ai.provider.spec.ts",
       "destination": "development-archive/apps/api/src/modules/pipeline/providers/baseten-ai.provider.spec.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "39754f7767602b6d6963013e048caeace4a4d0f051091fc9b554a4faeb23f239"
+      "sha256": "41ac331c36e0ca788d4e9417fa0cb0c8ea6b64d82c3f82213b8696b2eefebbb7"
     },
     {
       "status": "A",
@@ -983,14 +983,14 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "63d9707fe5a10c800a73ff1eb6552d7570785996b9eeabf69f65664ef64f98fe"
+      "sha256": "7483299f45d6ac06747aea5a21cd4cf4cbcbb990b3d5dc87c7b001b3f47da1cf"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-ai.provider.ts",
       "disposition": "exported integration source",
-      "sha256": "5200dcc2acd88ee3be3ee09f21c9906ef4ed8b8d31ae15a26bf75e86c698591b"
+      "sha256": "23710ad58c3cb733a1034230eaf5e4598738ac5736548f71a8f8bf39a3a5b244"
     },
     {
       "status": "A",
@@ -1100,6 +1100,20 @@
       "destination": "event-components/api/modules/pipeline/verification-response.spec.ts",
       "disposition": "exported integration source",
       "sha256": "c8c54b88e8c1c683d7e98ebb184b49f5a524bcf6ca87aca61f6c14013ba3c873"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/api/src/modules/pipeline/video-chunks.spec.ts",
+      "destination": "event-components/api/modules/pipeline/video-chunks.spec.ts",
+      "disposition": "exported integration source",
+      "sha256": "72eba17743dbfed535c28cf4de65c9601a93ffbce3f8fe0c7cdc95c095e23bfa"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/api/src/modules/pipeline/video-chunks.ts",
+      "destination": "event-components/api/modules/pipeline/video-chunks.ts",
+      "disposition": "exported integration source",
+      "sha256": "8d93fb29c429e4b149d640fc52d117d27ab3bfd6c94b89dbd1bbad7eb1bf19b6"
     },
     {
       "status": "A",
@@ -1220,7 +1234,7 @@
       "sourcePath": "apps/api/src/modules/queue/streamed-indexing.spec.ts",
       "destination": "event-components/api/modules/queue/streamed-indexing.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "443a18c6f74e29d89a99013e486b08672576c12ebefc81966d55644902441b30"
+      "sha256": "6f7e44ad2985ef696ccef6c95a6d0b21a0c5fd1b17f215a82f7f4bdfe9f7137d"
     },
     {
       "status": "M",
@@ -4237,6 +4251,13 @@
     },
     {
       "status": "A",
+      "sourcePath": "docs/bounded-video-understanding.md",
+      "destination": "development-archive/docs/bounded-video-understanding.md",
+      "disposition": "new event-period review archive; not imported by judge runtime",
+      "sha256": "22846851d9160ce20edbb6f4fc90a65eead85551525aea84bd0bbc8408711379"
+    },
+    {
+      "status": "A",
       "sourcePath": "docs/clip-operations-api.md",
       "destination": "development-archive/docs/clip-operations-api.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
@@ -4338,7 +4359,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "5345c75ba161878d83f1b5069f7c5043d98f72aabb78f00c0e7a0ebc54681e15"
+      "sha256": "b541dc9ae5f535208b7418168e18545491c57e592bb7090b03cf4d64afa12a49"
     },
     {
       "status": "A",

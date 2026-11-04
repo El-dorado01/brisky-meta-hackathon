@@ -21,6 +21,7 @@ test('preflight rejects missing credentials, non-Meta paths, missing prices and 
     e => { e.META_API_KEY = ''; },
     e => { e.AI_PROVIDER = 'google'; },
     e => { e.FACE_RECOGNITION_ENABLED = 'true'; },
+    e => { e.AI_VIDEO_CHUNK_SECONDS = '301'; },
     e => { e.AI_MODEL_PRICING_JSON = '{}'; },
     e => { e.SAAS_DRIVE_SYNC_ACCOUNT_IDS = '11111111-1111-4111-8111-111111111111'; },
   ]) {

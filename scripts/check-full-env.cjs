@@ -41,6 +41,8 @@ function inspect(engine, web) {
       models.push(model);
     }
   if (!(Number(engine.AI_BUDGET_USD) > 0)) errors.push('AI_BUDGET_USD: authorize a positive local allowance');
+  const videoSeconds=Number(engine.AI_VIDEO_CHUNK_SECONDS || 90);
+  if(!Number.isSafeInteger(videoSeconds)||videoSeconds<1||videoSeconds>300)errors.push('AI_VIDEO_CHUNK_SECONDS: use an integer from 1 to 300');
   if (!engine.AI_USAGE_LEDGER_PATH) errors.push('AI_USAGE_LEDGER_PATH: set a durable shared journal path');
   try {
     const pricing = JSON.parse(engine.AI_MODEL_PRICING_JSON);

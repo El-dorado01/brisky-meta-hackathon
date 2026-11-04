@@ -589,15 +589,15 @@
     {
       "path": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
-      "sourceCommit": "c3495c0384775abaf0deabe0966d3ab915a53a66",
-      "sha256": "63d9707fe5a10c800a73ff1eb6552d7570785996b9eeabf69f65664ef64f98fe",
+      "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
+      "sha256": "7483299f45d6ac06747aea5a21cd4cf4cbcbb990b3d5dc87c7b001b3f47da1cf",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
       "path": "event-components/api/modules/pipeline/providers/meta-ai.provider.ts",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.ts",
-      "sourceCommit": "c3495c0384775abaf0deabe0966d3ab915a53a66",
-      "sha256": "5200dcc2acd88ee3be3ee09f21c9906ef4ed8b8d31ae15a26bf75e86c698591b",
+      "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
+      "sha256": "23710ad58c3cb733a1034230eaf5e4598738ac5736548f71a8f8bf39a3a5b244",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
@@ -736,8 +736,8 @@
     {
       "path": "event-components/api/modules/queue/streamed-indexing.spec.ts",
       "sourcePath": "apps/api/src/modules/queue/streamed-indexing.spec.ts",
-      "sourceCommit": "41bb7c6f8a5a98299e55d6f3eebe56583ccdff4a",
-      "sha256": "443a18c6f74e29d89a99013e486b08672576c12ebefc81966d55644902441b30",
+      "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
+      "sha256": "6f7e44ad2985ef696ccef6c95a6d0b21a0c5fd1b17f215a82f7f4bdfe9f7137d",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
@@ -2664,6 +2664,20 @@
       "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
       "sha256": "656cad1d59bfe436361d553a1589265a65c47b62fa90cb29086fa075b984dce4",
       "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/video-chunks.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/video-chunks.ts",
+      "attribution": "event-developed bounded video planning and offline validation; extends external pre-existing engine",
+      "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
+      "sha256": "8d93fb29c429e4b149d640fc52d117d27ab3bfd6c94b89dbd1bbad7eb1bf19b6"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/video-chunks.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/video-chunks.spec.ts",
+      "attribution": "event-developed bounded video planning and offline validation; extends external pre-existing engine",
+      "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
+      "sha256": "72eba17743dbfed535c28cf4de65c9601a93ffbce3f8fe0c7cdc95c095e23bfa"
     }
   ],
   "identicalPreEventBlobsExcluded": []
