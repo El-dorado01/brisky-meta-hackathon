@@ -589,15 +589,15 @@
     {
       "path": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "121a3d3ad4b4e6981acf3ddf7fdee0a6c5fd188916e3fe4c9539c40a53cf9067",
+      "sourceCommit": "c3495c0384775abaf0deabe0966d3ab915a53a66",
+      "sha256": "63d9707fe5a10c800a73ff1eb6552d7570785996b9eeabf69f65664ef64f98fe",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
       "path": "event-components/api/modules/pipeline/providers/meta-ai.provider.ts",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "740fca4ea6447a714dfe248caa1713af598324ea4641e1b128ef7a7e0b2dbbe1",
+      "sourceCommit": "c3495c0384775abaf0deabe0966d3ab915a53a66",
+      "sha256": "5200dcc2acd88ee3be3ee09f21c9906ef4ed8b8d31ae15a26bf75e86c698591b",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
@@ -610,8 +610,8 @@
     {
       "path": "event-components/api/modules/pipeline/providers/meta-transport.ts",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-transport.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "3adf256a8986e6babb2cbbccb55849c5de0cdc4e4cf346fb8a05050607c88af7",
+      "sourceCommit": "c3495c0384775abaf0deabe0966d3ab915a53a66",
+      "sha256": "e90978514acf68fa641c1bffabd22480a1b092561291b1838649e7268b779b3f",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {

@@ -386,6 +386,16 @@ bodies have separate, smaller limits; this does not mean a 16 GiB video can be
 sent in one inference request. Large/long-file end-to-end processing is not
 established by short-video checks. Budget and account-scope controls still apply.
 
+The inline Meta adapter now allows **50,000,000 raw bytes per file**, matching
+the [documented inline file limit](https://dev.meta.ai/docs/file-handling).
+`META_MAX_REQUEST_BYTES=70000000` is a local serialized-body allowance for
+base64 expansion plus JSON, not a claim that Meta publishes a 70 MB file limit.
+Both settings are present in the judge template. Larger files need splitting
+or Meta's separate Files API route; uploads through that route are not currently
+implemented in this adapter. Raising local env values cannot override provider
+limits. Baseten's retained adapter now defaults to its documented 100 MiB media
+request-body ceiling, but it is not selected by this judge configuration.
+
 ## 8. Try the workflow
 
 1. Search for a distinctive visible event or spoken phrase in your video.

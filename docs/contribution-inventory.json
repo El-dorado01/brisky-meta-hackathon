@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "41bb7c6f8a5a98299e55d6f3eebe56583ccdff4a",
+  "sourceCommit": "c3495c0384775abaf0deabe0966d3ab915a53a66",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -983,14 +983,14 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "121a3d3ad4b4e6981acf3ddf7fdee0a6c5fd188916e3fe4c9539c40a53cf9067"
+      "sha256": "63d9707fe5a10c800a73ff1eb6552d7570785996b9eeabf69f65664ef64f98fe"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-ai.provider.ts",
       "disposition": "exported integration source",
-      "sha256": "740fca4ea6447a714dfe248caa1713af598324ea4641e1b128ef7a7e0b2dbbe1"
+      "sha256": "5200dcc2acd88ee3be3ee09f21c9906ef4ed8b8d31ae15a26bf75e86c698591b"
     },
     {
       "status": "A",
@@ -1004,7 +1004,7 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-transport.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-transport.ts",
       "disposition": "exported integration source",
-      "sha256": "3adf256a8986e6babb2cbbccb55849c5de0cdc4e4cf346fb8a05050607c88af7"
+      "sha256": "e90978514acf68fa641c1bffabd22480a1b092561291b1838649e7268b779b3f"
     },
     {
       "status": "M",
@@ -4338,7 +4338,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "aea67b3402b05cf2c2bdac8b19b40869fe3e2596a63b29b586c9ef9bd2c75ce7"
+      "sha256": "5345c75ba161878d83f1b5069f7c5043d98f72aabb78f00c0e7a0ebc54681e15"
     },
     {
       "status": "A",
@@ -4686,7 +4686,7 @@
       "sourcePath": "docs/meta-adapter.md",
       "destination": "development-archive/docs/meta-adapter.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "d0c487a1be2049ff674b13c13382be11c31d672c6f6840145d187e7508de66ec"
+      "sha256": "33e863eccf8b8225c08294d88dd8981391b5a800914624c6909afd61f013d9cd"
     },
     {
       "status": "A",
