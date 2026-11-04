@@ -1,5 +1,16 @@
 # Brisky — Meta hackathon event component
 
+**TTS exception / recorded demo:** The owner supplied a November 4 organizer
+clarification allowing any text-to-speech service when disclosed here. The actual
+Brisky recording profile uses **Gemini Flash TTS (Kore)** only to speak response
+text; its quota fallback is Gemini Flash-Lite TTS. Meta still performs microphone
+transcription (Muse Voice Transcribe), dialogue (Wonder), search/media reasoning
+(Spark) and local embeddings (LASER2). This is **not Gemini Live**. The all-Meta
+MMS option and standalone runner remain available. To reproduce the recording
+profile, follow [the TTS-only setup](docs/TTS-EXCEPTION.md); a Google speech key
+and speech pricing entries are needed. These models do not receive microphone
+audio or perform search in that profile.
+
 Brisky helps people find moments in their media and turn cited observations into
 useful conversations, shortlists, briefs and storylines. This fresh repository
 contains the **event-developed workspace and integration components**, plus a

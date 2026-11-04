@@ -32,3 +32,13 @@ test('preflight rejects missing credentials, non-Meta paths, missing prices and 
     assert.ok(!JSON.stringify(result).includes('generated-smtp'));
   }
 });
+test('TTS exception requires its own key, consent flag and speech pricing',()=>{
+  const {engine,web}=fixture();engine.VOICE_TTS_PROVIDER='gemini';
+  assert.ok(inspect(engine,web).errors.length);
+  Object.assign(engine,{ALLOW_NON_META_TTS:'true',GEMINI_VOICE_API_KEY:'generated-google-tts',VOICE_TTS_MODEL:'gemini-3.8-flash-tts'});
+  assert.ok(inspect(engine,web).errors.length);
+  const pricing=JSON.parse(engine.AI_MODEL_PRICING_JSON);pricing['google-speech/gemini-3.8-flash-tts']={reservationUsd:.25,inputUsdPerMillion:.5,outputUsdPerMillion:9};
+  engine.AI_MODEL_PRICING_JSON=JSON.stringify(pricing);
+  assert.deepEqual(inspect(engine,web).errors,[]);
+  engine.AI_PROVIDER='google';assert.ok(inspect(engine,web).errors.length);
+});

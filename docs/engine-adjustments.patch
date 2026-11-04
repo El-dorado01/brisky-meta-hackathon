@@ -1,5 +1,5 @@
 diff --git a/.env.example b/.env.example
-index 0098d91..447cc10 100644
+index 0098d91..b18aff6 100644
 --- a/.env.example
 +++ b/.env.example
 @@ -2 +2 @@
@@ -97,7 +97,7 @@ index 0098d91..447cc10 100644
 +FACTORY_CONTINUATION_SLOTS=0
 @@ -90 +132,0 @@ ENABLE_DEV_UPLOAD=false
 -VITE_ENABLE_DEV_UPLOAD=false
-@@ -91,0 +134,105 @@ VITE_ENABLE_DEV_UPLOAD=false
+@@ -91,0 +134,109 @@ VITE_ENABLE_DEV_UPLOAD=false
 +AI_PROVIDER=google
 +AI_MAX_CONCURRENCY=2
 +
@@ -203,6 +203,10 @@ index 0098d91..447cc10 100644
 +
 +# Meta/Baseten whole-video analysis windows; 1-300 seconds. Long/oversized sources are prepared locally.
 +AI_VIDEO_CHUNK_SECONDS=90
++
++# Optional organizer-permitted speech synthesis only; see event docs/TTS-EXCEPTION.md.
++ALLOW_NON_META_TTS=false
++VOICE_TTS_PROVIDER=mms
 diff --git a/.gitignore b/.gitignore
 index 700ec40..630ec5c 100644
 --- a/.gitignore

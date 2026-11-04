@@ -190,8 +190,8 @@
     {
       "path": "event-components/api/modules/conversation/meta-live-voice.ts",
       "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "9870d1c4331b105b7ffac3788ef890c6164a79a0be296c6f5b1aa0672e5c1cd1",
+      "sourceCommit": "46a2ac3a12c5f9ccbf07a6b84d8bc3f3e9d2fd8d",
+      "sha256": "b7e0c08ad8b923b37af261b69548596f4d6d33736fc36589fe53041b619aef66",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
@@ -2598,15 +2598,15 @@
     {
       "path": "event-components/api/common/meta-only-profile.ts",
       "sourcePath": "apps/api/src/common/meta-only-profile.ts",
-      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
-      "sha256": "31734987e59f0f07459355f42ca76ffdbb570aa5d13242b9197517eb9912d9ff",
+      "sourceCommit": "46a2ac3a12c5f9ccbf07a6b84d8bc3f3e9d2fd8d",
+      "sha256": "abccf13a89a5fdd6cc68d0e1233d79f2ae5229a4deb7aa68be9fcac59f084679",
       "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
     },
     {
       "path": "event-components/api/common/meta-only-profile.spec.ts",
       "sourcePath": "apps/api/src/common/meta-only-profile.spec.ts",
-      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
-      "sha256": "4c660ee0cfb2786003a7ea157899af9f233e9da82d7703cf336d9f8c136f6d56",
+      "sourceCommit": "46a2ac3a12c5f9ccbf07a6b84d8bc3f3e9d2fd8d",
+      "sha256": "b66800b5e3234aceb4dbd0c80828fa7c386448f2195dd9f5dee9d1339e7799c0",
       "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
     },
     {

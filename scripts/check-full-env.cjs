@@ -9,6 +9,13 @@ function inspect(engine, web) {
   });
   required(engine, ['META_API_KEY', 'JWT_SECRET', 'CONNECTOR_ENCRYPTION_KEY', 'DATABASE_URL', 'GOOGLE_CLIENT_ID', 'GOOGLE_CLIENT_SECRET']);
   required(web, ['SAAS_DATABASE_URL', 'SAAS_AUTH_SECRET', 'BREVO_SMTP_LOGIN', 'BREVO_SMTP_KEY', 'BREVO_SENDER_EMAIL']);
+  const externalTts=engine.VOICE_TTS_PROVIDER==='gemini';
+  if(externalTts){
+    if(engine.ALLOW_NON_META_TTS!=='true')errors.push('Gemini TTS requires ALLOW_NON_META_TTS=true');
+    required(engine,['GEMINI_VOICE_API_KEY']);
+    warnings.push('TTS exception enabled: Gemini synthesizes speech; other model operations must remain Meta');
+    for(const key of ['VOICE_TTS_MODEL','VOICE_TTS_FALLBACK_MODEL'])if(engine[key]&&!['gemini-3.8-flash-tts','gemini-3.8-flash-lite-tts'].includes(engine[key]))errors.push(`${key}: unsupported TTS exception model`);
+  }
   const exact = {
     META_ONLY_RUNTIME: 'true', AI_PROVIDER: 'meta', EMBEDDING_PROVIDER: 'meta-local', TRANSCRIPTION_PROVIDER: 'ai',
     VOICE_CONVERSATION_MODE: 'meta-mms', VOICE_ENABLED: 'true', SPACE_REPLIES_ENABLED: 'true',
@@ -46,7 +53,8 @@ function inspect(engine, web) {
   if (!engine.AI_USAGE_LEDGER_PATH) errors.push('AI_USAGE_LEDGER_PATH: set a durable shared journal path');
   try {
     const pricing = JSON.parse(engine.AI_MODEL_PRICING_JSON);
-    for (const name of [...new Set(models.map(m => `meta/${m}`)), 'meta-asr/muse-voice-transcribe-1.0']) {
+    const speechPrices=externalTts?[engine.VOICE_TTS_MODEL||'gemini-3.8-flash-tts',engine.VOICE_TTS_FALLBACK_MODEL].filter(Boolean).map(m=>'google-speech/'+m):[];
+    for (const name of [...new Set(models.map(m => `meta/${m}`)), 'meta-asr/muse-voice-transcribe-1.0',...speechPrices]) {
       const row = pricing[name];
       if (!row || !(row.reservationUsd > 0) || !Number.isFinite(row.inputUsdPerMillion) || row.inputUsdPerMillion < 0 || !Number.isFinite(row.outputUsdPerMillion) || row.outputUsdPerMillion < 0)
         errors.push('AI_MODEL_PRICING_JSON: missing or invalid entry for a configured model');

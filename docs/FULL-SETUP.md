@@ -6,6 +6,10 @@ The event repository contains new components and reviewable changes; its bootstr
 fetches the declared **pre-existing engine** at a fixed public commit. That engine
 is required for real Drive indexing and playback and is not claimed as event work.
 
+The default instructions below use local Meta MMS for speech. The recording can
+instead use the explicitly declared [Gemini TTS-only exception](TTS-EXCEPTION.md),
+which restores the six speech choices while retaining Meta recognition/reasoning.
+
 If you only want to inspect synthetic observations without these dependencies,
 follow the [standalone route](../README.md#run-without-the-original-engine).
 That route has a different UI and no real video playback.

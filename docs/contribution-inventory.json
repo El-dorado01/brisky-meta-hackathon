@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
+  "sourceCommit": "46a2ac3a12c5f9ccbf07a6b84d8bc3f3e9d2fd8d",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -116,14 +116,14 @@
       "sourcePath": "apps/api/src/common/meta-only-profile.spec.ts",
       "destination": "event-components/api/common/meta-only-profile.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "4c660ee0cfb2786003a7ea157899af9f233e9da82d7703cf336d9f8c136f6d56"
+      "sha256": "b66800b5e3234aceb4dbd0c80828fa7c386448f2195dd9f5dee9d1339e7799c0"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/common/meta-only-profile.ts",
       "destination": "event-components/api/common/meta-only-profile.ts",
       "disposition": "exported integration source",
-      "sha256": "31734987e59f0f07459355f42ca76ffdbb570aa5d13242b9197517eb9912d9ff"
+      "sha256": "abccf13a89a5fdd6cc68d0e1233d79f2ae5229a4deb7aa68be9fcac59f084679"
     },
     {
       "status": "A",
@@ -362,14 +362,14 @@
       "sourcePath": "apps/api/src/modules/conversation/live-voice.service.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/live-voice.service.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "dd590ccc7caac82238c8238adc0457f70e144fd61d4496b36b9df1efb330332c"
+      "sha256": "56a157ebbbed086d19a314f18e82455c8b757e7a7550c5568d5874fd9aefcd6a"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/live-voice.spec.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/live-voice.spec.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "411a9dd145b5f556ef8a6d9197d82ec853888d1e61141957affce13486c9adb8"
+      "sha256": "23701ea55ce256665d6a2d013eb0d446069e9b3f460708e43982a455615fc234"
     },
     {
       "status": "A",
@@ -383,7 +383,7 @@
       "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.ts",
       "destination": "event-components/api/modules/conversation/meta-live-voice.ts",
       "disposition": "exported integration source",
-      "sha256": "9870d1c4331b105b7ffac3788ef890c6164a79a0be296c6f5b1aa0672e5c1cd1"
+      "sha256": "b7e0c08ad8b923b37af261b69548596f4d6d33736fc36589fe53041b619aef66"
     },
     {
       "status": "A",
@@ -467,21 +467,21 @@
       "sourcePath": "apps/api/src/modules/conversation/voice.controller.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/voice.controller.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "18740fb57bcfef31d8cb11cd23df40075f48d9e2e39cb64a6ba88bd74cebc6ce"
+      "sha256": "84ee78dbda3a7ae570908278f8ef14503bdcf119790551e0c8996e7c44d78890"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/voice.service.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/voice.service.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "15aac5b6135effb96e3546975fd4cb3750940a065314592ec8055b14db03af91"
+      "sha256": "51c1ef9967efcbca54569185047364201049e76a9d85acee57710e42e08a2594"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/voice.spec.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/voice.spec.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "ca768a780ae500320ca21e830015cf7e239d5fa73ebd173aa385147dd502dc6e"
+      "sha256": "03ef970b8b383a683e085ad0f165462ca4317acdabec5206573312de68cb8093"
     },
     {
       "status": "M",
@@ -4282,7 +4282,7 @@
       "sourcePath": "docs/demo-recording-script.md",
       "destination": "development-archive/docs/demo-recording-script.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "45ca6b4104e026992387b017eaf56e37633f0389ab1813e629b36878a834c1b8"
+      "sha256": "ad98805a6eeb0a937071f8db6d92f2384e5777e1f8b68341511cd13b694422fb"
     },
     {
       "status": "A",
@@ -4352,14 +4352,14 @@
       "sourcePath": "docs/hackathon-agent-brief.md",
       "destination": "development-archive/docs/hackathon-agent-brief.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "e7533391099518ca0285108c1d7297805f79cf3dd5809d7564611ee6b00e4df4"
+      "sha256": "53be0b0c976f402019625e5f9d7e60d284d2d258139ba1f0cac120f0252095c4"
     },
     {
       "status": "A",
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "b541dc9ae5f535208b7418168e18545491c57e592bb7090b03cf4d64afa12a49"
+      "sha256": "e368f3b58916cfd9076418edb22443aec65657080a8f639040c0695b69d1ced5"
     },
     {
       "status": "A",

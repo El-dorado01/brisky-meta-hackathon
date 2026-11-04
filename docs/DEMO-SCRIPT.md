@@ -8,7 +8,7 @@ pace; the text below is intentionally conversational.
 ## Before recording — do not read aloud
 
 - Use the actual Brisky workspace, not the standalone synthetic runner. Check
-  API/web health, Docker, Meta access, MMS readiness and your remaining budget.
+  API/web health, Docker, Meta access, selected TTS readiness and your remaining budget.
 - For indexing, use a folder containing a genuinely new short recording you are
   allowed to show. An already indexed duplicate may reuse existing knowledge and
   will not demonstrate the entire pipeline. Choose a short clip to keep the demo
@@ -20,8 +20,8 @@ pace; the text below is intentionally conversational.
 - Use a clean demo Space. Close unrelated tabs; hide account emails and private
   filenames where needed. Never show env files, OAuth secrets, API keys or inbox
   contents. You can cut away while receiving the login code.
-- Test the microphone with headphones. Use the Meta/MMS profile throughout;
-  do not substitute a recording of the former Gemini voice.
+- Test the microphone with headphones. Use the documented Meta dialogue + Gemini TTS exception profile for this take;
+  do not substitute Gemini Live or hide which provider produces the speech.
 - Rehearse once. If indexing takes longer than the video allows, show the real
   start and finish with an honest “Indexing wait shortened” cut. Never make a
   prerecorded or sped-up result appear live. Check the organizer's video limit.
@@ -93,11 +93,12 @@ than continually cutting off playback.
 
 **After the call:**
 
-“That call uses Meta speech recognition and reasoning, with Meta MMS speaking
-the reply locally. Now I can inspect the source moment in the workspace.”
+“Meta handles speech recognition, reasoning and search here. Gemini provides
+only the spoken voice, using the permitted text-to-speech exception. Now I can
+inspect the source moment in the workspace.”
 
 **On screen:** Select the citation and play a few seconds. Confirm the video and
-timestamp match. Do not claim the local voice has Gemini Live's quality or that
+timestamp match. Do not claim this TTS-only composition is Gemini Live or that
 response time is always instant.
 
 ## 4. Text reasoning with an imperfect memory — about 50 seconds
@@ -183,7 +184,8 @@ action if available. Studio produces a document here, not a rendered video edit.
 
 **On screen:** Open settings from the sidebar user menu. Briefly show appearance,
 text size and the active Meta voice option. Switch theme once if it works well
-for your recording. Do not imply MMS offers the earlier Gemini voice choices.
+for your recording. The Gemini TTS exception enables the documented voice choices; MMS remains a
+single-speaker option when that profile is selected.
 
 **Say:**
 
