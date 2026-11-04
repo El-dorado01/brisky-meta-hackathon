@@ -519,14 +519,14 @@
     {
       "path": "event-components/api/modules/pipeline/ai-usage-ledger.spec.ts",
       "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.spec.ts",
-      "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+      "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
       "sha256": "b062ed33af7f8cf4af8fc463f361a97a0fdf36000d1cfb34cd5dbfea495a9c52",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
       "path": "event-components/api/modules/pipeline/ai-usage-ledger.ts",
       "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.ts",
-      "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+      "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
       "sha256": "178d3bf6a4a419e0c14f72aa4ee9a913a18d3ffcc637bc97d47b7178f701b576",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
@@ -589,7 +589,7 @@
     {
       "path": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
-      "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+      "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
       "sha256": "7ac94052b865c9516d12de2f9ac323e8c509bb350a922d13e1a886652ea2ba14",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
@@ -610,7 +610,7 @@
     {
       "path": "event-components/api/modules/pipeline/providers/meta-transport.ts",
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-transport.ts",
-      "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+      "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
       "sha256": "19ca24b1af8396c19bb628d0e294ababfabd5ca65444e9049fbd824b4ea7f888",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
@@ -715,14 +715,14 @@
     {
       "path": "event-components/api/modules/queue/factory-telemetry.spec.ts",
       "sourcePath": "apps/api/src/modules/queue/factory-telemetry.spec.ts",
-      "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+      "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
       "sha256": "8ca004375eaa1c574c6f4e3d269d8298cf62a9237a5b0d27eb59456ffe14ed00",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
       "path": "event-components/api/modules/queue/factory-telemetry.ts",
       "sourcePath": "apps/api/src/modules/queue/factory-telemetry.ts",
-      "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+      "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
       "sha256": "c3bffe909ff81a4d4ddf7ceca54da85e398ed4474301e17577cef156b159ba15",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
@@ -2129,7 +2129,7 @@
     {
       "path": "apps/web/lib/factory-context.tsx",
       "sourcePath": "apps/web/lib/factory-context.tsx",
-      "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+      "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
       "sha256": "72c145475fb6e2a5d0dbd32d991d74e784afd1e3c999d79ec3b1bfe935c80e86",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },

@@ -1,5 +1,5 @@
 diff --git a/.env.example b/.env.example
-index 0098d91..b18aff6 100644
+index 0098d91..c1c73ce 100644
 --- a/.env.example
 +++ b/.env.example
 @@ -2 +2 @@
@@ -90,14 +90,18 @@ index 0098d91..b18aff6 100644
 +SCENE_WINDOW_MAX_SCENES=1000
 +AUDIO_WINDOW_SECONDS=60
 +AUDIO_WINDOW_OVERLAP_SECONDS=2
-@@ -83,0 +123,4 @@ INTERACTIVE_RESERVED_SLOTS=1
+@@ -76,0 +116,3 @@ GOOGLE_REDIRECT_URI=http://localhost:3000/api/v1/connectors/google-drive/callbac
++# Full download deadline (15 minutes); connections get 30s and stalled bodies 60s.
++# The transfer deadline must be between 60000 and 3600000 milliseconds.
++GOOGLE_DRIVE_DOWNLOAD_TIMEOUT_MS=900000
+@@ -83,0 +126,4 @@ INTERACTIVE_RESERVED_SLOTS=1
 +# Optional strict preparation/downstream partition. Both 0 disables it.
 +# For 2 preparation + 3 downstream slots, use global/user limits 5 and values 2/3.
 +FACTORY_INGEST_SLOTS=0
 +FACTORY_CONTINUATION_SLOTS=0
-@@ -90 +132,0 @@ ENABLE_DEV_UPLOAD=false
+@@ -90 +135,0 @@ ENABLE_DEV_UPLOAD=false
 -VITE_ENABLE_DEV_UPLOAD=false
-@@ -91,0 +134,109 @@ VITE_ENABLE_DEV_UPLOAD=false
+@@ -91,0 +137,109 @@ VITE_ENABLE_DEV_UPLOAD=false
 +AI_PROVIDER=google
 +AI_MAX_CONCURRENCY=2
 +
@@ -950,7 +954,7 @@ index 44093cc..b756063 100644
 +    expect(op).toHaveBeenCalledTimes(1);
 +  });
 diff --git a/apps/api/src/modules/connector/google-drive.connector.ts b/apps/api/src/modules/connector/google-drive.connector.ts
-index 5a8f086..e555f58 100644
+index 5a8f086..a50ceec 100644
 --- a/apps/api/src/modules/connector/google-drive.connector.ts
 +++ b/apps/api/src/modules/connector/google-drive.connector.ts
 @@ -62,0 +63 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
@@ -985,26 +989,42 @@ index 5a8f086..e555f58 100644
 -    const client = this.createOAuthClient();
 +  async exchangeCodeForTokens(code: string,redirectUri?:string): Promise<GoogleDriveTokens> {
 +    const client = this.createOAuthClient(redirectUri);
-@@ -277,0 +282 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
-+      const signal = AbortSignal.timeout(180000);
-@@ -280 +285 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+@@ -278 +282,7 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+-      const res = await drive.files.get(
++      const downloadTimeout = Number(this.configService.get('GOOGLE_DRIVE_DOWNLOAD_TIMEOUT_MS',900000));
++      if(!Number.isSafeInteger(downloadTimeout)||downloadTimeout<60000||downloadTimeout>3600000)throw new Error('Invalid GOOGLE_DRIVE_DOWNLOAD_TIMEOUT_MS');
++      const controller = new AbortController();
++      const signal = AbortSignal.any([controller.signal,AbortSignal.timeout(downloadTimeout)]);
++      const connecting = setTimeout(()=>controller.abort(),30000);
++      let res;
++      try { res = await drive.files.get(
+@@ -280,2 +290,3 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
 -        { responseType: 'stream' },
-+        { responseType: 'stream', signal, timeout: 30000 },
-@@ -305 +310 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+-      );
++        { responseType: 'stream', signal, timeout: downloadTimeout },
++      ); } finally { clearTimeout(connecting); }
++      let idle = setTimeout(()=>controller.abort(),60000);
+@@ -290,0 +302,2 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
++          clearTimeout(idle);
++          idle=setTimeout(()=>controller.abort(),60000);
+@@ -305 +318 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
 -        await pipeline(res.data as NodeJS.ReadableStream, progressTracker, writeStream);
 +        await pipeline(res.data as NodeJS.ReadableStream, progressTracker, writeStream, {signal});
-@@ -327,0 +333 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+@@ -314,0 +328,2 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
++      } finally {
++        clearTimeout(idle);
+@@ -327,0 +343 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
 +    signal?: AbortSignal,
-@@ -328,0 +335 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+@@ -328,0 +345 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
 +    signal?.throwIfAborted();
-@@ -337,0 +345 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+@@ -337,0 +355 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
 +        ...(signal ? { signal } : {}),
-@@ -340,0 +349,4 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+@@ -340,0 +359,4 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
 +    if (signal?.aborted) {
 +      (res.data as any)?.destroy?.();
 +      signal.throwIfAborted();
 +    }
-@@ -343,0 +356,36 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
+@@ -343,0 +366,36 @@ export class GoogleDriveConnector implements MediaConnector<OAuth2Client> {
 +  async openReadSession(authClient: OAuth2Client, remoteId: string, signal?: AbortSignal) {
 +    signal?.throwIfAborted();
 +    const drive = google.drive({ version: 'v3', auth: authClient });
@@ -3268,7 +3288,7 @@ index 5f5f8b0..388c0a4 100644
 -    const pattern = (body?.pattern || 'MADE EASY').trim();
 +    const pattern = boundedText(body?.pattern, 'pattern', 200).trim();
 diff --git a/apps/api/src/modules/queue/indexing.processor.ts b/apps/api/src/modules/queue/indexing.processor.ts
-index b468457..e43c943 100644
+index b468457..45c7158 100644
 --- a/apps/api/src/modules/queue/indexing.processor.ts
 +++ b/apps/api/src/modules/queue/indexing.processor.ts
 @@ -4,0 +5,3 @@ import { ConfigService } from '@nestjs/config';
@@ -4010,7 +4030,7 @@ index b468457..e43c943 100644
 @@ -1314,2 +1661,2 @@ export class IndexingProcessor extends WorkerHost {
 -      `UPDATE indexing_jobs SET status = 'failed', stage = 'failed', error = $1, finished_at = NOW() WHERE bull_job_id = $2`,
 -      [message, job.id],
-+      `UPDATE indexing_jobs SET status = $3, stage = $4, error = $1, finished_at = CASE WHEN $3='failed' THEN NOW() ELSE NULL END WHERE bull_job_id = $2`,
++      `UPDATE indexing_jobs SET status = $3, stage = $4, error = $1, finished_at = CASE WHEN $3::varchar='failed' THEN NOW() ELSE NULL END WHERE bull_job_id = $2`,
 +      [message, job.id,retrying?'waiting':'failed',retrying?'retrying':'failed'],
 @@ -1341 +1688 @@ export class IndexingProcessor extends WorkerHost {
 -      if (completedUnits.has(unit.unit_id) || unit.status === 'completed') continue;

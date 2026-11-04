@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
+  "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -276,6 +276,13 @@
       "sourcePath": "apps/api/src/modules/connector/continuous-sync.spec.ts",
       "destination": null,
       "disposition": "external engine dependency / configuration / pre-existing asset"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/api/src/modules/connector/google-drive-download-timeout.spec.ts",
+      "destination": "development-archive/apps/api/src/modules/connector/google-drive-download-timeout.spec.ts",
+      "disposition": "new event-period review archive; not imported by judge runtime",
+      "sha256": "cfb5394d71966e0cdfcead7ddb013a79d98dc35e9100fe4180ddeefce421b237"
     },
     {
       "status": "A",
@@ -4385,7 +4392,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "2e4717b0475e8686307b619486ebdcf603530bd27f654dbe9ad8562ddec1ac18"
+      "sha256": "bc154eb25826d76491c2e8511c86476481145bdf525e5706232b58aecd2c11b3"
     },
     {
       "status": "A",
