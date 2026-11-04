@@ -18,6 +18,30 @@ page. Read [provenance](docs/PROVENANCE.md) and
 
 ## Run the actual Brisky UI and media workflow
 
+### Which Meta model does what?
+
+These are the configured roles in the pinned full application's judge profile:
+
+| Meta model | Role in Brisky |
+| --- | --- |
+| Muse Spark 1.3 (`muse-spark-1.3`) | Text reasoning: interpreting searches, grounded written answers, evidence-sensitive conversation and Studio briefs/storylines. |
+| Muse Spark 1.2 (`muse-spark-1.2`) | Video/audio understanding: indexed media descriptions, audio transcription during indexing, and inspection of candidate moments against a search request. |
+| Muse Wonder (`muse-wonder-1.0`) | Voice conversation coordination and natural response text, including requesting searches and reporting their results. It does not synthesize the audio. |
+| Muse Voice Transcribe (`muse-voice-transcribe-1.0`) | Streaming speech recognition for microphone input during a voice call. |
+| Meta MMS (`facebook/mms-tts-eng`, local CPU) | Turns response text into spoken English audio. One English speaker; not a Gemini Live equivalent. |
+| Meta LASER2 (local CPU) | Creates text embeddings for indexed descriptions/transcripts and search queries, supporting semantic retrieval. |
+
+The standalone sample uses Wonder for its text/Studio responses, and optionally
+Muse Voice Transcribe + Wonder + MMS for voice. It supplies synthetic observations
+directly and does not run video indexing or LASER retrieval. The full application
+requires the original engine as explained below. Model assignments are configuration,
+not evidence of comparative accuracy; see the rehearsal and reasoning reports.
+
+FFmpeg and OpenCV are media-processing libraries, not inference models. Automatic
+face recognition is disabled in the judge profile; manual people tagging remains.
+Dormant Gemini, Whisper, MiniLM and YuNet/SFace development paths are not enabled
+fallbacks. See [full setup](docs/FULL-SETUP.md) for exact configuration and downloads.
+
 Use [full application setup](docs/FULL-SETUP.md). `npm run setup:full` downloads
 the separately declared original engine at a pinned Meta-only-compatible revision.
 This is required for real Drive indexing, media search and playback. The sample
