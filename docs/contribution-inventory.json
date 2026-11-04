@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "04c973167f5a0d610aa35ac0de2437f70f2819bf",
+  "sourceCommit": "4466edfecb2beedeab10bd8689ec7d9ce288687d",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -836,14 +836,14 @@
       "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.spec.ts",
       "destination": "event-components/api/modules/pipeline/ai-usage-ledger.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "b062ed33af7f8cf4af8fc463f361a97a0fdf36000d1cfb34cd5dbfea495a9c52"
+      "sha256": "0c88c1bfd4420cedeec324439f550f4114a0c75fe19de155f1a9dc025a62aca7"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.ts",
       "destination": "event-components/api/modules/pipeline/ai-usage-ledger.ts",
       "disposition": "exported integration source",
-      "sha256": "178d3bf6a4a419e0c14f72aa4ee9a913a18d3ffcc637bc97d47b7178f701b576"
+      "sha256": "b46d64f8a482c4fdd2a65722e0b48be2ec09cac1f8680993eef10ed2d1fe8d30"
     },
     {
       "status": "A",
@@ -1003,7 +1003,7 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "7ac94052b865c9516d12de2f9ac323e8c509bb350a922d13e1a886652ea2ba14"
+      "sha256": "7b4b53477b4825755db866fa132fb0eaaf929147a8f3a9a37e0fe5b26d94ffe1"
     },
     {
       "status": "A",
@@ -1024,7 +1024,7 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-transport.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-transport.ts",
       "disposition": "exported integration source",
-      "sha256": "19ca24b1af8396c19bb628d0e294ababfabd5ca65444e9049fbd824b4ea7f888"
+      "sha256": "a3d30e2d1c457356d77a0fb06e985f4f22132ec93dc957edcac22709e31e072b"
     },
     {
       "status": "M",
@@ -1385,7 +1385,7 @@
       "sourcePath": "apps/web/app/(app)/layout.tsx",
       "destination": "apps/web/app/(app)/layout.tsx",
       "disposition": "exported integration source",
-      "sha256": "99f4a74dfe31e438c05ffc7c978eb05cf3513e23631690381ec5e6016954f24b"
+      "sha256": "179014490d20a878d81c8e59b291620a172b54647ebdc363fe586d319d5f86c2"
     },
     {
       "status": "A",
@@ -1434,7 +1434,7 @@
       "sourcePath": "apps/web/app/(auth)/layout.tsx",
       "destination": "apps/web/app/(auth)/layout.tsx",
       "disposition": "exported integration source",
-      "sha256": "141926a244b09156c5b56e46da83f238fa75831dc991a3da62cc1463746d2f09"
+      "sha256": "1c5766587da09571ed72ab33614942446773ad82a98517445ef40ad01b362d9b"
     },
     {
       "status": "A",
@@ -1708,6 +1708,97 @@
       "destination": "apps/web/app/favicon.ico",
       "disposition": "exported integration source",
       "sha256": "7845b3b508959287f9bdad3435fb643828f8ebaebb920fdf9afd06e02b2b1d97"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts.ts",
+      "destination": "apps/web/app/fonts.ts",
+      "disposition": "exported integration source",
+      "sha256": "c019b4e4d3f99d82843c145c3e99282d111d9f2f551a2fffc35184d9effb1751"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/README.md",
+      "destination": "apps/web/app/fonts/README.md",
+      "disposition": "exported integration source",
+      "sha256": "4902e2af2c77de96f53badadf02f4bd401898ea202852c7464bfac9d90583903"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/bricolage.ttf",
+      "destination": "apps/web/app/fonts/bricolage.ttf",
+      "disposition": "exported integration source",
+      "sha256": "413e7357809ddd12fd80a96a8a396de0e401638d4acd3cb3e37532f0472ac682"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/bricolagegrotesque-OFL.txt",
+      "destination": "apps/web/app/fonts/bricolagegrotesque-OFL.txt",
+      "disposition": "exported integration source",
+      "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/dm-sans.ttf",
+      "destination": "apps/web/app/fonts/dm-sans.ttf",
+      "disposition": "exported integration source",
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/dmsans-OFL.txt",
+      "destination": "apps/web/app/fonts/dmsans-OFL.txt",
+      "disposition": "exported integration source",
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/ibmplexmono-OFL.txt",
+      "destination": "apps/web/app/fonts/ibmplexmono-OFL.txt",
+      "disposition": "exported integration source",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/instrument.ttf",
+      "destination": "apps/web/app/fonts/instrument.ttf",
+      "disposition": "exported integration source",
+      "sha256": "b24f1812584816958afcf22e22d08e44318c5e51651e25d2438efdde389b33b1"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/instrumentsans-OFL.txt",
+      "destination": "apps/web/app/fonts/instrumentsans-OFL.txt",
+      "disposition": "exported integration source",
+      "sha256": "9e27a72ed30eb49a08678f6a5d6ed98ec7ba5368f541637ee0683ec9134ef966"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/love-ya.woff2",
+      "destination": "apps/web/app/fonts/love-ya.woff2",
+      "disposition": "exported integration source",
+      "sha256": "da69ce7de85cf3f2b00ff28847ca85bf6d13a4cfed7739b54b38c8306ba44c59"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/loveyalikeasister-OFL.txt",
+      "destination": "apps/web/app/fonts/loveyalikeasister-OFL.txt",
+      "disposition": "exported integration source",
+      "sha256": "0e441ae9f18ad0c294cc5b6ae3974c2db1614cab220598578b1b58c4cc334485"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/plex-mono-400.ttf",
+      "destination": "apps/web/app/fonts/plex-mono-400.ttf",
+      "disposition": "exported integration source",
+      "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/web/app/fonts/plex-mono-500.ttf",
+      "destination": "apps/web/app/fonts/plex-mono-500.ttf",
+      "disposition": "exported integration source",
+      "sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755"
     },
     {
       "status": "A",
@@ -4392,7 +4483,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "bc154eb25826d76491c2e8511c86476481145bdf525e5706232b58aecd2c11b3"
+      "sha256": "8f41b362fbfe3bdc2c425738d45a077cfe0c6befa42411b834a0ae610becccd0"
     },
     {
       "status": "A",
