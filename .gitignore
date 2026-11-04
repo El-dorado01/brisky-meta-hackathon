@@ -12,3 +12,5 @@ __pycache__/
 *.tsbuildinfo
 .tmp/
 next-env.d.ts
+
+.engine/

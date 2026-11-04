@@ -76,3 +76,12 @@ runner does not require the original engine.
 - Historical Spark/Wonder and local MMS measurements in exported development
   docs concern the original development environment and their stated scope;
   they are not automatically measurements of this standalone packaging.
+
+## November 4 Meta-only extension
+
+New Meta-only profile admission, LASER2 integration sources and judge bootstrap
+were added after the initial event export. The full original-engine dependency
+is pinned to 49b7e71293e667a885a8752117d8e779cd8220c4; it remains external,
+not included or represented as newly created code. The bootstrap clone/check
+passed. Full fresh-account installation remains unverified. Model files are not
+committed. Their upstream notices and download provenance are retained.

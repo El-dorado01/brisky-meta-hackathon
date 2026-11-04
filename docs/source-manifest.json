@@ -2414,8 +2414,8 @@
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
-      "path": "brisky-alien-mascot/Brisky’s Whimsical Emotion Grid.png",
-      "sourcePath": "brisky-alien-mascot/Brisky’s Whimsical Emotion Grid.png",
+      "path": "brisky-alien-mascot/Brisky\u2019s Whimsical Emotion Grid.png",
+      "sourcePath": "brisky-alien-mascot/Brisky\u2019s Whimsical Emotion Grid.png",
       "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
       "sha256": "e22b2e29c60be271c1c0da2353fb43e7c8672a3e023fa0655e24dd3285937333",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
@@ -2594,6 +2594,55 @@
       "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
       "sha256": "84597b42968f69f3d71b22f085839e25c68c0a36b034b608d58260e25d698642",
       "attribution": "event integration; upstream hooks retain their applicable terms"
+    },
+    {
+      "path": "event-components/api/common/meta-only-profile.ts",
+      "sourcePath": "apps/api/src/common/meta-only-profile.ts",
+      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
+      "sha256": "31734987e59f0f07459355f42ca76ffdbb570aa5d13242b9197517eb9912d9ff",
+      "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
+    },
+    {
+      "path": "event-components/api/common/meta-only-profile.spec.ts",
+      "sourcePath": "apps/api/src/common/meta-only-profile.spec.ts",
+      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
+      "sha256": "4c660ee0cfb2786003a7ea157899af9f233e9da82d7703cf336d9f8c136f6d56",
+      "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/meta-embedding-text.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/meta-embedding-text.ts",
+      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
+      "sha256": "1a75ae596afc02382dfc7a37230c4771d39ea366cb179e6b9ac4add1ffa5a30f",
+      "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
+    },
+    {
+      "path": "services/meta-embeddings/LICENSE.LASER",
+      "sourcePath": "services/meta-embeddings/LICENSE.LASER",
+      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
+      "sha256": "05ec63ab2a813d0ef4c872cc2e74c71f666ea0560f92bfa31ee2f093c4ede17f",
+      "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
+    },
+    {
+      "path": "services/meta-embeddings/model-manifest.json",
+      "sourcePath": "services/meta-embeddings/model-manifest.json",
+      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
+      "sha256": "321528dab1f392a5afbadfd413a22c2a4ad9757d1bda8fbc5dfd4f4a960068a1",
+      "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
+    },
+    {
+      "path": "services/meta-embeddings/requirements.txt",
+      "sourcePath": "services/meta-embeddings/requirements.txt",
+      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
+      "sha256": "0f3dacace12acf4413c6c12152067f3f4e6d4d8da53fae6ab6cd5ce79becf145",
+      "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
+    },
+    {
+      "path": "services/meta-embeddings/serve.py",
+      "sourcePath": "services/meta-embeddings/serve.py",
+      "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
+      "sha256": "9e44d8a668ff255385d1173c5bc76e9cc01afc9db2f80a4fe08852fe652bce32",
+      "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
     }
   ],
   "identicalPreEventBlobsExcluded": []

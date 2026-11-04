@@ -11,7 +11,8 @@
     "start": "node scripts/start-demo.cjs",
     "test": "node scripts/build-demo.cjs && node --test tests/*.test.cjs",
     "audit": "node scripts/audit-runtime.cjs",
-    "setup:mms": "node scripts/setup-mms.cjs"
+    "setup:mms": "node scripts/setup-mms.cjs",
+    "setup:full": "node scripts/setup-full.cjs"
   },
   "dependencies": {
     "@nestjs/common": "11.1.6",

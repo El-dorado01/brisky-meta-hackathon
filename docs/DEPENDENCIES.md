@@ -74,3 +74,12 @@ non-Meta fallback. Runtime configuration rejects incompatible model selections.
 Setup downloads dependencies and the pinned Meta weights; it does not perform
 model inference with a third-party model. FFmpeg/OpenCV library use is not, by
 itself, model inference. A trained model loaded through a library still counts.
+
+## Full-application integration update
+
+The pinned original engine revision and strict Meta-only setup are now declared in
+[FULL-SETUP.md](FULL-SETUP.md) and `full-engine.json`. This supersedes the earlier
+backup-only integration warning for that exact configured revision, not arbitrary
+engine defaults. The root fixture runner remains different from the actual UI.
+LASER2 setup sources are included for event-code review; the original engine is
+still an external dependency, never relabelled as new code.

@@ -10,6 +10,13 @@ This repository does not contain its indexing engine, old dashboard or landing
 page. Read [provenance](docs/PROVENANCE.md) and
 [external dependencies and limitations](docs/DEPENDENCIES.md) before judging.
 
+## Run the actual Brisky UI and media workflow
+
+Use [full application setup](docs/FULL-SETUP.md). `npm run setup:full` downloads
+the separately declared original engine at a pinned Meta-only-compatible revision.
+This is required for real Drive indexing, media search and playback. The sample
+runner below has a different, simplified UI and cannot reproduce that full flow.
+
 ## Run without the original engine
 
 Requires Node 22.6+ and npm. No Docker, PostgreSQL, Brevo account, Google Drive,
