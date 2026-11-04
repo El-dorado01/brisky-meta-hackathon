@@ -1751,3 +1751,33 @@ now validates the original Drive version independently before/after download,
 closes the failed bridge, and uses that independent check after local extraction.
 It does not ignore source changes. Eight regression checks and compilation passed
 again; live Drive completion remains pending.
+
+### Shared indexing admission, transient recovery and attempt visibility (November 4)
+
+Event-period reliability extensions to the pre-existing indexing engine:
+- Keep file-plan admission when one child unit exhausts retries; finalization or
+  explicit cancellation releases the shared remainder. Explicit failed-unit retry
+  renews the recorded plan under the same cumulative ceiling, retaining all old
+  charges and unknown outcomes. Legacy work with no historical plan is replanned
+  while retaining completed units. Active/inference-queued work blocks overlapping
+  retry; waiting local embed/finalize dependencies do not block repairing failures.
+- Retry transient Drive TLS/socket/reset/timeout errors with bounded backoff and
+  cancellation. Version checks retain strict size/version validation. Full media
+  transfer attempts have a three-minute abort bound instead of waiting forever.
+- Single-model Meta inference has one metered transient retry; authorization and
+  malformed evidence still fail without retry. Unknown attempt costs stay held.
+- Factory activity exposes attempt numbers and the current file stage alongside
+  historical stage records; earlier scene completion is not erased by later Fetch
+  failure. Metrics still describe recorded runs, including failed attempts.
+
+95 offline regression tests, API/worker build and web TypeScript check passed.
+Unauthenticated HTTPS connectivity checks reached both providers without inference.
+Only the two reported Drive files were retried under the unchanged local $50/32 MiB
+bounds; live indexing completion and provider reliability remain separate checks.
+A follow-up closes the retry/finalizer race: retryable units remain waiting rather
+than terminally failed, so the finalizer cannot release a plan between attempts.
+Admitted unit jobs also update the file's current stage/status (rather than leave
+it labelled queued during an active retry). 28 focused scheduler, retry, telemetry
+and service checks passed, in addition to the earlier 95-check regression run;
+compilation passed. Live Meta frame calls are now succeeding for the reported
+training-field file; full file completion is still a separate live check.

@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "247eb0736e8e14506c24b9e494c9d9aab2f2cfb7",
+  "sourceCommit": "e7dc2661b48203c53cfd6face94b1efcd69bf6ce",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -283,6 +283,12 @@
       "destination": "development-archive/apps/api/src/modules/connector/google-drive-range-cancellation.spec.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
       "sha256": "fadad1894483001b9664b3604ae8dede872644daf355d579a04ddc62fc70c794"
+    },
+    {
+      "status": "M",
+      "sourcePath": "apps/api/src/modules/connector/google-drive-resilience.spec.ts",
+      "destination": null,
+      "disposition": "external engine dependency / configuration / pre-existing asset"
     },
     {
       "status": "M",
@@ -823,14 +829,14 @@
       "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.spec.ts",
       "destination": "event-components/api/modules/pipeline/ai-usage-ledger.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "8dcc996becfb15b7634ea3f0a88e26425c3ef470ffc5b492ac3888d7533a3c51"
+      "sha256": "b062ed33af7f8cf4af8fc463f361a97a0fdf36000d1cfb34cd5dbfea495a9c52"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.ts",
       "destination": "event-components/api/modules/pipeline/ai-usage-ledger.ts",
       "disposition": "exported integration source",
-      "sha256": "aee4523b0cb723d39e146ff3293c0d2da092c330c78cf7fde443baf33d6e0ff4"
+      "sha256": "178d3bf6a4a419e0c14f72aa4ee9a913a18d3ffcc637bc97d47b7178f701b576"
     },
     {
       "status": "A",
@@ -990,7 +996,7 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "7483299f45d6ac06747aea5a21cd4cf4cbcbb990b3d5dc87c7b001b3f47da1cf"
+      "sha256": "7ac94052b865c9516d12de2f9ac323e8c509bb350a922d13e1a886652ea2ba14"
     },
     {
       "status": "A",
@@ -1011,7 +1017,7 @@
       "sourcePath": "apps/api/src/modules/pipeline/providers/meta-transport.ts",
       "destination": "event-components/api/modules/pipeline/providers/meta-transport.ts",
       "disposition": "exported integration source",
-      "sha256": "e90978514acf68fa641c1bffabd22480a1b092561291b1838649e7268b779b3f"
+      "sha256": "19ca24b1af8396c19bb628d0e294ababfabd5ca65444e9049fbd824b4ea7f888"
     },
     {
       "status": "M",
@@ -1172,14 +1178,14 @@
       "sourcePath": "apps/api/src/modules/queue/factory-telemetry.spec.ts",
       "destination": "event-components/api/modules/queue/factory-telemetry.spec.ts",
       "disposition": "exported integration source",
-      "sha256": "8a68a36810e2067776daabfcf351a5ca2a7313f968ecc56512811b24e7c1a8a7"
+      "sha256": "8ca004375eaa1c574c6f4e3d269d8298cf62a9237a5b0d27eb59456ffe14ed00"
     },
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/queue/factory-telemetry.ts",
       "destination": "event-components/api/modules/queue/factory-telemetry.ts",
       "disposition": "exported integration source",
-      "sha256": "e5687e478818adb3a108b2d9fc94e8fac1a854a05643e4244edc5aacdf94814a"
+      "sha256": "c3bffe909ff81a4d4ddf7ceca54da85e398ed4474301e17577cef156b159ba15"
     },
     {
       "status": "A",
@@ -1187,6 +1193,12 @@
       "destination": "event-components/api/modules/queue/indexing-retry-state.spec.ts",
       "disposition": "exported integration source",
       "sha256": "c55d14a6eecaa5f031232aa6ce2b9cdfd3aa12b168006c9e4f0c91b3edda6d9b"
+    },
+    {
+      "status": "M",
+      "sourcePath": "apps/api/src/modules/queue/indexing-service-factory.spec.ts",
+      "destination": null,
+      "disposition": "external engine dependency / configuration / pre-existing asset"
     },
     {
       "status": "M",
@@ -1235,7 +1247,7 @@
       "sourcePath": "apps/api/src/modules/queue/scene-recovery.spec.ts",
       "destination": "development-archive/apps/api/src/modules/queue/scene-recovery.spec.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "0b2a9b8a02f24c10955138d025e74abe9a7ca5fb2149ca0e9061e043a9cf448b"
+      "sha256": "92e398843efaa8b9f637f62a7426f9592493aac59074a589619db6c4cfd815f6"
     },
     {
       "status": "M",
@@ -2884,7 +2896,7 @@
       "sourcePath": "apps/web/lib/factory-context.tsx",
       "destination": "apps/web/lib/factory-context.tsx",
       "disposition": "exported integration source",
-      "sha256": "bc9a63d6670a23ad2ae67c4f2cb80f79d505a3975485b27cac074c5cb7fd771f"
+      "sha256": "72c145475fb6e2a5d0dbd32d991d74e784afd1e3c999d79ec3b1bfe935c80e86"
     },
     {
       "status": "A",
@@ -4373,7 +4385,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "56afbc3e6344ede332b7a7d854228841b9a0ed084687fa923f9e2cc7453c57d7"
+      "sha256": "2e4717b0475e8686307b619486ebdcf603530bd27f654dbe9ad8562ddec1ac18"
     },
     {
       "status": "A",
