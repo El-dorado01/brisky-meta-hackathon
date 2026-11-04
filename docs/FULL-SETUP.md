@@ -78,15 +78,31 @@ relicense external code or model weights.
 
 ## Start the three applications
 
-Use three terminals, each in `.engine`:
+Start the API first, in `.engine`, so it creates the engine/workspace tables:
 
 ```sh
 pnpm dev:api
 ```
 
+Wait until the API logs that it is running. In a second terminal, also in
+`.engine`, explicitly initialize the email-code tables before opening the web app:
+
 ```sh
+pnpm --dir apps/web auth:migrate
 pnpm dev:web
 ```
+
+Engine startup creates the media/workspace schema but does not apply the separate
+email-code schema. Omitting `auth:migrate` prevents first-time login.
+For local checks that use fake email delivery and temporary database schemas:
+
+```sh
+pnpm --dir apps/web auth:check
+pnpm --dir apps/web spaces:check
+```
+
+Start the worker in a third terminal only when you are ready to process queued
+media (this can spend your configured credits):
 
 ```sh
 pnpm dev:worker
@@ -115,3 +131,9 @@ The complete fresh-machine installation with new Google/Brevo credentials has
 not been independently replayed. The bootstrap verifies checkout and required
 files, not external account configuration. If you cannot supply those services,
 use the root standalone runner, whose limitations are documented in the README.
+
+## Rehearsal results
+
+See [the November 4 rehearsal report](REHEARSAL.md) for checks performed with
+a fresh dependency installation and empty database, checks using existing
+credentials/media, corrected setup steps and remaining acceptance limits.

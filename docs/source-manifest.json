@@ -2248,8 +2248,8 @@
     {
       "path": "apps/web/scripts/check-spaces.ts",
       "sourcePath": "apps/web/scripts/check-spaces.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "85740f482a3897f2cf60d3620d6affd67217cb391ec0faee518fc6c664a639c6",
+      "sourceCommit": "72e12ab21679cdc454df8d9a3d1c3a8a73be0f01",
+      "sha256": "8a199727c63d6c67066be5512eb01e15faf14dcf26b695eeb8b8645f2fa4635a",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
