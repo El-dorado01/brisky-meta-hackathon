@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "41167d054aa266628e73cabf18047abb7ea65412",
+  "sourceCommit": "af0cf7f4ff056a8f56a44456fd8d3f95434cc152",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -1229,6 +1229,13 @@
       "sourcePath": "apps/api/src/modules/queue/ranged-access.spec.ts",
       "destination": null,
       "disposition": "external engine dependency / configuration / pre-existing asset"
+    },
+    {
+      "status": "A",
+      "sourcePath": "apps/api/src/modules/queue/scene-recovery.spec.ts",
+      "destination": "development-archive/apps/api/src/modules/queue/scene-recovery.spec.ts",
+      "disposition": "new event-period review archive; not imported by judge runtime",
+      "sha256": "0b2a9b8a02f24c10955138d025e74abe9a7ca5fb2149ca0e9061e043a9cf448b"
     },
     {
       "status": "M",
@@ -4366,7 +4373,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "778d63f3d4e5572ae2f331ae77ea1b33851e93e62c8d42f01f279df505c1d9c9"
+      "sha256": "e853df560948cf236746813e4444ff3448127b76571d7431b325567fac6a7434"
     },
     {
       "status": "A",
