@@ -1,0 +1,14 @@
+node_modules/
+.next/
+build/
+dist/
+.env
+.env.local
+.env.*.local
+storage/
+.venv-mms/
+__pycache__/
+*.log
+*.tsbuildinfo
+.tmp/
+next-env.d.ts

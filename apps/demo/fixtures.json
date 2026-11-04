@@ -1,0 +1,5 @@
+[
+  {"id":"e1","assetId":"synthetic-kitchen","startS":4,"endS":12,"title":"Kitchen dance","filename":"synthetic-kitchen.mp4","transcript":"","description":"Synthetic test observation: one person dances beside a kitchen counter, then sets down a blue cup. No identity, clothing or private relationship is established.","status":"indexed"},
+  {"id":"e2","assetId":"synthetic-lecture","startS":18,"endS":29,"title":"Lecture explanation","filename":"synthetic-lecture.mp4","transcript":"We can compare two possible explanations, then check which one the evidence supports.","description":"Synthetic test observation: a speaker points at two diagrams on a board.","status":"indexed"},
+  {"id":"e3","assetId":"synthetic-garden","startS":2,"endS":10,"title":"Garden memory","filename":"synthetic-garden.mp4","transcript":"We planted this tree together last year.","description":"Synthetic test observation: two people stand beside a young tree and water its base. No identities or family relationships are known.","status":"indexed"}
+]

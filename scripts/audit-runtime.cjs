@@ -1,0 +1,6 @@
+// Audit the standalone runner's explicit executable surface, not dormant optional integration source.
+const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..');
+const inputs=['apps/demo/meta.cjs','apps/demo/core.cjs','apps/demo/server.cjs','apps/demo/public/index.html','event-components/api/modules/conversation/meta-live-voice.ts','event-components/api/modules/conversation/mms-speech.service.ts','services/mms-tts/serve.py','services/mms-tts/prepare_models.py'];
+const forbidden=[/generativelanguage\.googleapis\.com/i,/api\.openai\.com/i,/silero/i,/all-MiniLM/i,/sface/i,/yunet/i,/faster_whisper/i];const findings=[];for(const file of inputs){const source=fs.readFileSync(path.join(root,file),'utf8');for(const pattern of forbidden)if(pattern.test(source))findings.push({file,pattern:String(pattern)});}
+const package=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));if(package.dependencies?.['@google/genai'])findings.push({file:'package.json',pattern:'Google model SDK'});
+if(findings.length){console.error(JSON.stringify(findings));process.exitCode=1;}else console.log('Standalone runtime surface audit passed. Models: Meta Wonder/Spark, Muse Voice Transcribe, MMS English. No embedding or face-recognition model runs. This static check is not a proof of every dependency’s internal behavior.');

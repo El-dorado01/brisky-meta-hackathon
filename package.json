@@ -1,0 +1,27 @@
+{
+  "name": "brisky-meta-hackathon",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Brisky event components and a standalone Meta-only fixture runner",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "build": "node scripts/build-demo.cjs",
+    "start": "node scripts/start-demo.cjs",
+    "test": "node scripts/build-demo.cjs && node --test tests/*.test.cjs",
+    "audit": "node scripts/audit-runtime.cjs",
+    "setup:mms": "node scripts/setup-mms.cjs"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.1.6",
+    "@nestjs/config": "4.0.2",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "ws": "8.18.3"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}

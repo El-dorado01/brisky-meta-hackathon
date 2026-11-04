@@ -1,0 +1,16 @@
+/* Fresh workspace packaging styles. The pre-event landing-page stylesheet is excluded. */
+@import "tailwindcss";
+@import "./appearance.css";
+@theme {
+ --color-brand-violet:#7363de;--color-brand-ink:#22283f;--color-brand-muted:#6b7190;
+ --color-brand-canvas:#f6f7fb;--color-brand-line:#e3e6f2;--color-brand-surface:#fff;
+ --color-brand-violet-hover:#5f4fc9;--color-brand-action:#7363de;--color-brand-action-hover:#5f4fc9;
+ --font-display:ui-sans-serif,system-ui,sans-serif;--font-body:ui-sans-serif,system-ui,sans-serif;
+ --font-mono:ui-monospace,monospace;
+}
+*{box-sizing:border-box}body{margin:0;background:var(--color-brand-canvas);color:var(--color-brand-ink);font-family:var(--font-body);font-variant-numeric:tabular-nums;overflow-x:hidden}
+button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default}
+.thin-scrollbar{scrollbar-width:thin;scrollbar-color:#c8c2e7 transparent}
+@keyframes word-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:767px){input,select,textarea{font-size:16px!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

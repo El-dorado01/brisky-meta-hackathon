@@ -1,0 +1,2600 @@
+{
+  "recordedAt": "2026-11-04T08:23:32.131Z",
+  "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
+  "snapshot": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+  "ownerConfirmedAfterCutoff": "2026-10-26T16:24:00Z",
+  "limitation": "Content comparison plus owner attestation, not independent timestamp proof. Existing engine and moved landing page excluded. New packaging/scaffolding changes are described separately.",
+  "files": [
+    {
+      "path": "event-components/api/common/api-contract.spec.ts",
+      "sourcePath": "apps/api/src/common/api-contract.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e42b1c7c65d6bca0baffcc969d1a6848a69b7c7f8f52bfdb4cf3a26c2baba4e1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/api-contract.ts",
+      "sourcePath": "apps/api/src/common/api-contract.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "85df94600139bde9b9819f7a121a39bc987dece174c6dac1ba94ba0c92d67ec4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/api-errors.spec.ts",
+      "sourcePath": "apps/api/src/common/api-errors.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6d8168a91c9d548e0c95f472d5445f82ee2db4474db55cd66d5ac2a2875e3338",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/api-errors.ts",
+      "sourcePath": "apps/api/src/common/api-errors.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "0aaf619ff912e36075afe6fa081e47329f899119441474552f67bd4a8c69adb0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/api-http-contract.spec.ts",
+      "sourcePath": "apps/api/src/common/api-http-contract.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "116f2b06067111a96d43e43f6de9aa619b7d75171020d97473883d32d0c7a4ce",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/pagination.spec.ts",
+      "sourcePath": "apps/api/src/common/pagination.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6ed1d8c743de64f77534fcb4d03ef6c8dcaabc8754b62560ad6023a94861ebae",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/pagination.ts",
+      "sourcePath": "apps/api/src/common/pagination.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e53eccd8a488ead39464308ac7e355c740eae77b435e9fdf1638cfe153119e50",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/request-limits.spec.ts",
+      "sourcePath": "apps/api/src/common/request-limits.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e32b13f0ca857e59e6cb52fbb820c73ad43a180ab02216207407152e516eb1e5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/request-limits.ts",
+      "sourcePath": "apps/api/src/common/request-limits.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2ec516e47e20ea496b72b8d8c645f9773d7a06e9aa6a5231f120a8e2952a551a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/request-validation.spec.ts",
+      "sourcePath": "apps/api/src/common/request-validation.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "67bf8542fd85545106e1b318b3cc411da3138e59f8162ea0d5f35c2ef7d01195",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/request-validation.ts",
+      "sourcePath": "apps/api/src/common/request-validation.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1197e4b587ed827bcd0a649b335b5832c33f3c4436095d9b66399d82fdb62cd1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/search-deadline.spec.ts",
+      "sourcePath": "apps/api/src/common/search-deadline.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "def74618090985a5d8295f60b24b4dc567de443dd3ea26a3ef1e1ebaa4175e71",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/search-deadline.ts",
+      "sourcePath": "apps/api/src/common/search-deadline.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8b3655fe5085051b48a29ed522b29707dd529adad9ef86353b79108a2919cf53",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/search-disconnect.spec.ts",
+      "sourcePath": "apps/api/src/common/search-disconnect.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b62521fe840b929bfb5cf24676b0713282a5f6d5044c4ce4f4995051b6b5a958",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/search-disconnect.ts",
+      "sourcePath": "apps/api/src/common/search-disconnect.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8bc7c6f74e4dea0386c1a8497f86943e846089c7222f9ea3ba56825836ad97e9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/search-progress.ts",
+      "sourcePath": "apps/api/src/common/search-progress.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3b58a1d33b16fbab6db9fb40c92b5cc1eca31785a829c44ac151170b5106e743",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/search-resources.spec.ts",
+      "sourcePath": "apps/api/src/common/search-resources.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "26563bfa1e3d476f1d24c521af4b632c64bf241ce09acc84daeed034358050fe",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/common/search-resources.ts",
+      "sourcePath": "apps/api/src/common/search-resources.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "39e8e3ce9b97d1fcc48f04b2aed2ca1eef7fe7e29ee4234915934cc7e1273c9b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/auth/auth-security.spec.ts",
+      "sourcePath": "apps/api/src/modules/auth/auth-security.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "af5d03253fcc1309a51530436d41bbf4359ae17816313dc73b01cd2539156108",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/connector/saas-connectors.controller.ts",
+      "sourcePath": "apps/api/src/modules/connector/saas-connectors.controller.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f8f9802a84ed8a27792da60bed831fab56e5c352da6168be466b6dd832a27c7f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/connector/saas-connectors.spec.ts",
+      "sourcePath": "apps/api/src/modules/connector/saas-connectors.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "536031f779a61b8efff5a3bf336c51193d2b57fb23ebcb4598333cdfc1e49c39",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/connector/sync-boundaries.spec.ts",
+      "sourcePath": "apps/api/src/modules/connector/sync-boundaries.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2aaf457a1615497a613e6702818bd308c5c84f2d4897fa8e1391a725efe46912",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/conversation.controller.ts",
+      "sourcePath": "apps/api/src/modules/conversation/conversation.controller.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c72f36975364a3db1f6d325f1a336e7e8e53d89c52bd121f102e9002568935ed",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/conversation.module.ts",
+      "sourcePath": "apps/api/src/modules/conversation/conversation.module.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "bf74dedd352705cd1f13fc7f49b33e8f5b8a9906a272f214c1fd2b546bf92dc6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/conversation.service.ts",
+      "sourcePath": "apps/api/src/modules/conversation/conversation.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c44043af170063a6402b5256012d5b8805822e697986bc0e82f3662719e759da",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/conversation.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/conversation.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a1cb3ecd34dc72c93f6f3341176af7d12de33c28560f7543857814fd4359c56a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/meta-live-voice.ts",
+      "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9870d1c4331b105b7ffac3788ef890c6164a79a0be296c6f5b1aa0672e5c1cd1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/meta-voice-stream.ts",
+      "sourcePath": "apps/api/src/modules/conversation/meta-voice-stream.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "fc3e853c72c768428731436e7a76d80bf74cf45ba6cb10f3a1c0ee584f14cd81",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/mms-saved-speech.service.ts",
+      "sourcePath": "apps/api/src/modules/conversation/mms-saved-speech.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "def2a43714514a3b60da3aa14e3d8c7b72da3238d4d7d2f89143e4a1229ec932",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/mms-saved-speech.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/mms-saved-speech.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "827eca32ef10d2d1755f17928932fe2d39abbd6cd40c6b24ac5becedc0a2d86b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/mms-speech.service.ts",
+      "sourcePath": "apps/api/src/modules/conversation/mms-speech.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "16be268a9f32d9f3e0d852dd4e38322e8ec41e3c18642fe633ca40bc0e125827",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/saas-session.guard.ts",
+      "sourcePath": "apps/api/src/modules/conversation/saas-session.guard.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9a86e6df815dfc798c14af2c238d7d84e7921a84ff93125bb2303667ccafb791",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/studio.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/studio.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5fa4f7d4143d03719f821bcac7c886a788f27b78d24b6471458025c7b802ebcd",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/conversation/voice-stream.ts",
+      "sourcePath": "apps/api/src/modules/conversation/voice-stream.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2c9bd95a5a4499c9d5a73c93963da0c781cb95c9be9639fe700b077bdc476754",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/database/face-schema.sql",
+      "sourcePath": "apps/api/src/modules/database/face-schema.sql",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "493d07a20cbb84796c73073f01f67e098e379628cd36b72076c640cea3a91d42",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/database/saas-schema.sql",
+      "sourcePath": "apps/api/src/modules/database/saas-schema.sql",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ddf9bd3c92350757c846db345921619321420735cd99627c135ef73ee746faf5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/cloud-inspection-source.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/cloud-inspection-source.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ff7861d62644586b39394eb1f9ec5bcbc4e65325a027a8b65acaea49debf3106",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/cloud-inspection-source.ts",
+      "sourcePath": "apps/api/src/modules/media/cloud-inspection-source.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "afb59073b1f04555e305127b2dceba9066864cd400279b2ce6c362e6f39337d0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/embedding-cache-isolation.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/embedding-cache-isolation.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2532c06c810483802ce40c130512a5edf7bc648f139235743c0982b3cbdf408f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/moment-thumbnail.service.ts",
+      "sourcePath": "apps/api/src/modules/media/moment-thumbnail.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "842894d78967a8333afdfd8f4134ce336d7c145b351bb9bdb09b08e7772adc63",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/moment-thumbnail.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/moment-thumbnail.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "fa1c4ffcfece17939cf71952c693e259d44599900fa07a90809f57426119755d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/query-parse.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/query-parse.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "033d8d0771b940817237f8e503939dd01dccad18f571dff6859d4be965758f15",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/remote-stream-response.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/remote-stream-response.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2131e630c863ecc207a7c2e1d4c09267a7d6c916b2f88b7522ddbf7a46d3e041",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/remote-stream-response.ts",
+      "sourcePath": "apps/api/src/modules/media/remote-stream-response.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9ac93a3f2634917e42b3621b4c74a24f859fc78c664bc336b8966b2a880cefd6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/stream-response.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/stream-response.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "545394e921f4807e82cfbaeced0070f17e6ad85ffeed0211f836d5bb60c740fd",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/stream-response.ts",
+      "sourcePath": "apps/api/src/modules/media/stream-response.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8a62a08c01e0a01523c5bddee290fc11d45f2a5994573989d9c064cd7764a349",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/media/verification-correctness.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/verification-correctness.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b99c8908f7badb41c657b238dca96b9d7a683d3bda8e3fac2c034a00cba22f1d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/conversation-verifier.service.ts",
+      "sourcePath": "apps/api/src/modules/people/conversation-verifier.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e51ce46f88a2b556da303148c44d5e90ee33cb5ecf66b710866485c5f2cb92c1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/conversation-verifier.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/conversation-verifier.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2c090140aae6c53b2e2d89284a8d9b6257fef60cee023ab506358cdbcb193acf",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-archive.service.ts",
+      "sourcePath": "apps/api/src/modules/people/face-archive.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d5d16606564e1c573add1e50678ec18fcbdc56ab2db78dbd0d8cfb6b81f836d0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-archive.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/face-archive.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "74b029ef1cf482750159c60351f7c2fb031ed013d552a59958a7a307e9f5fdcc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-archive.sql.ts",
+      "sourcePath": "apps/api/src/modules/people/face-archive.sql.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "381f0d9491679c11b28ef82d0da38debd33c0ff688d353acfbe4b033e368f41e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-enrollment.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/face-enrollment.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8972ac9bbf9449b7c2e1020186e76bd1a11ae0f92b7be2fe14fe57e118644ec9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-matching.controller.ts",
+      "sourcePath": "apps/api/src/modules/people/face-matching.controller.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "92c34135e8da78b3f891c86e641696a69a31b84c13e592654011090ea398308f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-matching.service.ts",
+      "sourcePath": "apps/api/src/modules/people/face-matching.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "48cd6d138d8d16faa23618fb2529822e657309f6c59ac3dff5730b83a4c15e54",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-references.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/face-references.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f913e01bd32ed0c74811fd7eb6b72eed05f7822115b9151134a6b116f0075190",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-references.ts",
+      "sourcePath": "apps/api/src/modules/people/face-references.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5a30d733f8e148c34f7dad94ff61eac83719a2d8905c1b2e19b6c6e3684acc24",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-sampling.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/face-sampling.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9ff4aa959f4a4954e8f130a6639fd1db152dd52ad96d1b27e11e36e1318a782e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/face-sampling.ts",
+      "sourcePath": "apps/api/src/modules/people/face-sampling.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1db198962c6a15a09a5b108fe041dca7f1d22ccd8e27a1ac426bf6fa769b80d2",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people-search.service.ts",
+      "sourcePath": "apps/api/src/modules/people/people-search.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d562d276e71a9a42a0bbde52c4cecbe50d3f6a89a3dc4850c456f9fcdda3334d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people-search.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/people-search.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b9aca223078793e0c4d47306d8fa57c99fb2ad1ded935af5fcba77556dc849d3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people-search.ts",
+      "sourcePath": "apps/api/src/modules/people/people-search.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "fca41ad48be5eed3c1c4ce014b40998dea04c2b22cd317b46dbec467437aaf69",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people.controller.ts",
+      "sourcePath": "apps/api/src/modules/people/people.controller.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4722a34afcbbf6bba46df4d7f8ec2094836b51165d1e52942ed996eb6fd8cca2",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people.module.ts",
+      "sourcePath": "apps/api/src/modules/people/people.module.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "10d8b1cd19b798d36a8f92ad4addc15ec079cb2423868d5b8d87e3b8c3d4498d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people.service.ts",
+      "sourcePath": "apps/api/src/modules/people/people.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c26448c0beb67f6a86128e6a2ff62f89e9946dbacf4ea08e497f92050b7fbbf5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/people.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e11db528361218651096c50f93f4cb8e91a4c209b6a1ea6b1ba9661b158be263",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/people.validation.ts",
+      "sourcePath": "apps/api/src/modules/people/people.validation.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c44364d147ba145eaad6d25bb493c571afd1517b9d8779830cb85ed35df24aab",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/reference-check.spec.ts",
+      "sourcePath": "apps/api/src/modules/people/reference-check.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d5137cfca0ecfbda2a71a798104cf7e8fe8c2be1eee928c6295a974361d441f3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/reference-check.ts",
+      "sourcePath": "apps/api/src/modules/people/reference-check.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "145c2be39e9f9f02837ccf3ddfb8480a5e1d7615cbd599b98ef957517432e2a9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/people/saas-people.controller.ts",
+      "sourcePath": "apps/api/src/modules/people/saas-people.controller.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "61fcebcc33fcea51a1a51cfde6198b662faf410cb67a3e5928fea53cbb9395a0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/ai-intelligence.service.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/ai-intelligence.service.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9e00f23a145e3ad6ab2522b14d8826b00d690bf8dd2038682c663ced512de1a9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/ai-intelligence.service.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/ai-intelligence.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3bece1f977d5ea9a3ec890f90c8214ad1c7ab54cd8e9fb511d3237e076c506c5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/ai-provider.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/ai-provider.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5003e7aaa3d2757bd4949296553ae6d3b534de319db357064d95a3b703bae6cc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/ai-usage-ledger.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8dcc996becfb15b7634ea3f0a88e26425c3ef470ffc5b492ac3888d7533a3c51",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/ai-usage-ledger.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/ai-usage-ledger.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "aee4523b0cb723d39e146ff3293c0d2da092c330c78cf7fde443baf33d6e0ff4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/audio-windows.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/audio-windows.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a758676acaeb466bfe94e4a07acf8333b5c3e214de09b13c51c6404129871a9f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/audio-windows.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/audio-windows.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "463603766eb0566f43c91a25e2d318641ce75cdf4116339686ad0aa8b913c624",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/conversation-evidence.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/conversation-evidence.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6b6fb6504685a42fde47f471bbc78baaca49f39ad1793eb763998064955a0bd6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/conversation-evidence.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/conversation-evidence.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3789a09f9c82148eaff1352d9340f1880e6a79e81734b69d9cc689cef499a5bb",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/embedding-provider.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/embedding-provider.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "33ae6d96921dbf78552c600179132860de54523cb82a60b6f362f1857b01b592",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/embedding-provider.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/embedding-provider.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "7b826a7d3a3ee39728a0084170f7dfb00f539ab20e4081ea0516b69197dbc8b6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/frame-coverage.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/frame-coverage.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cf1e4d0ff926b17f3f35774c3866db7ec0b4e66210c3fbceb9e5d6f156d351b5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/local-embedding.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/local-embedding.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f48dbf054d7d94e49c0ecc5d758a34b987deeef61ed27a0383c6a78898a1d8df",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/providers/meta-ai.provider.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "121a3d3ad4b4e6981acf3ddf7fdee0a6c5fd188916e3fe4c9539c40a53cf9067",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/providers/meta-ai.provider.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/providers/meta-ai.provider.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "740fca4ea6447a714dfe248caa1713af598324ea4641e1b128ef7a7e0b2dbbe1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/providers/meta-contract.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/providers/meta-contract.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ef387965591fcafa76a7699e5f4923026002f7382ea70aab1849423f8d47285f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/providers/meta-transport.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/providers/meta-transport.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3adf256a8986e6babb2cbbccb55849c5de0cdc4e4cf346fb8a05050607c88af7",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/scene-checkpoints.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/scene-checkpoints.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "67c08d9201b9fc4f7a68d44fa6b8c9a0a39652a73c2f9de97ebf5bbc3cb9859a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/scene-windows.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/scene-windows.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "bce35c50986c69be6b3c07527c3fda93e619d5942b57533bec8a21a56eb4aeeb",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/scene-windows.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/scene-windows.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "dbc9d8f054e835f34bd67b11b9c3b0e3df3c9aede0eb1429891674c788188174",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/search-evidence.service.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/search-evidence.service.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "fddbce406b05a34a8403484aada05eb0ecc4884a2337735b8f30f9f313f77583",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/search-evidence.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/search-evidence.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4cca229dd60b9122fa37cdd3e831ebb477a76a74dabf6b55e05c0cb8afe407d0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/seekable-media-source.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/seekable-media-source.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "272898a25755bedd1fcd030fce35ee356dc7abfd98a5a6bccea827a9e17e1510",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/seekable-media-source.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/seekable-media-source.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5f9aad2d66821f8612cd691b8fdac2b3e1b39adcfc0dcf97a2faa90343d06acc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/space-conversation.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/space-conversation.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "673fadc44b9328bd853a6aad20746f4a3d839d445bf3eefb6370e2bda57bdf29",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/studio-document.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/studio-document.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ac0cee035aeb853285dcd16c90a47778f1b21220e673432a3390cd4d9fd08dc7",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/studio-document.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/studio-document.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "fa5df1e4e157ef1991520fec51cd4c2ad2d5348ad00652ae8423f967f6c23f46",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/verification-response.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/verification-response.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c8c54b88e8c1c683d7e98ebb184b49f5a524bcf6ca87aca61f6c14013ba3c873",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/pipeline/whisper-session.spec.ts",
+      "sourcePath": "apps/api/src/modules/pipeline/whisper-session.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "407c73cbfc557c2e998a826e7aeb521746f4e5875f50993bbf0a5d6887d2b6f0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/queue/clip-operations.spec.ts",
+      "sourcePath": "apps/api/src/modules/queue/clip-operations.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "79261810c64d27237ccf717ababc4f1af0e4c8c727f5d26731d0222b8d7b6818",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/queue/embed-dependencies.spec.ts",
+      "sourcePath": "apps/api/src/modules/queue/embed-dependencies.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "983e50e4ceb00c0c095e38de2d48d2681acd16ce44caa6db9bee5ee7499cac8f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/queue/factory-telemetry.spec.ts",
+      "sourcePath": "apps/api/src/modules/queue/factory-telemetry.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8a68a36810e2067776daabfcf351a5ca2a7313f968ecc56512811b24e7c1a8a7",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/queue/factory-telemetry.ts",
+      "sourcePath": "apps/api/src/modules/queue/factory-telemetry.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e5687e478818adb3a108b2d9fc94e8fac1a854a05643e4244edc5aacdf94814a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/queue/indexing-retry-state.spec.ts",
+      "sourcePath": "apps/api/src/modules/queue/indexing-retry-state.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c55d14a6eecaa5f031232aa6ce2b9cdfd3aa12b168006c9e4f0c91b3edda6d9b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "event-components/api/modules/queue/streamed-indexing.spec.ts",
+      "sourcePath": "apps/api/src/modules/queue/streamed-indexing.spec.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "51ba644c8dd932fbb22bddf5ad65c5ac2a14f85bb6bee4bda8d32b5ded5475d4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/developer/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/developer/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c01c677f784db7dd459189c74fd20a218ddaed7c7df2d805de786ded048316ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/developer/page.tsx",
+      "sourcePath": "apps/web/app/(app)/developer/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b5f275e7bc08664fa738c3916052cebd9681bf074e13d13a5d0528d160f6ec9c",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/entities/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/entities/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c01c677f784db7dd459189c74fd20a218ddaed7c7df2d805de786ded048316ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/entities/new/page.tsx",
+      "sourcePath": "apps/web/app/(app)/entities/new/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "203031139b69476d4b99497121edd976f0e25fd491934205c7919dedd847c8c6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/entities/page.tsx",
+      "sourcePath": "apps/web/app/(app)/entities/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "56d3cccd032346d55ba85bbf1acda05ffc29c1dec491370efee0f034c5df1951",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/entity/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/entity/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c01c677f784db7dd459189c74fd20a218ddaed7c7df2d805de786ded048316ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/entity/new/page.tsx",
+      "sourcePath": "apps/web/app/(app)/entity/new/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4e117f350351aeda390020584111b3fd65dab25169f2e3f45e2abfb39d907a57",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/factory/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/factory/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c01c677f784db7dd459189c74fd20a218ddaed7c7df2d805de786ded048316ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/factory/page.tsx",
+      "sourcePath": "apps/web/app/(app)/factory/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a54178b53ba9f67b70190e7632593f8075247a9ca67113a4def960443b9f3842",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "99f4a74dfe31e438c05ffc7c978eb05cf3513e23631690381ec5e6016954f24b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/search/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/search/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c01c677f784db7dd459189c74fd20a218ddaed7c7df2d805de786ded048316ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/search/page.tsx",
+      "sourcePath": "apps/web/app/(app)/search/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2a0145e2f21489bec71e123c150cb4d722751bddc60dfc75fb0440a2f05de5d0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/settings/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/settings/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c01c677f784db7dd459189c74fd20a218ddaed7c7df2d805de786ded048316ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/settings/page.tsx",
+      "sourcePath": "apps/web/app/(app)/settings/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "05a51c4e03038154e3af249267dee7f4f4802f40c0927177a11df131370b92f2",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/studio/layout.tsx",
+      "sourcePath": "apps/web/app/(app)/studio/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c01c677f784db7dd459189c74fd20a218ddaed7c7df2d805de786ded048316ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(app)/studio/page.tsx",
+      "sourcePath": "apps/web/app/(app)/studio/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6289ad3ebd5fa1c8c40b206e08f739f1380350850547590ca33f38626b6d5644",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(auth)/layout.tsx",
+      "sourcePath": "apps/web/app/(auth)/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "141926a244b09156c5b56e46da83f238fa75831dc991a3da62cc1463746d2f09",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(auth)/login/layout.tsx",
+      "sourcePath": "apps/web/app/(auth)/login/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "28f15ec5dcc77d385500a32d4df672147b881128bde1d8242e3324deeb5ef42c",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(auth)/login/page.tsx",
+      "sourcePath": "apps/web/app/(auth)/login/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a72ffe93ad326168b7906071b1935f9dc373916a772eea88a46b13e9e9d15188",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(auth)/onboarding/layout.tsx",
+      "sourcePath": "apps/web/app/(auth)/onboarding/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "63ad91a4c6c0b01d7c148b1cd738c1cb68512c90ff80561189e070b8e4cc1b51",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(auth)/onboarding/page.tsx",
+      "sourcePath": "apps/web/app/(auth)/onboarding/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6b7991aeb800a907eb734eff58e4d33a1bb570d210790a3a6166d6175eb55791",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(auth)/verify/layout.tsx",
+      "sourcePath": "apps/web/app/(auth)/verify/layout.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "28f15ec5dcc77d385500a32d4df672147b881128bde1d8242e3324deeb5ef42c",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/(auth)/verify/page.tsx",
+      "sourcePath": "apps/web/app/(auth)/verify/page.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "96d5412d8ce9eab350f318ef7fbc1b038f4e02496d831e8c0f8824f0fb85d920",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/auth/email/request-code/route.ts",
+      "sourcePath": "apps/web/app/api/auth/email/request-code/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8fb7ba50bf44f57ec1ec0486a89d4d640e84e50e243d0c95044c4199c91c0755",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/auth/email/verify-code/route.ts",
+      "sourcePath": "apps/web/app/api/auth/email/verify-code/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e885020468734f4a0178546a83f8cda16a7fdc31f2ecaedb49781873498ee6ed",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/auth/logout/route.ts",
+      "sourcePath": "apps/web/app/api/auth/logout/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f4fb3a96116296ff1bb328fc2a155fc43418d0b490f895b5d531d457fa29a901",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/auth/session/route.ts",
+      "sourcePath": "apps/web/app/api/auth/session/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ab3f67da16f89bd09e3cae43b5240ad5c02f33a407cb0bc677b60a1cb8a7a502",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/connectors/[accountId]/folders/route.ts",
+      "sourcePath": "apps/web/app/api/connectors/[accountId]/folders/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "81f751b5b1d45033e8c817aa25b1c1a9422807dde73000fcfa484f29a6fb47b8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/connectors/[accountId]/route.ts",
+      "sourcePath": "apps/web/app/api/connectors/[accountId]/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9bb4d6449d407fd8975600fde92f0a4e48363b0edeb33bfbe91e8726bd6ea163",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/connectors/[accountId]/sync/route.ts",
+      "sourcePath": "apps/web/app/api/connectors/[accountId]/sync/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c265f284042c71988a207c76557706c3af4c89e7762d3c9235351ac46e059921",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/connectors/google-drive/callback/route.ts",
+      "sourcePath": "apps/web/app/api/connectors/google-drive/callback/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "579986ddddeb9836cbccf455b8436dd513d1a5266be39610cb14ce877aa8e58d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/connectors/google-drive/start/route.ts",
+      "sourcePath": "apps/web/app/api/connectors/google-drive/start/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "19e56105c6ed9a69ea98bc9ddbb03c7b9d770ca349eaca1ee37cc5ba919e6fec",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/connectors/route.ts",
+      "sourcePath": "apps/web/app/api/connectors/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d862e811d044ace03302ba99e34d2f2a4dc75f3c08587f66811025963f5a944a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/indexing/route.ts",
+      "sourcePath": "apps/web/app/api/indexing/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4c34f7449761940f9cee4bce5af7460da08778830817e8bc73002e3f7d5e2d11",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/onboarding/route.ts",
+      "sourcePath": "apps/web/app/api/onboarding/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "33c3b4d8c0034f1e8eb267b7e4d84423298d08292bb596545f2203ec18d15e23",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/people/[[...path]]/route.ts",
+      "sourcePath": "apps/web/app/api/people/[[...path]]/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6d0edfc2d111c4e584f30de9f8d19d5208ffc0cd546a3393eebc2bc384810ed9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/messages/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/messages/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3ffc9738f604811c94a36be0a88cb7b58e7fbf295f4e8f19481e8a0da1892307",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/moments/[momentId]/playback/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/moments/[momentId]/playback/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3c79293023352ff7c411667df51e93b65270df03237853248f6693ebb66292d3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/moments/[momentId]/thumbnail/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/moments/[momentId]/thumbnail/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f74ac9fce15f41d43645e61bf4b627f12c088abfe94f88ea34103230be40ac96",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/moments/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/moments/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4ed413869a0ebd18bc61f25adc8ccfa012163e620e6bd806e8957951b3590887",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/reply/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/reply/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "7d5e9a630d1a82a7714fc3647b0cccbb9965a142253660464efce834b4f971e6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "506e4290239a2bf47280f653d99459d75dd094ea545718c7e7636c996f56afa9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/shortlist/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/shortlist/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1197820cac10df25d4ca3a9e6c9db72695a4fbd43e405e241a8615fc54b17e01",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/sources/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/sources/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "bf2ba31653a0ab18d9f5dfc20d98476ce719f4319a1f3d5a53fa847b5e18ec02",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/[spaceId]/studio/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/[spaceId]/studio/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ef88667f2404aca7b9281ee108193977f854b50c0aeda89067eabf135ff2e0b6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/spaces/route.ts",
+      "sourcePath": "apps/web/app/api/spaces/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e50c8efc660a69ef4283124150c37bf280e38a0802c2eab9fe6b0f60d69180e8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/studio/[outputId]/route.ts",
+      "sourcePath": "apps/web/app/api/studio/[outputId]/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "69e3130fe249318410776774748b64a42a8547f46bfbc9c59645524a3e96535a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/studio/route.ts",
+      "sourcePath": "apps/web/app/api/studio/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b789f0b35a48ec60176a5ef5ffaf49f0d596d8fb731fd9e98d1b57a3b21e08a5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/voice/config/route.ts",
+      "sourcePath": "apps/web/app/api/voice/config/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "806bf73b17d0433f2f80c39203c074d3f1c7c2e5b17d34ff661d6c0fb1eaf812",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/voice/live-ticket/route.ts",
+      "sourcePath": "apps/web/app/api/voice/live-ticket/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "707ebc755ab7b74a51d0f6a1e7c3a0f135a774bce5fee6a52e826a154127013d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/voice/preview/route.ts",
+      "sourcePath": "apps/web/app/api/voice/preview/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "0ee45cfb38c8d826de3c2a47cd00cc8e87a717ddbf2bc3d55c43f914d04024ee",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/voice/speak/route.ts",
+      "sourcePath": "apps/web/app/api/voice/speak/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e6a5b5ed2a61ed652e2d57c55c7409b4e187746b6c5f35ac10078f5022810bb8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/voice/stream/route.ts",
+      "sourcePath": "apps/web/app/api/voice/stream/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "866b96bb7b45a88ce2d91a6c92d2ae1222e8bfcd501920045bf6009e2366db81",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/api/voice/transcribe/route.ts",
+      "sourcePath": "apps/web/app/api/voice/transcribe/route.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c45c5797b5bafd1d944055206a8a0151c1b09c6ec27a7c365e1493857e3c2c27",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/appearance.css",
+      "sourcePath": "apps/web/app/appearance.css",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5d42355e750ef1b6609a6012c3edf727c443e07780b45da69b44e43eed6edbfc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/app/favicon.ico",
+      "sourcePath": "apps/web/app/favicon.ico",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "7845b3b508959287f9bdad3435fb643828f8ebaebb920fdf9afd06e02b2b1d97",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components.json",
+      "sourcePath": "apps/web/components.json",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5e40d191a896bd8a781a50c75d28ea21ced81f69bacda878cb8d3e19673bbb74",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/audio-lines.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/audio-lines.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "0e27401bcbb8ff446c5598af4b7a9611666ee8de985e5d223cbd0d3d65cb994c",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/clapperboard.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/clapperboard.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "dd411b5f9ed8f555a8375bab5455b797338d81299d540504d83765e11d1c6913",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/download.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/download.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "358afe392a1c58a12accea458b3951aeeba7e8ae4ac2671034da7678913d7dba",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/ellipsis.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/ellipsis.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2e8a1d02673aaaba3c3f363c42b81675a60385fc512a675511c671f70f793b30",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/folder-open.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/folder-open.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "eb1197950e8d1ca7f21567dd4a8f3b38e9ffdda93421f20806c1d7e3bf8e59e7",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/add-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/add-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "177888cfd16feb91a4c85b738107ebb4596df38cb2cb49ac88b25de6f577f3b1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/arrow-down-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/arrow-down-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d55580f54487dbe8cbb6b0d0b8ac4c56bb71fcbf584ecb28bf34eb53a77f7e80",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/arrow-left-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/arrow-left-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4f9ab68bf7cf271e8be98cf03eb64a6a0a09bbb1795ea0964f79d4c73ea20509",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/arrow-right-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/arrow-right-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9229d2f8242984bbf650a5eb8473ed6f9a9e845e21eccecf6c18730a4b6c4fc3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/arrow-up-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/arrow-up-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d5129ec67e3c8d86883ae935f84c52e750b2392b5dbba796cd2d787b94190508",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/arrow-up-down.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/arrow-up-down.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cd7cd8aa6a2f8ead1ad841f2f1eec988f63db2afa220675b42f9316547b44b1d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/check.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/check.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a56b086c95faf2c357e295963ed4ade5b0220523a931ef6eb237eb6cfc74d6a8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/clapperboard.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/clapperboard.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "da0c202d0cc83a94db064970c053e58de20c5cd556cf6167c833911526a104a0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/common.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/common.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e56eb4fbbc2043dbeb417138048c790db66883934aa5cd9f90bec66fc0a2473d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/computer-terminal-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/computer-terminal-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "81a16f0855265174dcfcfd55eaf8c90732fbd3beaa1e291b3d708adbb67f1d0b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/copy-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/copy-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "20e56d8288a11d7487f595fe7da17c88973105aa3975b0006c917ac3f7f06383",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/create-animated.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/create-animated.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "0ef1e1b8087ef36545f3304f10d7714d9e2b5f44c9dfb74ef4c75aada2e32dda",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/delete-02.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/delete-02.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "34dc736e6c53c2477cca362043469a7c13dd58c1eb17384e11424921fd6319e4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/download-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/download-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f7be46310922cab3007fe83d661ac2540722092716cfa239705ef4829f23a8b4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/file-check.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/file-check.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8ac88cc928101e36f2b4c7235dea3a87bac064aa64d8b21268b7222066b56e43",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/file-sliders.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/file-sliders.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ff022bfebea1fcedb6524194500236c0d4e72c370b542f14b0fce32c3b640105",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/filter-horizontal.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/filter-horizontal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "369f6cf694ae8b091be634fee8407f316281893401b19cddb46081edd7610b65",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/layers-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/layers-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cfc3d1a627f11795c035f01ce1155ed935d5382a4e3c1df9bdcadec58a292d33",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/list.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/list.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "52d56eca0f7096c197e9c7ccc30b10fb13c360cc9b8ed16bdbbfc7cd95fa50ed",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/logout-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/logout-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2640e5a4c824f40521ff2447e9b8b232250b82eaecddb86a8bfff5fbb48c921b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/maximize-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/maximize-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "34d8adbde343ee1147fc92803db95dd2b5db3f7080e551efe7d08fa2c86576ea",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/menu-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/menu-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e45e685506b39cbd82be49789cf2a0f3b90ff09e381303477bfa66346d9517ca",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/message-square-code.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/message-square-code.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "131c7c852db61b453b715f2aaa252c38164fc814ac37199e637b6170d3d8c998",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/message-square-quote.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/message-square-quote.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e062ccdff3712a3a775d360774e071804b744260c865602a96c3829e6f6fcb9a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/message-square-share.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/message-square-share.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "dd9e75834af1ff04a739f1787dc7c79fdd86bf501d995b85a9fd541ea9348975",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/message-square-text.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/message-square-text.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "702aef6d9a21d1dd9a8521122d5757cf91db374a59077955eb9d5ecc8fbf37ee",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/minimize-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/minimize-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a25d600e4e1fd1bd7341b77c75890085314a9455393253a4bfe99255994c736b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/more-horizontal.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/more-horizontal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9ec3e70c27e1c122d6f5a5b3d4b3c3a6d97ceefbf8259314f51fc45f38522dc0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/paint-board.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/paint-board.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6a2599fb8ab19f8216c875272de27e971806f6d5244515a7d2c0afe063ba53be",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/panel-left-close.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/panel-left-close.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1322f295c83f9978e7f779df8326b799333d19942daec7432f3c933784a5aa1d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/panel-left-open.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/panel-left-open.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "84975eb3fb3568930ff689f2253d75eeb92b92a9ac774fc91a56a984641dbbe6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/panel-left.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/panel-left.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6020682dfa0c48eb22d7d3e534bbe254f338d9923eed3e8ddbba561f0fed06d2",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/panel-right.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/panel-right.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f294e345ed40a8df26a9402ff1e1ce7b9660953c6d33bf3e3b00e7bc072baeaa",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/pencil-edit-02.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/pencil-edit-02.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "da8ab9799143a88f65b7427a2f508f6ab8534a5708b0cea105ff8cc7b5230d37",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/pin.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/pin.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f6a11cb122ecfefc1b58d513d88484f07ea7149566f40ace0a051854672cd241",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/play.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/play.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2e8532cfc00a191a3873f3e57c1fb90e0eea83a9a50defc51462fdf5be5ce08f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/plus-sign.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/plus-sign.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "876823afc6ac62686377616effcfb37d88f3b6636c5441a22b784c87a3021b69",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/scissors.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/scissors.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5e43c213e10473e168aac9dc1016827b40b46601a5b00e62f51d9052b4e287ab",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/search-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/search-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8f964f4495a4c54d6aea084c845d9de3aad7c9860ad64a1ac0b113db53262df3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/send-horizontal.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/send-horizontal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3d5f35c5cff8b7d925fea62e5d2cff1b58d5001163509f15deb3c6867b13cb8e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/settings-02.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/settings-02.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "54679afff5fb118bb5f4662063cdf3225f4e631632883fb3ccc7f671025b3c63",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/trash.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/trash.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ff8c8c565c0764f9ca7eb4225bbddd96d4aac0b99f8df3668fa8834ea0dd2050",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/user-add-01.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/user-add-01.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "41ebaa2bd718d52df2126a7899fbc686cd1034a0a2d04d1b8f09b11a21a06d60",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/user.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/user.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a84b1fcd2165012b576a380eb3b45058ba42c6c45f974c0bf3a2db0c57946c3d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/users.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/users.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9caabc800f493bd20064e35194635a4254cde8033d434d24c735b7b7130adbd3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/hugeicons/workflow.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/hugeicons/workflow.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "af1f34ce46576c8e2d898b56a5f01f5404d9046e02ca03149101e52d96ea93ee",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/icon.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/icon.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "deafb63ae9c8b8de94e45471cae813f6e69f2230ec16f61190f49743feb67a19",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/layers.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/layers.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "355ee33515b0dfd5f771913dd112cbd1b31b06e9ffad8b07367510b132e3c911",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/maximize-2.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/maximize-2.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1fcb748e6d014ea6ad2e9700a0747d1dfff58bfcff90db36db816a450748b1af",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/minimize-2.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/minimize-2.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "eaa0cad480c38d21e7c63c378e07dc231b38dffce66584492aab1880c7ccd230",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/panel-left-close.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/panel-left-close.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cb81710c859c8b1d1d9298e66fdb6a2968fade54f59114235608f3cd60344b5a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/panel-left-open.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/panel-left-open.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e0b909283f7f8ba1104ee0221b970ac8633e1d67f9b2446097733e355c527a73",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/panel-right-close.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/panel-right-close.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "04ebe0f4ace1628b485bf450f9dbb068c299be5591212f5a3529fa60e6995f9a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/panel-right-open.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/panel-right-open.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "402fbd9d188413d505675c8b2ff464da2959bc56772664e32e99ebb7b721a51c",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/plug-zap.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/plug-zap.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5735c172195c9df2835f50cf3ceb8086169d5d6765aebc4736e0e3ae2257ef6a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/scissors.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/scissors.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8c07927e049ac287b3ca7d1336518f5b88e385860ff76ccbce76a5466562233a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/search.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/search.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "89f579e31b8a1e421de3d2a9d6ede6d29fe610e5bbb095641cdd51b34a8de3df",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/send-horizontal.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/send-horizontal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e7c585dc120cb32178a7b1939e29cc67ffae1da6b73b0782a1c53f571e386180",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/settings.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/settings.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4561338890e44b59d113ba31f841f533c40ce44374b326061840b63526596e7b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/sliders-horizontal.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/sliders-horizontal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ea9ceed26073e1974ee673f13b2854ec8f1d9100f5160b3e341b2b1ea3c54c16",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/sparkles.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/sparkles.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f80683bae19fbd0fe0dad1440691094065e304160c6d7763bb7bd6c80ccfb18a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/trash.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/trash.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f7c09198b25ab81c7d43f673535a7c9970b5adab5e3e80019949e1bb270bf1a3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/users.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/users.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a87c0eaf51b5ddf861773b29568f18f71f95edada5227234d0cacd55d5b77067",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/icons/workflow.tsx",
+      "sourcePath": "apps/web/components/animate-ui/icons/workflow.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e7f3c84c2a28939dedeae6dc09f4b6a2f8da09254e778a06cfc8512f17cadc09",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/animate-ui/primitives/animate/slot.tsx",
+      "sourcePath": "apps/web/components/animate-ui/primitives/animate/slot.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "fa25d5da614c751b65dedb4b2037b05e7d725caa9d786adbbcfb36ab2f1582c5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/auth/AuthShell.tsx",
+      "sourcePath": "apps/web/components/auth/AuthShell.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "338a866cf507c8a23dc9918315ce6c21b839facb65604c85d3be9d4f69e746f8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/auth/AuthThemeEnforcer.tsx",
+      "sourcePath": "apps/web/components/auth/AuthThemeEnforcer.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e3e5ef5336df2cefb13aa74320f74050dc2bc8db850562c48736b7286805b554",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/auth/GuestOnly.tsx",
+      "sourcePath": "apps/web/components/auth/GuestOnly.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "638a155b27d6713cee609ff0b84de88144e59ce61435d68c71dcf2643021ccb8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/auth/LoginBackground.tsx",
+      "sourcePath": "apps/web/components/auth/LoginBackground.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "436ceadea76c0791ffddbc3f93ac1db7abb605e18c3fe2a11c934578ee4ec72b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/auth/LoginCard.tsx",
+      "sourcePath": "apps/web/components/auth/LoginCard.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c76fde4a1966ffe1f56762d793d211b7d52751c2b988647ef30205125b471e42",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/auth/OtpForm.tsx",
+      "sourcePath": "apps/web/components/auth/OtpForm.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "49eac8eba99e4c5dd0ca75de5d958d91ecf3ce58106090b9f2839b80cf3b8fab",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/auth/RequireSession.tsx",
+      "sourcePath": "apps/web/components/auth/RequireSession.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f3c323dbb31c833617784d756e73fd9c8f50ba21309dc03c6d7be863a55d0817",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/ConnectorDialog.tsx",
+      "sourcePath": "apps/web/components/connectors/ConnectorDialog.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "462e256ab4fe517d07f371b79b8be11b69d5b44a28ce18b1d9deff2ba14eac39",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/ConnectorsModal.tsx",
+      "sourcePath": "apps/web/components/connectors/ConnectorsModal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2262292eecb259b1ab1536e7d6f3a264e5342344090bf2964701aa928dd5d5cb",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/DetailPanel.tsx",
+      "sourcePath": "apps/web/components/connectors/DetailPanel.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c11594cd30a423bacd450861c160c5af114e84d6af9f5441604540ecd4f285a0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/DriveManagementModal.tsx",
+      "sourcePath": "apps/web/components/connectors/DriveManagementModal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d6c8380cfba5a47f8ab7e69de68d261c4a6f8eb8d55457fe0b2d20072097a460",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/DriveManager.tsx",
+      "sourcePath": "apps/web/components/connectors/DriveManager.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "43fbd74e620213c211183cb172ed6b034062d82113f13dcd44a8fcce16735755",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/FactoryIcons.tsx",
+      "sourcePath": "apps/web/components/connectors/FactoryIcons.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5de46a9c9404d92a78b6de9be43f362ec552639d64f1752e51980648bfa69ccf",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/FactoryOverview.tsx",
+      "sourcePath": "apps/web/components/connectors/FactoryOverview.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "51ae3e53e2184335300e1d01e1b4f38b91e99f3f4123d9f47af3190a4e80e184",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/GoogleDriveIcon.tsx",
+      "sourcePath": "apps/web/components/connectors/GoogleDriveIcon.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b4d68d31cbe3640b6f39e1d5c0d9d4e500aceffab92cc916d52f3adb40bfc021",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/PipelineCanvas.tsx",
+      "sourcePath": "apps/web/components/connectors/PipelineCanvas.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a5f268f6cd4929406acdfb3e59676ee38f29916f9e3fc7fc609bbe7944ae1570",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/SourceNode.tsx",
+      "sourcePath": "apps/web/components/connectors/SourceNode.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4b7278de1e162c69ddc2aaa06871d7fc00bbe6bba123e6655d285a1fe1ee2bdc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/StageNode.tsx",
+      "sourcePath": "apps/web/components/connectors/StageNode.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c29a9c38b0e483519eb0bcd3d97801cb7e1811e71ae036ea1783f51460ebe9a8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/connectors/usePulse.ts",
+      "sourcePath": "apps/web/components/connectors/usePulse.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f468b3a97a6f6a837c4afedb259b6b3fd25c8527587721d0f213e63af7dcf8ec",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/dashboard/Sidebar.tsx",
+      "sourcePath": "apps/web/components/dashboard/Sidebar.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5e0a081d06dc097427a02801c399e841d87eb0b39042316a963575d3729613f3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/developer/DeveloperView.tsx",
+      "sourcePath": "apps/web/components/developer/DeveloperView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "824231c53a28034b1a38b53490aa3d61e60c1f356f2f6703a2d8821a9e26d716",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/ArchiveMatching.tsx",
+      "sourcePath": "apps/web/components/entities/ArchiveMatching.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "704de04fbe9af47e56107f83f89308e441f7c6391563fe7d2a216e6d9c086bdc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/CreateEntityView.tsx",
+      "sourcePath": "apps/web/components/entities/CreateEntityView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c98223de10a452163794b847d1440180f02c294cda1ac84dd9c57d8b5ad9a830",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/EntitiesMetricChart.tsx",
+      "sourcePath": "apps/web/components/entities/EntitiesMetricChart.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5e3a596b388dc84131617f14d4a43fae4f1064444d417f1e617468ed4960edc6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/EntitiesView.tsx",
+      "sourcePath": "apps/web/components/entities/EntitiesView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "0740e076e7f850ce7828ff649bbe73628fb7af3ab98a10aeb454dec0b586c6d3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/FaceMatches.tsx",
+      "sourcePath": "apps/web/components/entities/FaceMatches.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4cab56213c61fce24880e0721647c7a561cf635c3f063feb1c4401029911531f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/PeopleTable.tsx",
+      "sourcePath": "apps/web/components/entities/PeopleTable.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c3e33a9d03c50594b5db40f8c3024389c3e2b3818bf19985f9377af86a81732e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/PeopleView.tsx",
+      "sourcePath": "apps/web/components/entities/PeopleView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ce5c0c0f3d722796f70bdc104f668890245489aa11a56424b98b507808642614",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/PersonCard.tsx",
+      "sourcePath": "apps/web/components/entities/PersonCard.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1e6e0ec12e60b749e2c4cd15dfc39d52b01ee4d3a6573b72921459e08da10feb",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/PersonForm.tsx",
+      "sourcePath": "apps/web/components/entities/PersonForm.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c13abf18ad23fc16568d64237bc8f84b2c4a661956d7c8e487ce6e46f9059ef7",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/entities/TagPerson.tsx",
+      "sourcePath": "apps/web/components/entities/TagPerson.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e3b6dda6dc876b77a183e5dda71ced52424f28c1bd070cdd1dbeba8f864d1aeb",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/mascot/BriskyCompanion.tsx",
+      "sourcePath": "apps/web/components/mascot/BriskyCompanion.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f3d955d0c44b913648bb0add9171d3b16bad72fd7f6742c3eb700ed3ecdbb4d6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/mascot/BriskyFace.tsx",
+      "sourcePath": "apps/web/components/mascot/BriskyFace.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c2d636fda70db1cc8d912dcd9c22b494071e2a9df0a94e8a89b4f55755cc52f1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/mascot/BriskyGreetingArm.tsx",
+      "sourcePath": "apps/web/components/mascot/BriskyGreetingArm.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a1c35fb31be94ac692a0d0d642d6ada3da5c1908e65047fd04064e52eb76f1ec",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/mascot/BriskySearchAntenna.tsx",
+      "sourcePath": "apps/web/components/mascot/BriskySearchAntenna.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a0e38b9235f05df633c231edabba0d815206d6637e69b0d31e8b53156e93c25c",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/mascot/mascot.css",
+      "sourcePath": "apps/web/components/mascot/mascot.css",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a00c0a892a7a3503228f78a4f7bd9919b0f8ca624853c89bbeb348e1f4108b14",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/onboarding/OnboardingView.tsx",
+      "sourcePath": "apps/web/components/onboarding/OnboardingView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "bb110ea506409378600390509845e437bba3d818170902dcd58b880a022eeaf6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/AnimatedPlaceholder.tsx",
+      "sourcePath": "apps/web/components/search/AnimatedPlaceholder.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "aa3e81ff2ef6a672676cbcea140d408d548b2254d5e0144261aff747aa12ce0a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/CloudyVoiceOrb.tsx",
+      "sourcePath": "apps/web/components/search/CloudyVoiceOrb.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cb7095d969117136f6e5ccedaf23d5abedfc5556aefdd61d2f63d5fcbe72f682",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/CreationStudioModal.tsx",
+      "sourcePath": "apps/web/components/search/CreationStudioModal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "54db1f80f622d922bc57819d39c9de85646c3b4dac881fb6b2c9054ce4e6729b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/ImmersiveVoiceOverlay.tsx",
+      "sourcePath": "apps/web/components/search/ImmersiveVoiceOverlay.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "df418c29fa135422a2144b8621da834ce9ff5a61e4ddf7774f980416a34ef521",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/LiveVoiceConversation.tsx",
+      "sourcePath": "apps/web/components/search/LiveVoiceConversation.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "0ed0fc48a0339aa579daec70e5be8078eaba7f270fb4af1af85409d8f1fe5614",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/MomentThumbnail.tsx",
+      "sourcePath": "apps/web/components/search/MomentThumbnail.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "78082f2053e21a9a889b185d617f2d53c298cc09d4ebe5053a42cec319de1a39",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/ReplyCitation.tsx",
+      "sourcePath": "apps/web/components/search/ReplyCitation.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5cd80da628dbdb85caac781af7b6e6e373996be4ad785ee3d912dd1363637178",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/ResponseActions.tsx",
+      "sourcePath": "apps/web/components/search/ResponseActions.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e8adcd2dc430517c86ef13bb2eddee55eb2371dd97c748a4899b555791ecc8cd",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/SearchResultsView.tsx",
+      "sourcePath": "apps/web/components/search/SearchResultsView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8078cfef6a865b417c6acbcab52a975b25e1c0fef78b4fd6117dbfcbe327c606",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/SearchStage.tsx",
+      "sourcePath": "apps/web/components/search/SearchStage.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "0720d26e70cc5036c57cf161557cff093d9502bbc8724c90be41a6d9e532e006",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/SourcePreview.tsx",
+      "sourcePath": "apps/web/components/search/SourcePreview.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f8a4f77396a738d1e59b2c5b5cfb59c9a7893ee623f57d2fed5009244772c3d1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/SpaceCompanion.tsx",
+      "sourcePath": "apps/web/components/search/SpaceCompanion.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "95c07fd73fca569575651bb77af3e086675a98c0cfcf900b724911300458017d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/ThoughtBubble.tsx",
+      "sourcePath": "apps/web/components/search/ThoughtBubble.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "f26b80197de2b6a4062b9d28afbf79238c5360cebc522bbe0a707fec0a03900d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/VoiceConversation.tsx",
+      "sourcePath": "apps/web/components/search/VoiceConversation.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5585b58e2b4b28aa5484da3db63b39a3b2e5dc71790296cac3d5b71ec1b669af",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/VoiceModeButton.tsx",
+      "sourcePath": "apps/web/components/search/VoiceModeButton.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a257c47e60ba0d3848c2bf8b34b3891c151eea416225c01f9ff0bba639cf9b3d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/VoiceModeModal.tsx",
+      "sourcePath": "apps/web/components/search/VoiceModeModal.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "a5401626d1c668d6608747f5e9829250a9359ab14f0f85f0c5b5242e6dd71367",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/VoiceOrb.tsx",
+      "sourcePath": "apps/web/components/search/VoiceOrb.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1ec31a8e38b07899e15841c8aa66f2cab3c4abd81bbf3824199fd20e0bbf2768",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/search/WavySatinBackground.tsx",
+      "sourcePath": "apps/web/components/search/WavySatinBackground.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4c23185d67f7a4fb983b34dbc6d817c0c1349a738b87fbbe57d5bfad8194fdd4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/settings/SettingsSources.tsx",
+      "sourcePath": "apps/web/components/settings/SettingsSources.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "91017ebabeec19fe3d57ceed6da34d9ea6ede79f7f25c5587af6049ea258219d",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/settings/SettingsView.tsx",
+      "sourcePath": "apps/web/components/settings/SettingsView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e3a0e7e9369d8b7ba712dc3773a0616226000c93d38fb5fb4e0d3ce877ef19b9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/settings/SpeechSettings.tsx",
+      "sourcePath": "apps/web/components/settings/SpeechSettings.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "7f8fb1e9413f9eab3bb05671012ab3451d099fae650b4b5d89226d1f327aa8d1",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/studio/SpaceStudio.tsx",
+      "sourcePath": "apps/web/components/studio/SpaceStudio.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c1c419f7843d5ba805df562a3cd1ff8f7b57971857eaa25f501743a9ad6d1ef2",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/studio/StudioDocument.tsx",
+      "sourcePath": "apps/web/components/studio/StudioDocument.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ccfcc844d0d44c9c7b537b2368e8c1addec16c293ec16f74a5fb109be860d940",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/studio/StudioEmptyArtwork.tsx",
+      "sourcePath": "apps/web/components/studio/StudioEmptyArtwork.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2b1303937e6ed4b366de908e695168a5921e8d4f01f6d25e06d087502785d7dc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/studio/StudioLibrary.tsx",
+      "sourcePath": "apps/web/components/studio/StudioLibrary.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6fffd76884ec0ff5007291c423fcf3ea7c4908ae536b25ed1bcdcab6bdd815d6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/studio/StudioView.tsx",
+      "sourcePath": "apps/web/components/studio/StudioView.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9bfcd66919deae10e3cab754567d799851b9529b5847d915f264ac38a9693212",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/ui/AppSelect.tsx",
+      "sourcePath": "apps/web/components/ui/AppSelect.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "78b0bb57486dd332b4fb02125c1afc51c5f0c0be524917dc9026d28a6c3ee494",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/components/ui/app-select.css",
+      "sourcePath": "apps/web/components/ui/app-select.css",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cbd8742f171137dba326316305c9b730c59396bc655773b2ff6891795a0ae30e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/auth-response.ts",
+      "sourcePath": "apps/web/lib/auth-response.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "84622d263ca5f5c677fa3e9dbc7d494b1043d4475eeb1caa773ef269acd76f87",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/brisky-voices.ts",
+      "sourcePath": "apps/web/lib/brisky-voices.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ed445702dfe657a73cbfaa61e4a70b71ad0cbb8e399667559016d4b033c75dff",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/browser-preferences.ts",
+      "sourcePath": "apps/web/lib/browser-preferences.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9288c5bfd9d766b558dcff604466c2e25d463b55f29d1c0638a3848ddad58b94",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/chat-time.ts",
+      "sourcePath": "apps/web/lib/chat-time.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "5646b0421bd81b207a2b44f6e7c69cd36ec259b3ab110a6d3337e959ce19fa65",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/connectors.ts",
+      "sourcePath": "apps/web/lib/connectors.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8cc4c5356defe4b3cf188d4567897b25503a8e6607523ac5fa8e590ff72fdff7",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/entities-data.ts",
+      "sourcePath": "apps/web/lib/entities-data.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ce78eede0c880f91a4f6e1909bb14e676ff82ab127c2d5a588cd9d2caef17df0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/factory-context.tsx",
+      "sourcePath": "apps/web/lib/factory-context.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "bc9a63d6670a23ad2ae67c4f2cb80f79d505a3975485b27cac074c5cb7fd771f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/live-voice.ts",
+      "sourcePath": "apps/web/lib/live-voice.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ef30502b1f80afd920b1eafb8a2351e35aac0ab8f28078bdf40de86d34b8206e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/people-api.ts",
+      "sourcePath": "apps/web/lib/people-api.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d31b6319f33ef8e7e8c5e8c8d9e46f2a91c8ec2fa24170aa492d0f4a11f30cc8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/pipeline-stages.ts",
+      "sourcePath": "apps/web/lib/pipeline-stages.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8f0d5afbbb6b6b3d1e7cc6d306b55c02e83ab852e6ec49f6b47e63034ccc34ba",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/search-results.ts",
+      "sourcePath": "apps/web/lib/search-results.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cc87d127504e19f00548c232222401940eb74d1668278484028d8987d2e4960f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/spaces-client.ts",
+      "sourcePath": "apps/web/lib/spaces-client.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "90c2d8a2e4441aca42204ccee5b8fa9710335864501c7aec1c0e0d1ad8c902e8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/spaces-context.tsx",
+      "sourcePath": "apps/web/lib/spaces-context.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "bea0f5d5b74cda999feab3c6e70f3d1b0fb1d656bd5b24bd65d00e74124cacba",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/spaces-types.ts",
+      "sourcePath": "apps/web/lib/spaces-types.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "26333b7a02f04290b4b6b974e00444c5215142d475614dfd7887ae31300aa171",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/streaming-speech.ts",
+      "sourcePath": "apps/web/lib/streaming-speech.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "07cccedbec554d85be274b0b6b4adc866c118e9ba6a9cc95bc7743f7ffcd6b6f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/studio-client.ts",
+      "sourcePath": "apps/web/lib/studio-client.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ceeb7f4492d3830a1087223d1874a8775dd501eba76bde3ecbd3a0a9018cdce2",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/studio-types.ts",
+      "sourcePath": "apps/web/lib/studio-types.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "cf11ba80f1ebbbc935b948f7045e0434a624bb01ea4ed5079b0053bf4c76423c",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/use-brisky-speech.ts",
+      "sourcePath": "apps/web/lib/use-brisky-speech.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "71bdd9779e040e373c69af8020de45efa43009f8a6fce765ad96dcf5742286bd",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/lib/voice-acknowledgements.ts",
+      "sourcePath": "apps/web/lib/voice-acknowledgements.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "7110c2231a5eb9ac686e6a9f1af87ec45d429020ce4180a15a0f5c0ab3c9c4e5",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/public/audio/brisky/live-microphone.js",
+      "sourcePath": "apps/web/public/audio/brisky/live-microphone.js",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1a485a485b77bdb4b40961b8adbfb484b0d157f973b3a13b0435a2900252885a",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/check-auth.cjs",
+      "sourcePath": "apps/web/scripts/check-auth.cjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9f17065cab4c1677335b7ec8f7156f7cc385bcc6ff0ea0cc19c5e77fa332824b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/check-auth.ts",
+      "sourcePath": "apps/web/scripts/check-auth.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e660771909fd6dbb3b08695fc80e96dae16e71cef853fe1352f0b63f32a35f6f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/check-spaces.cjs",
+      "sourcePath": "apps/web/scripts/check-spaces.cjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "63d0275d4e0344f8b1c036b4b36bd38eab259249d48269c85b9b1068777fcd93",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/check-spaces.ts",
+      "sourcePath": "apps/web/scripts/check-spaces.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "85740f482a3897f2cf60d3620d6affd67217cb391ec0faee518fc6c664a639c6",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/check-studio.cjs",
+      "sourcePath": "apps/web/scripts/check-studio.cjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2f7869a25f40e514dfadbfabfe1fe79785416941883c9ef19b00f2c81941b6ea",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/check-studio.ts",
+      "sourcePath": "apps/web/scripts/check-studio.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d504ca7397d65fdb5b96d18f70fe87e8aaad862281b4cc7dbac6bc6e5d75dc04",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/migrate-auth.cjs",
+      "sourcePath": "apps/web/scripts/migrate-auth.cjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "dc284c16ed0b18dd22f15d7e264bec01171f82d72a988d3b6e3bcf9abf766312",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/scripts/migrate-spaces.cjs",
+      "sourcePath": "apps/web/scripts/migrate-spaces.cjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "85fae8620864aad0089939febc17404e9f6a47f35d74c85740eaa621da7764c2",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/auth-core.ts",
+      "sourcePath": "apps/web/server/auth-core.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1a39fa6d24c9beffc53b89b2c12c09d4b4781b0ee3f27412adb22f72bd1cbb5f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/auth-http.ts",
+      "sourcePath": "apps/web/server/auth-http.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d4698bcabf0ca90d4ff572fbdcd07d0da7e2cfa42e3d1fdf03f136120c98fe50",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/auth-schema.sql",
+      "sourcePath": "apps/web/server/auth-schema.sql",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b394fa19f317f5b1bd3985da4b0a79d69e7186bd0e197b63d04f67937eab2f00",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/auth.ts",
+      "sourcePath": "apps/web/server/auth.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "da766cc2706febc09c7b40e720afee27763453b9bcb83a1361469db6b5131030",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/connectors-http.ts",
+      "sourcePath": "apps/web/server/connectors-http.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "23e80218238f0c2a3775c8ee84d3934eaa8e65de292982acbe56383a3dc08fdc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/db.ts",
+      "sourcePath": "apps/web/server/db.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "70d346592d6764a859233c9caf3554ce7edd2397637c60c9b377275c3b386226",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/drive-oauth-state.ts",
+      "sourcePath": "apps/web/server/drive-oauth-state.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "065740f187a820100da6e5a26f6b9bdea87fee8577fb65bbd19d1d978f915bfe",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/engine-reply.ts",
+      "sourcePath": "apps/web/server/engine-reply.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e286a87b0a7a5af240449df03fd59be0c5c1708b1b518152aebd87e566318e10",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/onboarding-core.ts",
+      "sourcePath": "apps/web/server/onboarding-core.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b058cee8d6a7f9bd39e314587ad3f05724cd1402e9b816c44f87f9c6c2934840",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/people-http.ts",
+      "sourcePath": "apps/web/server/people-http.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "279c031cf8642efdc5328643f107ebe0aaba436fe1219ddcb1c101bd1f9cc263",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/space-playback.ts",
+      "sourcePath": "apps/web/server/space-playback.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b5eb8d4a6e8df2805c3ce93bf36f99881b24d658c9a0bc5e15f3a53af0216bd4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/space-replies-core.ts",
+      "sourcePath": "apps/web/server/space-replies-core.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "1ce8de110b7fd120bdd2a5a68d48a943e4639c472f76840c023e8e6cce6eddff",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/spaces-core.ts",
+      "sourcePath": "apps/web/server/spaces-core.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "dd64c7c0d4b887a845a70a188fde69f27c3b7278140d1761e7959a425156c5e8",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/spaces-http.ts",
+      "sourcePath": "apps/web/server/spaces-http.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "027455dd0084b92faac8eca93d50c85bcb6d516bf9a77c1a28ecccad49689c08",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/studio-core.ts",
+      "sourcePath": "apps/web/server/studio-core.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "385c9470bcb1d624b314b9790e16009cc4ad692cfb22ab3192bf1803b9922871",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/studio-http.ts",
+      "sourcePath": "apps/web/server/studio-http.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e2ad58d83f217f604d3cfae029e545685c031e8016dffefc96171a28a3ed99f3",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/server/voice-http.ts",
+      "sourcePath": "apps/web/server/voice-http.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "b8015f54d1c2e3ee9b1f6a03e586e284875ac95aff45d4d68c74880279a15c4b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/.gitignore",
+      "sourcePath": "brisky-alien-mascot/.gitignore",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e470e01248b83f2a23f667bf507219eaffa736da8683571fc16ff1787cd690aa",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/Brisky_Mascot_Implementation_Spec.md",
+      "sourcePath": "brisky-alien-mascot/Brisky_Mascot_Implementation_Spec.md",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "03fba5c6a3333be9db0b27f8fa02bb0d7c432131c75817d82ce5cb9c1088679f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/Brisky’s Whimsical Emotion Grid.png",
+      "sourcePath": "brisky-alien-mascot/Brisky’s Whimsical Emotion Grid.png",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "e22b2e29c60be271c1c0da2353fb43e7c8672a3e023fa0655e24dd3285937333",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/Iridescent Jelly Alien Mascot.png",
+      "sourcePath": "brisky-alien-mascot/Iridescent Jelly Alien Mascot.png",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "39bf8b631b7fe1f21d59704b258fe084dd9e35c734ea4c344b95255f6f414959",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/index.html",
+      "sourcePath": "brisky-alien-mascot/index.html",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9e49bf48ed1f263b6fd2fb603e5c36a94af61a270f82301e208577f8a7708787",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/package.json",
+      "sourcePath": "brisky-alien-mascot/package.json",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "131c52af362c7c5f6680116e982c3fd6ce093f0019279e4102da318ae2e2c849",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/src/BriskyCompanion.tsx",
+      "sourcePath": "brisky-alien-mascot/src/BriskyCompanion.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6ad1b0036dbcebb731865a83af75cf4ade3c77f965683e20db8d12b4737baae9",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/src/BriskyFace.tsx",
+      "sourcePath": "brisky-alien-mascot/src/BriskyFace.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "12a833079d4bf847adb7c77e1505fba46d971b33dfb490b1044f6d686235b831",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/src/BriskyGreetingArm.tsx",
+      "sourcePath": "brisky-alien-mascot/src/BriskyGreetingArm.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9fb65a274305335d95605bdc1cf71da6c0b30d300b265c40d9b0705b7b5c38d4",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/src/BriskySearchAntenna.tsx",
+      "sourcePath": "brisky-alien-mascot/src/BriskySearchAntenna.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "086e7fbfda260cfcdeecceb64ebd16ff62e3a877d40909c714dd1ab6869f7203",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/src/main.tsx",
+      "sourcePath": "brisky-alien-mascot/src/main.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8e8c9d72302eda139ca58059c1d0d08f693a4c6799338d97631d98efce7e01bc",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/src/searchSimulation.ts",
+      "sourcePath": "brisky-alien-mascot/src/searchSimulation.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "ab7b6bb0deabc633c45fa47dd7aa109ddd0f0ed50163c731432d54aaf66dad96",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/src/style.css",
+      "sourcePath": "brisky-alien-mascot/src/style.css",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d3cb9c9ea181c0556546226e4d2429bf3083d3b80a1003fdf7ee593a9cc44330",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/tests/searchSimulation.test.mjs",
+      "sourcePath": "brisky-alien-mascot/tests/searchSimulation.test.mjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "86a35307c82cf90dcdc04394a35f40b0dd89a818f3fd86ba0f7c6aaf29f75171",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/tsconfig.json",
+      "sourcePath": "brisky-alien-mascot/tsconfig.json",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "c09263efe51eb6cf96479b27e3afcf1a9c8b16beee1a6997453ff2b74f63bb8e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "brisky-alien-mascot/vite.config.ts",
+      "sourcePath": "brisky-alien-mascot/vite.config.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "d1bf20324809996534f30069114a1c15784969e2f090cb36f871d688dde2ca9f",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "docs/meta-mms-voice.md",
+      "sourcePath": "docs/meta-mms-voice.md",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "71087d68884051481af47d4c8ee4f98bbd7d1e3ecfe75269602aba734c5a33dd",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "docs/saas-conversation.md",
+      "sourcePath": "docs/saas-conversation.md",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "3700a0f49de608cf82dd111a4ad46374332e8aca13c4102cd99d076f9a5625d0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "docs/saas-studio.md",
+      "sourcePath": "docs/saas-studio.md",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "6a1bcac0c351e6e40043782b8cbe1d53a027e54c9218e0bf6497ef6d21eec43e",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "docs/voice-model-comparison.md",
+      "sourcePath": "docs/voice-model-comparison.md",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "606fd4093f1432230add60d9d674fb538435baa12f3c108e531b57a429a19464",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "scripts/setup-mms.cjs",
+      "sourcePath": "scripts/setup-mms.cjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "2fab3ba12c9c96611b950dddc033c2972af9ad7dda968062057fdf20d6199f36",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "services/mms-tts/download_weights.cjs",
+      "sourcePath": "services/mms-tts/download_weights.cjs",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "da0a010e3f84f74eb255811c8c567296d948c2b4af01d6727a5a59170ba28a44",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "services/mms-tts/prepare_models.py",
+      "sourcePath": "services/mms-tts/prepare_models.py",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "28298bfc1403a0ff48af90feab333f75799f134488395c6c6e532f2909c3fa5b",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "services/mms-tts/requirements.txt",
+      "sourcePath": "services/mms-tts/requirements.txt",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "934376c771a41c6112e19048b92246bdba00923528f1978a00a2dccd557f4114",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "services/mms-tts/serve.py",
+      "sourcePath": "services/mms-tts/serve.py",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "4e0bed2d705d714a6ad474b9234b8399c6e2cdea102d4afc2b3b47c3a2f129a0",
+      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+    },
+    {
+      "path": "apps/web/hooks/use-bottom-sheet.ts",
+      "sourcePath": "apps/web/hooks/use-bottom-sheet.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "9c4d5a7097f53526aea82edb2747066f01af687e75636852904740a9d815c937",
+      "attribution": "event integration; upstream hooks retain their applicable terms"
+    },
+    {
+      "path": "apps/web/hooks/use-is-in-view.tsx",
+      "sourcePath": "apps/web/hooks/use-is-in-view.tsx",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "8564c6cd97c8729c40f77119fc13143af026756ddc4f493b8660ff52f033aa08",
+      "attribution": "event integration; upstream hooks retain their applicable terms"
+    },
+    {
+      "path": "apps/web/hooks/use-mobile-layout.ts",
+      "sourcePath": "apps/web/hooks/use-mobile-layout.ts",
+      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
+      "sha256": "84597b42968f69f3d71b22f085839e25c68c0a36b034b608d58260e25d698642",
+      "attribution": "event integration; upstream hooks retain their applicable terms"
+    }
+  ],
+  "identicalPreEventBlobsExcluded": []
+}
