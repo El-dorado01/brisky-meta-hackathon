@@ -5,6 +5,12 @@ useful conversations, shortlists, briefs and storylines. This fresh repository
 contains the **event-developed workspace and integration components**, plus a
 standalone runner that works without the pre-existing Brisky engine.
 
+**Start here:** [beginner-friendly full setup](docs/FULL-SETUP.md), including
+tool installation, obtaining keys, model downloads and each startup terminal.
+For the source audit, read [contribution coverage](docs/CONTRIBUTION-COVERAGE.md):
+it maps exported components, retained development alternatives and patches to
+pre-existing engine files without claiming the old engine as new work.
+
 **The original Brisky engine predates the event and is not submitted as new work.**
 This repository does not contain its indexing engine, old dashboard or landing
 page. Read [provenance](docs/PROVENANCE.md) and

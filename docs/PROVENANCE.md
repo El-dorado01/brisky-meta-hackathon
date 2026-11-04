@@ -29,7 +29,8 @@ No history was rewritten or backdated. The submission repository starts fresh.
   and judge instructions. The runner reuses the actual event evidence/Studio
   contracts and voice orchestration rather than relabelling the old engine.
 
-`source-manifest.json` records 370 exported files with source hashes. The export
+`source-manifest.json` records the initially exported files and subsequent shared
+integration updates with source hashes. The export
 selected files absent at the baseline and excluded identical baseline blobs.
 After export, new root scaffolding, workspace entry/configuration/style files,
 runner, tests and documentation were written for this independent component.
@@ -81,7 +82,18 @@ runner does not require the original engine.
 
 New Meta-only profile admission, LASER2 integration sources and judge bootstrap
 were added after the initial event export. The full original-engine dependency
-is pinned to 49b7e71293e667a885a8752117d8e779cd8220c4; it remains external,
+is pinned to the exact revision in `full-engine.json`; it remains external,
 not included or represented as newly created code. The bootstrap clone/check
 passed. Full fresh-account installation remains unverified. Model files are not
 committed. Their upstream notices and download provenance are retained.
+
+## Completeness follow-up
+
+The initial export did not include every event-developed file: in particular,
+Baseten and some development/evaluation tools were omitted, and changes within
+existing engine files were available only through the external engine. See
+[CONTRIBUTION-COVERAGE.md](CONTRIBUTION-COVERAGE.md) for the added review archive,
+complete changed-path inventory and redacted zero-context engine-adjustment
+patch. Retained non-Meta development paths are not judge runtime fallbacks.
+The baseline comparison and owner's attestation remain the provenance boundary;
+an inventory is not independent proof of timing or organizer eligibility.
