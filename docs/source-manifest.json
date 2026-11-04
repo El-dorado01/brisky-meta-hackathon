@@ -176,16 +176,16 @@
     {
       "path": "event-components/api/modules/conversation/conversation.service.ts",
       "sourcePath": "apps/api/src/modules/conversation/conversation.service.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "c44043af170063a6402b5256012d5b8805822e697986bc0e82f3662719e759da",
-      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "2ebc27e8e9ae4192a587f2b16074f614c2876c37f20d58a59e5af771a7655146",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
     },
     {
       "path": "event-components/api/modules/conversation/conversation.spec.ts",
       "sourcePath": "apps/api/src/modules/conversation/conversation.spec.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "a1cb3ecd34dc72c93f6f3341176af7d12de33c28560f7543857814fd4359c56a",
-      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "f2cd7bc521c2eff9025afb101dbc9b93d6fab97a143679a50b01317dfea0105b",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
     },
     {
       "path": "event-components/api/modules/conversation/meta-live-voice.ts",
@@ -638,16 +638,16 @@
     {
       "path": "event-components/api/modules/pipeline/search-evidence.service.ts",
       "sourcePath": "apps/api/src/modules/pipeline/search-evidence.service.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "fddbce406b05a34a8403484aada05eb0ecc4884a2337735b8f30f9f313f77583",
-      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "8213e7075a09754b0d38744e30789fd5a7d654367ef151fbd2b535cec1189b17",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
     },
     {
       "path": "event-components/api/modules/pipeline/search-evidence.spec.ts",
       "sourcePath": "apps/api/src/modules/pipeline/search-evidence.spec.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "4cca229dd60b9122fa37cdd3e831ebb477a76a74dabf6b55e05c0cb8afe407d0",
-      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "276308c4322400a6f6f95950c748d0c8b279de7d00060c5864ddef0dec631f90",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
     },
     {
       "path": "event-components/api/modules/pipeline/seekable-media-source.spec.ts",
@@ -666,9 +666,9 @@
     {
       "path": "event-components/api/modules/pipeline/space-conversation.ts",
       "sourcePath": "apps/api/src/modules/pipeline/space-conversation.ts",
-      "sourceCommit": "fd34773d507e1d3b43b7ba9dfb37ea295523be09",
-      "sha256": "673fadc44b9328bd853a6aad20746f4a3d839d445bf3eefb6370e2bda57bdf29",
-      "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "a3351922f1f984646c724813aa2fdf458b890a03968586b882251da8e5661a28",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
     },
     {
       "path": "event-components/api/modules/pipeline/studio-document.spec.ts",
@@ -2643,6 +2643,27 @@
       "sourceCommit": "49b7e71293e667a885a8752117d8e779cd8220c4",
       "sha256": "9e44d8a668ff255385d1173c5bc76e9cc01afc9db2f80a4fe08852fe652bce32",
       "attribution": "November 4 event integration; LASER upstream files retain their separate BSD attribution"
+    },
+    {
+      "path": "event-components/api/modules/conversation/source-review.ts",
+      "sourcePath": "apps/api/src/modules/conversation/source-review.ts",
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "92497feebd47cbfe109d1a75dc17febddd3794efd30c60cb1ba6aac064e9a567",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
+    },
+    {
+      "path": "event-components/api/modules/conversation/source-review.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/source-review.spec.ts",
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "2919fec678b4f4ce611923e4229168fc750db04e1a45038dad775d813c934991",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
+    },
+    {
+      "path": "event-components/api/modules/media/search-reasoning.spec.ts",
+      "sourcePath": "apps/api/src/modules/media/search-reasoning.spec.ts",
+      "sourceCommit": "e51e79fc8ee3149f8e3ac1c60d1ae76293bc565e",
+      "sha256": "656cad1d59bfe436361d553a1589265a65c47b62fa90cb29086fa075b984dce4",
+      "attribution": "Event-developed orchestration and regression coverage; extends the separately declared original engine"
     }
   ],
   "identicalPreEventBlobsExcluded": []

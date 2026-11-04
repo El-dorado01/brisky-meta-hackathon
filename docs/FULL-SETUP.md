@@ -137,3 +137,10 @@ use the root standalone runner, whose limitations are documented in the README.
 See [the November 4 rehearsal report](REHEARSAL.md) for checks performed with
 a fresh dependency installation and empty database, checks using existing
 credentials/media, corrected setup steps and remaining acceptance limits.
+
+The pinned engine includes the [reasoning audit fixes](REASONING-AUDIT.md),
+including collection scope, original-constraint verification, current evidence
+metadata and broader source-context reasoning. This is not a guarantee of
+correct answers for all requests. Generated live checks can be run from `.engine`
+with `node --env-file=.env scripts/check-reasoning-live.cjs --live`; those checks
+use the configured paid Meta budget and preserve its journal.
