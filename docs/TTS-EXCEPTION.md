@@ -33,6 +33,17 @@ guards continue rejecting Gemini reasoning, transcription and non-Meta embedding
 Validation distinguishes offline routing/guard checks from live speech listening.
 No claim of organizer eligibility or guaranteed latency follows from unit tests.
 
+The full call relay now forwards Gemini's streamed PCM audio as it arrives, rather
+than waiting for a whole sentence WAV. Meta still produces the response text,
+which is queued for speech sentence by sentence. Interruption aborts synthesis
+and discards stale chunks; partial output is not cached as a complete reply.
+This applies to replies, search announcements, status messages and farewells.
+The default local MMS route remains available and is unchanged.
+
+One generated-only live Kore sentence yielded first audio in 1,558 ms and
+completed in 10,043 ms, with 82 chunks. This is a single TTS-path measurement,
+not a microphone-to-answer benchmark. There is no promised near-instant latency.
+
 November 4 acceptance: the authenticated full application reported Meta conversation
 mode plus Gemini TTS, and a generated-only Kore settings sample returned a valid
 334,436-byte WAV. No microphone recording or personal-media text was used in that

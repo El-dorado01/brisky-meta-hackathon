@@ -1,6 +1,6 @@
 {
   "baseline": "05caf9af22173b5235cef4795ab19b2660761b8f",
-  "sourceCommit": "46a2ac3a12c5f9ccbf07a6b84d8bc3f3e9d2fd8d",
+  "sourceCommit": "365d777ad4acd862f9e449832546f7f2c9be8eed",
   "limitation": "Comparison plus owner attestation, not independent timing or eligibility proof. Patch includes old removed lines for review and is not a standalone engine. Runtime uses full-engine.json. Dormant non-Meta development sources must not be enabled for judging.",
   "modifiedExistingFilesPatch": "docs/engine-adjustments.patch",
   "records": [
@@ -362,7 +362,7 @@
       "sourcePath": "apps/api/src/modules/conversation/live-voice.service.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/live-voice.service.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "56a157ebbbed086d19a314f18e82455c8b757e7a7550c5568d5874fd9aefcd6a"
+      "sha256": "5f93a89f780e6b65cf1a5795b43747cc53f09afa1a562493eac71af8c7624da1"
     },
     {
       "status": "A",
@@ -383,7 +383,7 @@
       "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.ts",
       "destination": "event-components/api/modules/conversation/meta-live-voice.ts",
       "disposition": "exported integration source",
-      "sha256": "b7e0c08ad8b923b37af261b69548596f4d6d33736fc36589fe53041b619aef66"
+      "sha256": "63a2d2df19c2c0969d8fb9f70304af797a788c485b78dd48e4c8a6cece098a4f"
     },
     {
       "status": "A",
@@ -422,6 +422,13 @@
     },
     {
       "status": "A",
+      "sourcePath": "apps/api/src/modules/conversation/relay-speech-stream.spec.ts",
+      "destination": "event-components/api/modules/conversation/relay-speech-stream.spec.ts",
+      "disposition": "exported integration source",
+      "sha256": "91c2570e4363fc812fa1efe9cf7ee2d5331f294307ef177e5d3fe9fc070d9dff"
+    },
+    {
+      "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/saas-session.guard.ts",
       "destination": "event-components/api/modules/conversation/saas-session.guard.ts",
       "disposition": "exported integration source",
@@ -451,9 +458,9 @@
     {
       "status": "A",
       "sourcePath": "apps/api/src/modules/conversation/voice-stream.spec.ts",
-      "destination": "development-archive/apps/api/src/modules/conversation/voice-stream.spec.ts",
-      "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "7352bd11ec724e3ba3f17eacb2a234fe5843f3aabb4a675c048f0e5a7d4d8e12"
+      "destination": "event-components/api/modules/conversation/voice-stream.spec.ts",
+      "disposition": "exported integration source",
+      "sha256": "ad01395fffbeb041143ed53c95e8d5412e813c5920a304684d252e6be9e99089"
     },
     {
       "status": "A",
@@ -474,7 +481,7 @@
       "sourcePath": "apps/api/src/modules/conversation/voice.service.ts",
       "destination": "development-archive/apps/api/src/modules/conversation/voice.service.ts",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "51c1ef9967efcbca54569185047364201049e76a9d85acee57710e42e08a2594"
+      "sha256": "f707f5db0c3956b680721eed863b4fa998aa59cbdc47612a7053d65815520f1f"
     },
     {
       "status": "A",
@@ -4359,7 +4366,7 @@
       "sourcePath": "docs/hackathon-contributions.md",
       "destination": "development-archive/docs/hackathon-contributions.md",
       "disposition": "new event-period review archive; not imported by judge runtime",
-      "sha256": "e368f3b58916cfd9076418edb22443aec65657080a8f639040c0695b69d1ced5"
+      "sha256": "40ed67580dffd1a357575d2cf7d1a35632adb1b2ee68cf36c134a45364ae4766"
     },
     {
       "status": "A",

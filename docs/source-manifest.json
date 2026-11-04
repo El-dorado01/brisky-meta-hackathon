@@ -190,8 +190,8 @@
     {
       "path": "event-components/api/modules/conversation/meta-live-voice.ts",
       "sourcePath": "apps/api/src/modules/conversation/meta-live-voice.ts",
-      "sourceCommit": "46a2ac3a12c5f9ccbf07a6b84d8bc3f3e9d2fd8d",
-      "sha256": "b7e0c08ad8b923b37af261b69548596f4d6d33736fc36589fe53041b619aef66",
+      "sourceCommit": "365d777ad4acd862f9e449832546f7f2c9be8eed",
+      "sha256": "63a2d2df19c2c0969d8fb9f70304af797a788c485b78dd48e4c8a6cece098a4f",
       "attribution": "event implementation; owner confirmed post-cutoff; dependency code retains upstream attribution where applicable"
     },
     {
@@ -2678,6 +2678,20 @@
       "attribution": "event-developed bounded video planning and offline validation; extends external pre-existing engine",
       "sourceCommit": "9e17285f962a28b1a66088c66ae00ec437b5c2ed",
       "sha256": "72eba17743dbfed535c28cf4de65c9601a93ffbce3f8fe0c7cdc95c095e23bfa"
+    },
+    {
+      "path": "event-components/api/modules/conversation/voice-stream.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/voice-stream.spec.ts",
+      "attribution": "event-developed speech streaming validation; extends external engine",
+      "sourceCommit": "365d777ad4acd862f9e449832546f7f2c9be8eed",
+      "sha256": "ad01395fffbeb041143ed53c95e8d5412e813c5920a304684d252e6be9e99089"
+    },
+    {
+      "path": "event-components/api/modules/conversation/relay-speech-stream.spec.ts",
+      "sourcePath": "apps/api/src/modules/conversation/relay-speech-stream.spec.ts",
+      "attribution": "event-developed speech streaming validation; extends external engine",
+      "sourceCommit": "365d777ad4acd862f9e449832546f7f2c9be8eed",
+      "sha256": "91c2570e4363fc812fa1efe9cf7ee2d5331f294307ef177e5d3fe9fc070d9dff"
     }
   ],
   "identicalPreEventBlobsExcluded": []
