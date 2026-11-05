@@ -7,6 +7,7 @@
     "node": ">=22.6"
   },
   "scripts": {
+    "demo:offline": "node scripts/start-offline.cjs",
     "build": "node scripts/build-demo.cjs",
     "start": "node scripts/start-demo.cjs",
     "test": "node scripts/build-demo.cjs && node --test tests/*.test.cjs",

@@ -5,7 +5,8 @@ const {ConfigService}=require('@nestjs/config'),{WebSocketServer}=require('ws');
 const {MetaLiveVoice}=require('../../build/event-components/api/modules/conversation/meta-live-voice');
 const {MmsSpeechService}=require('../../build/event-components/api/modules/conversation/mms-speech.service');
 function createServer(env=process.env){
- const config=configuration(env),sessions=new Map(),tickets=new Map(),connections=new Set(),mms=new MmsSpeechService(new ConfigService(env));
+ const offline=env.DEMO_OFFLINE==='true',sample=require('./offline.cjs');
+ const config=offline?{key:'',model:'No model (scripted offline sample)',voice:false}:configuration(env),sessions=new Map(),tickets=new Map(),connections=new Set(),mms=new MmsSpeechService(new ConfigService(env));
  const server=http.createServer(async(req,res)=>{
   const origin='http://'+req.headers.host;const url=new URL(req.url,origin);
   const reply=(status,value)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(value));};
@@ -17,7 +18,7 @@ function createServer(env=process.env){
    if(req.method==='GET'&&url.pathname==='/'){res.writeHead(200,{'Content-Type':'text/html','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws://localhost:* ws://127.0.0.1:*; media-src 'self' blob:; img-src 'self' data:"});return res.end(fs.readFileSync(path.join(__dirname,'public/index.html')));}
    if(req.method==='GET'&&url.pathname==='/audio/brisky/live-microphone.js'){res.writeHead(200,{'Content-Type':'application/javascript'});return res.end(fs.readFileSync(path.resolve('apps/web/public/audio/brisky/live-microphone.js')));}
    if(req.method==='GET'&&url.pathname==='/live-voice.js'){res.writeHead(200,{'Content-Type':'application/javascript'});return res.end(fs.readFileSync(path.resolve('build/browser/live-voice.js')));}
-   if(req.method==='GET'&&url.pathname==='/api/state')return reply(200,{mode:'synthetic-fixtures',configured:!!config.key,model:config.model,voiceEnabled:config.voice,fixtures,saved:state.saved,shortlist:state.shortlist,documents:state.documents});
+   if(req.method==='GET'&&url.pathname==='/api/state')return reply(200,{mode:offline?'offline-scripted-sample':'synthetic-fixtures',offline,configured:!!config.key,model:config.model,voiceEnabled:config.voice,fixtures,saved:state.saved,shortlist:state.shortlist,documents:state.documents});
    if(req.method!=='POST')return reply(404,{error:'Not found'});
    if(req.headers.origin!==origin||!req.headers['content-type']?.startsWith('application/json'))return reply(403,{error:'Same-origin JSON request required'});
    let data='';for await(const chunk of req){data+=chunk;if(Buffer.byteLength(data)>16000)return reply(413,{error:'Request too large'});}let body;try{body=JSON.parse(data);}catch{return reply(400,{error:'Invalid JSON'});}
@@ -28,7 +29,7 @@ function createServer(env=process.env){
    }
    if(!['/api/chat','/api/studio'].includes(url.pathname))return reply(404,{error:'Not found'});
    if(state.busy)return reply(409,{error:'The previous request is still running.'});state.busy=true;
-   try{return reply(200,url.pathname==='/api/chat'?await chat(state,body.text):await studio(state,body.format,body.goal));}finally{state.busy=false;}
+   try{const actions=offline?sample:{chat,studio};return reply(200,url.pathname==='/api/chat'?await actions.chat(state,body.text):await actions.studio(state,body.format,body.goal));}finally{state.busy=false;}
   }catch(error){console.error('Demo request did not complete.');return reply(503,{error:/^(Add META_API_KEY|Meta request HTTP|Enter a request|Choose a brief|Shortlist at least|Meta response was incomplete)/.test(error.message)?error.message:'The request did not finish. Check the Meta access, budget and setup; no result was simulated.'});}
  });
  const sockets=new WebSocketServer({noServer:true,maxPayload:20000,perMessageDeflate:false});
@@ -43,5 +44,5 @@ function createServer(env=process.env){
  });});
  server.on('close',()=>{for(const client of connections)client.terminate();sockets.close();mms.onModuleDestroy();});return server;
 }
-if(require.main===module){const port=Number(process.env.DEMO_PORT||3100);if(!Number.isInteger(port)||port<1024||port>65535)throw Error('Invalid DEMO_PORT');const server=createServer();server.listen(port,'127.0.0.1',()=>console.log(`Brisky synthetic fixture runner: http://localhost:${port}. Meta models only; no private engine or background indexing.`));for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>server.close(()=>process.exit()));}
+if(require.main===module){const port=Number(process.env.DEMO_PORT||3100);if(!Number.isInteger(port)||port<1024||port>65535)throw Error('Invalid DEMO_PORT');const server=createServer();server.listen(port,'127.0.0.1',()=>console.log(`Brisky synthetic fixture runner: http://localhost:${port}. Synthetic data; see the page banner for offline/live mode. No private engine or background indexing.`));for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>server.close(()=>process.exit()));}
 module.exports={createServer};

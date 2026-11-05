@@ -1,5 +1,7 @@
 ﻿# Full Brisky setup — start here for the real application
 
+**Judges without accounts or credentials:** start with the [offline scripted walkthrough](../README.md#judges-run-without-login-accounts-or-api-keys). Run `npm ci`, then `npm run demo:offline`. No login, Brevo, Google OAuth, Meta key, Docker or original engine is required. This is labelled mock data and scripted output, not live inference or the recorded full UI. The connected setup below is optional and requires credentials.
+
 This guide runs the same SaaS workspace UI used in the demonstration, with your
 own accounts and media. Commands are for a local computer, not a hosted deployment.
 The event repository contains new components and reviewable changes; its bootstrap
@@ -11,7 +13,7 @@ instead use the explicitly declared [Gemini TTS-only exception](TTS-EXCEPTION.md
 which restores the six speech choices while retaining Meta recognition/reasoning.
 
 If you only want to inspect synthetic observations without these dependencies,
-follow the [standalone route](../README.md#run-without-the-original-engine).
+follow the [standalone route](../README.md#judges-run-without-login-accounts-or-api-keys).
 That route has a different UI and no real video playback.
 
 ## 1. Install the tools

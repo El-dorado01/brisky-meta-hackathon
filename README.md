@@ -1,5 +1,39 @@
 # Brisky — Meta hackathon event component
 
+## Judges: run without login, accounts or API keys
+
+Install [Node.js 22.6+ with npm](https://nodejs.org/en/download) and
+[Git](https://git-scm.com/downloads), then run:
+
+```sh
+git clone https://github.com/El-dorado01/brisky-meta-hackathon.git
+cd brisky-meta-hackathon
+npm ci
+npm run demo:offline
+```
+
+Open **http://localhost:3100**. No `.env`, login, Brevo, Google OAuth, Docker,
+original engine, model download, outside account or API credential is required.
+If port 3100 is occupied, stop the other local demo first.
+
+1. Send **Find the kitchen dancing moment** and inspect its synthetic citation.
+2. Select that source using its checkbox on the right.
+3. Enter a direction and click **Create brief** or **Create storyline**.
+4. Try **Which clip proves these people are my relatives?** to see the scripted
+   unsupported-identity example.
+
+**This is an explicitly labelled, scripted offline walkthrough using mock data.**
+It demonstrates the sample workflow; it does not perform AI inference, cloud
+indexing, face recognition, voice calls or real video playback. Its simplified UI
+is different from the full application in the recording. Scripted text must not
+be interpreted as measured Meta output. Source and integration code remain
+available for review. Run `npm test` and `npm run audit` for automated checks.
+
+The full connected application and optional live-inference sample are documented
+below. They require credentials; neither is the only entry point for judging.
+Brevo is for email delivery and Google OAuth is for connecting Drive, not for
+accessing this offline demo. No owner credentials are distributed in the repo.
+
 ## Hackathon team: solo entry
 
 **Sole hackathon participant: [El-dorado01](https://github.com/El-dorado01), the
@@ -15,13 +49,13 @@ engine is an explicitly declared dependency. See [provenance](docs/PROVENANCE.md
 This is an owner-confirmed team statement, not a claim that all engine or
 third-party code was authored by the entrant.
 
-**TTS exception / recorded demo:** The owner supplied a November 4 organizer
-clarification allowing any text-to-speech service when disclosed here. The actual
-Brisky recording profile uses **Gemini Flash TTS (Kore)** only to speak response
+**TTS exception / optional connected profile:** The owner supplied a November 4 organizer
+clarification allowing any text-to-speech service when disclosed here. The optional
+Brisky TTS-exception profile uses **Gemini Flash TTS (Kore)** only to speak response
 text; its quota fallback is Gemini Flash-Lite TTS. Meta still performs microphone
 transcription (Muse Voice Transcribe), dialogue (Wonder), search/media reasoning
 (Spark) and local embeddings (LASER2). This is **not Gemini Live**. The all-Meta
-MMS option and standalone runner remain available. To reproduce the recording
+MMS option and standalone runner remain available. To reproduce this configured
 profile, follow [the TTS-only setup](docs/TTS-EXCEPTION.md); a Google speech key
 and speech pricing entries are needed. These models do not receive microphone
 audio or perform search in that profile.
@@ -31,7 +65,7 @@ useful conversations, shortlists, briefs and storylines. This fresh repository
 contains the **event-developed workspace and integration components**, plus a
 standalone runner that works without the pre-existing Brisky engine.
 
-**Start here:** [beginner-friendly full setup](docs/FULL-SETUP.md), including
+**Optional full connected setup:** [beginner-friendly full setup](docs/FULL-SETUP.md), including
 tool installation, obtaining keys, model downloads and each startup terminal.
 For the source audit, read [contribution coverage](docs/CONTRIBUTION-COVERAGE.md):
 it maps exported components, retained development alternatives and patches to
@@ -63,7 +97,7 @@ These are the configured roles in the pinned full application's judge profile:
 | Meta MMS (`facebook/mms-tts-eng`, local CPU) | Turns response text into spoken English audio. One English speaker; not a Gemini Live equivalent. |
 | Meta LASER2 (local CPU) | Creates text embeddings for indexed descriptions/transcripts and search queries, supporting semantic retrieval. |
 
-The standalone sample uses Wonder for its text/Studio responses, and optionally
+The optional live standalone sample uses Wonder for its text/Studio responses, and optionally
 Muse Voice Transcribe + Wonder + MMS for voice. It supplies synthetic observations
 directly and does not run video indexing or LASER retrieval. The full application
 requires the original engine as explained below. Model assignments are configuration,
@@ -80,6 +114,9 @@ This is required for real Drive indexing, media search and playback. The sample
 runner below has a different, simplified UI and cannot reproduce that full flow.
 
 ## Run without the original engine
+
+For the no-credentials scripted walkthrough use `npm run demo:offline` as described
+at the top. The instructions below describe the optional live-inference mode.
 
 Requires Node 22.6+ and npm. No Docker, PostgreSQL, Brevo account, Google Drive,
 private service or model download is needed to start the fixture runner.
@@ -104,7 +141,8 @@ model requests return a clear configuration error; no responses are faked.
 
 The three fixture observations are authored synthetic test data, **not videos,
 actual indexing results, the owner's Drive or footage playback**. All chat and
-Studio outputs require live Meta inference. The runner deliberately omits vector
+Studio outputs in this optional live mode require Meta inference. Offline outputs
+are instead explicitly labelled scripted samples. The runner omits vector
 embeddings and automatic face recognition; no non-Meta substitute is used.
 It supplies the small complete fixture catalogue to Meta, rather than claiming
 to reproduce production-scale retrieval.
